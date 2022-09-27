@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &969093349748811283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2844663573237949333}
+  m_Layer: 7
+  m_Name: Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2844663573237949333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969093349748811283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3514529928658135206}
+  m_Father: {fileID: 6701215735205843670}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2965345159766956802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3514529928658135206}
+  m_Layer: 7
+  m_Name: DebugZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3514529928658135206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2965345159766956802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2844663573237949333}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6701215735205843674
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,11 +73,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6701215735205843670}
   - component: {fileID: 6701215735205843671}
+  - component: {fileID: 3569366774625308054}
   - component: {fileID: 6701215735205843673}
   - component: {fileID: 6701215735205843668}
   - component: {fileID: 6701215735205843669}
   - component: {fileID: 6701215735205843667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -32,7 +96,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2844663573237949333}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67,6 +132,59 @@ MonoBehaviour:
   invincibleTime: 2
   inputDir: {x: 0, y: 0}
   dirCoef: 1
+--- !u!114 &3569366774625308054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701215735205843674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f230d7bd37481e9409796ca56c92427c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotgunRate: 0
+  shotgunSpread: 0
+  shotgunProjectileNumber: 0
+  shotgunRange: 0
+  shotgunIsExplosive: 0
+  shotgunIsPiercing: 0
+  shotgunIsDoubleShot: 0
+  rocketRate: 0
+  rocketRadius: 0
+  rocketIsResidual: 0
+  rocketIsBonusRocket: 0
+  rocketIsDoubleBounce: 0
+  mineRate: 0
+  mineRadius: 0
+  rocketIsShrapnel: 0
+  shieldRate: 0
+  shieldRange: 0
+  shieldSpeed: 0
+  shotgunProjectileDamage: 0
+  rocketDamage: 0
+  mineDamage: 0
+  shieldDamage: 0
+  shotgunProjo: {fileID: 8865965525024252180, guid: d571c8ebd84ce9c4fa1d51a6ae9f09c6, type: 3}
+  rocketProjo: {fileID: 6689219710273432464, guid: bbec3ce80b77edd40bfe82c19fe2ad16, type: 3}
+  mineProjo: {fileID: 9114584235997046971, guid: ce4db7881fafa0a4996ff7426287237b, type: 3}
+  shieldProjo: {fileID: 1868323276631808540, guid: 5fbb99efc636e5548806c62f9fdc33c0, type: 3}
+  isShogunActive: 0
+  isRocketActive: 0
+  isMinesActive: 0
+  isShieldActive: 0
+  shotgunSpeed: 10
+  rocketSpeed: 10
+  attackDir: {x: 0, y: 0}
+  player: {fileID: 0}
+  target: {fileID: 0}
+  shotgunTimer: 0
+  rocketTimer: 0
+  mineTimer: 0
+  shotgunCooldown: 2
+  rocketCooldown: 4
+  mineCooldown: 3
 --- !u!95 &6701215735205843673
 Animator:
   serializedVersion: 4
@@ -121,7 +239,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.02948375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +250,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.54325294, y: 0.71165264}
   m_EdgeRadius: 0
 --- !u!212 &6701215735205843667
 SpriteRenderer:

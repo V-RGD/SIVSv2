@@ -11,7 +11,9 @@ public class Spawner : MonoBehaviour
     private float timer;
 
     private Vector3 spawnVector;
-    
+
+    public List<Transform> enemyPoses;
+
     void Start()
     {
         
@@ -25,7 +27,8 @@ public class Spawner : MonoBehaviour
         if(timer >= spawnInterval)
         {
             timer = 0f;
-            Instantiate(enemyPrefab, spawnPos.position, quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefab, spawnPos.position, quaternion.identity);
+            enemyPoses.Add(enemy.transform);
         }
     }
     
