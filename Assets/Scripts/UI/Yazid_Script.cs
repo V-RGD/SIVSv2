@@ -13,9 +13,13 @@ public class Yazid_Script : MonoBehaviour
     // Experience
     public LevelBar level;
     public float currentlevel;
+
+    // Score
+    private GameObject TheScore;
     // Start is called before the first frame update
     void Start()
     {
+        TheScore = GameObject.Find("Score");
         currentHealth = health.GetComponent<Slider>().value;
         currentlevel = level.GetComponent<Slider>().value;
     }
@@ -39,6 +43,12 @@ public class Yazid_Script : MonoBehaviour
         {
             currentlevel += 10;
             level.GetComponent<LevelBar>().SetLevel(currentlevel);
+        }
+
+        // Score
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            TheScore.GetComponent<Score>().currentScore += 1;
         }
     }
 }
