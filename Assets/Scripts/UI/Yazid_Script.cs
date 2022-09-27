@@ -117,4 +117,12 @@ public class Yazid_Script : MonoBehaviour
     {
         Application.Quit();
     }
+
+    // Start Button
+        public void StartGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+        SceneManager.LoadScene("Yazid");
+    }
 }
