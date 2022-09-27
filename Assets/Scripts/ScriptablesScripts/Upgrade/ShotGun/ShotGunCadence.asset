@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d98002afd69a642b6be42727a26449, type: 3}
   m_Name: ShotGunCadence
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Cadence
+  description: Cadence de tir
   level: 0

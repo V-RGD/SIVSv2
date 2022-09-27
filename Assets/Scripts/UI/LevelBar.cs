@@ -8,6 +8,10 @@ public class LevelBar : MonoBehaviour
     public Image fill;
   //  public Color newColor;
 
+    public UpgradeWeapons upgradeScriptableObject1;
+    public UpgradeWeapons upgradeScriptableObject2;
+    public UpgradeWeapons upgradeScriptableObject3;
+
     void Start()
     {
         fill.color = gradient.Evaluate(slider.normalizedValue);

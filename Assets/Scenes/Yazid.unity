@@ -1406,6 +1406,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
+  upgradeScriptableObject1: {fileID: 0}
+  upgradeScriptableObject2: {fileID: 0}
+  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &278965484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +1862,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
+  upgradeScriptableObject1: {fileID: 0}
+  upgradeScriptableObject2: {fileID: 0}
+  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &410637954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,6 +3466,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
+  upgradeScriptableObject1: {fileID: 0}
+  upgradeScriptableObject2: {fileID: 0}
+  upgradeScriptableObject3: {fileID: 0}
 --- !u!1001 &888600438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3680,6 +3689,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
+  upgradeScriptableObject1: {fileID: 0}
+  upgradeScriptableObject2: {fileID: 0}
+  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &894178940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8264,6 +8276,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
+  upgradeScriptableObject1: {fileID: 11400000, guid: 48547debc95ea684fa085af6bdcade9b, type: 2}
+  upgradeScriptableObject2: {fileID: 11400000, guid: 2d2d5c2d54f4feb46ae03a66be9a532d, type: 2}
+  upgradeScriptableObject3: {fileID: 11400000, guid: 41312d7cb98bc3f4f8361b52a8f07496, type: 2}
 --- !u!1001 &3625682232443770167
 PrefabInstance:
   m_ObjectHideFlags: 0
