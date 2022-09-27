@@ -28,6 +28,9 @@ public class Yazid_Script : MonoBehaviour
     // Settings
     private GameObject PanelSettings;
 
+    // Sound
+    public AudioClip sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,12 @@ public class Yazid_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Sound
+         if(Input.GetKeyDown(KeyCode.W))
+        {
+            AudioManager.instance.PlayClipAt(sound, transform.position);
+        }
+
         // Health
         currentHealth = health.GetComponent<Slider>().value;
 
