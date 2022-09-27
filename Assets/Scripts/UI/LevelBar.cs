@@ -6,6 +6,7 @@ public class LevelBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+  //  public Color newColor;
 
     void Start()
     {
@@ -25,5 +26,6 @@ public class LevelBar : MonoBehaviour
         slider.value = level;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
+    //    newColor = new Color(fill.color.r, fill.color.g, fill.color.b, 0f);
     }
 }
