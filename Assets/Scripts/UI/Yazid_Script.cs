@@ -25,6 +25,9 @@ public class Yazid_Script : MonoBehaviour
     private GameObject PauseMenu;
     private bool isPaused;
 
+    // Settings
+    private GameObject PanelSettings;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,8 @@ public class Yazid_Script : MonoBehaviour
         currentlevel = level.GetComponent<Slider>().value;
         PauseMenu = GameObject.Find("PauseMenuPanel");
         PauseMenu.SetActive(false);
+        PanelSettings = GameObject.Find("SettingsPanel");
+        PanelSettings.SetActive(false);
     }
 
     // Update is called once per frame
@@ -124,5 +129,14 @@ public class Yazid_Script : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         SceneManager.LoadScene("Yazid");
+    }
+
+        public void OpenSettings()
+    {
+        PanelSettings.SetActive(true);
+    }
+        public void CloseSettings()
+    {
+        PanelSettings.SetActive(false);
     }
 }
