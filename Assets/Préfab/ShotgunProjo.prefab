@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8865965525024252179}
   - component: {fileID: 7365022762870616141}
   - component: {fileID: 7556469439009575057}
+  - component: {fileID: 4303312604066328999}
   m_Layer: 6
   m_Name: ShotgunProjo
   m_TagString: PlayerAttack
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8865965525024252180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -146,3 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3613685e438a4a9449c9379d9c4f1c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  player: {fileID: 0}
+--- !u!114 &4303312604066328999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865965525024252180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af44c0198d5ee4f4f8ee035ea241924f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  isRocket: 1
+  rotationDiff: {x: 0, y: 0}

@@ -7,8 +7,8 @@ public class PlayerAttacks : MonoBehaviour
 {
     //--------------shotgun ------------------envoie X balles en Y arc de cercle toutes les Z secondes
     public float shotgunRate;
-    public float shotgunSpread; //reliés
-    public float shotgunProjectileNumber = 2;
+    public float shotgunSpread = 4; //reliés
+    public float shotgunProjectileNumber = 15;
     public float shotgunRange;
     //modules
     public bool shotgunIsExplosive;
@@ -16,7 +16,7 @@ public class PlayerAttacks : MonoBehaviour
     public bool shotgunIsDoubleShot;
     //------------missile guidé ------------- Instancie un missile qui ne touche pas le joueur mais se dirige vers l'ennemi le plus proche
     public float rocketRate;
-    public float rocketRadius;
+    public float rocketAngleDiff = 0;
     //modules
     public bool rocketIsResidual;
     public bool rocketIsBonusRocket;
@@ -29,7 +29,7 @@ public class PlayerAttacks : MonoBehaviour
     //-----------------shield ------------------ orbite a une certaine distance du joueur 
     public float shieldRate;
     public float shieldRange;
-    public float shieldSpeed;//reliés
+    public float shieldSpeed = 1;//reliés
     
     //tweak values to balance 
     public float shotgunProjectileDamage;
@@ -44,39 +44,38 @@ public class PlayerAttacks : MonoBehaviour
     public GameObject shieldProjo;
 
     //requirements for activations
-    public bool isShogunActive;
+    public bool isShogunActive = true;
     public bool isRocketActive;
     public bool isMinesActive;
     public bool isShieldActive;
 
-    public float shotgunSpeed = 10;
-    public float rocketSpeed = 100;
+    public float shotgunSpeed = 100;
+    public float rocketSpeed = 3;
 
     public Vector2 attackDir;
-    public GameObject player;
     public GameObject target;
-
+    
     private Transform[] enemyPoses;
     private Spawner spawner;
     
-    public float shotgunTimer;
-    public float rocketTimer;
-    public float mineTimer;
+    //for timer purposes only
+    private float shotgunTimer;
+    private float rocketTimer;
+    private float mineTimer;
+    private float shieldRotation;
     
+    //cooldown for all weapons
     public float shotgunCooldown = 2;
     public float rocketCooldown = 4;
     public float mineCooldown = 3;
-    
-
-    void Start()
-    {
-        player = GameObject.Find("Player");
-    }
 
     void Update()
     {
         //FindClosestEnemy();
-        attackDir = (target.transform.position - transform.position).normalized;
+        if (target != null)
+        {
+            attackDir = (target.transform.position - transform.position).normalized;
+        }
 
         if (shotgunTimer <= 0)
         {
@@ -86,7 +85,7 @@ public class PlayerAttacks : MonoBehaviour
         if (rocketTimer <= 0 && isRocketActive)
         {
             rocketTimer = rocketCooldown;
-            RocketShot();   
+            RocketShot();
         }
 
         if (mineTimer <= 0 && isMinesActive)
@@ -97,45 +96,47 @@ public class PlayerAttacks : MonoBehaviour
 
         if (isShieldActive)
         {
-            //shieldProjo.SetActive(true);
+            shieldProjo.SetActive(true);
             //rotates around players
-            ShieldRotation();
+            shieldRotation += Time.deltaTime * 360 * shieldSpeed;
+            shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
+
+            if (shieldRotation > 360)
+            {
+                shieldRotation = 0;
+            }
         }
-        
+
         shotgunTimer -= Time.deltaTime;
         rocketTimer -= Time.deltaTime;
-        rocketTimer -= Time.deltaTime;
+        mineTimer -= Time.deltaTime;
     }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
     void ShotgunShot()
     {
+        float rotationDiff = -shotgunSpread * shotgunProjectileNumber / 2;
         //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
         for (int i = 0; i < shotgunProjectileNumber; i++)
         {
+            Vector2 rotateDir = Quaternion.Euler(0, 0, rotationDiff) * attackDir;
             GameObject projo = Instantiate(shotgunProjo, transform.position, Quaternion.identity);
-            projo.GetComponent<Rigidbody2D>().AddForce(attackDir * shotgunSpeed);
+            projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * shotgunSpeed);
+            projo.GetComponent<HomingMissile>().enemy = target;
+            projo.GetComponent<HomingMissile>().isRocket = false;
+            projo.GetComponent<HomingMissile>().rotationDiff = rotateDir;
+            rotationDiff += shotgunSpread;
         }
     }
 
     void RocketShot()
     {
         GameObject rocket = Instantiate(rocketProjo, transform.position, Quaternion.identity);
-        rocket.GetComponent<Rigidbody2D>().AddForce(attackDir * rocketSpeed);
+        rocket.GetComponent<HomingMissile>().enemy = target;
+        rocket.GetComponent<HomingMissile>().speed = rocketSpeed;
     }
 
     void MineLaunch()
     {
         Instantiate(mineProjo, transform.position, Quaternion.identity);
-    }
-
-    void ShieldRotation()
-    {
-        
     }
 
     void FindClosestEnemy()
