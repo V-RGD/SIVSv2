@@ -16,9 +16,14 @@ public class Yazid_Script : MonoBehaviour
 
     // Score
     private GameObject TheScore;
+
+    // Panel Selection amélioration
+    private GameObject UpgradePanel;
     // Start is called before the first frame update
     void Start()
     {
+        UpgradePanel = GameObject.Find("SelectUpgradePanel");
+        UpgradePanel.SetActive(false);
         TheScore = GameObject.Find("Score");
         currentHealth = health.GetComponent<Slider>().value;
         currentlevel = level.GetComponent<Slider>().value;
@@ -50,5 +55,15 @@ public class Yazid_Script : MonoBehaviour
         {
             TheScore.GetComponent<Score>().currentScore += 1;
         }
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            UpgradePanel.SetActive(true);
+        }
     }
+
+        public  void SelectUpgrade()
+        {
+            UpgradePanel.SetActive(false);
+        }
 }
