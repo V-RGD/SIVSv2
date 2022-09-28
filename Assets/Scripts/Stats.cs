@@ -8,5 +8,6 @@ public class Stats
     public string name;
     public string description;
     public string level;
+    public int niveau;
     public int[] valeurs;
 }
