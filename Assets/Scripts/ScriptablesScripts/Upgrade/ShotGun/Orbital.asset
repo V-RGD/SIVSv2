@@ -10,8 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76d98002afd69a642b6be42727a26449, type: 3}
-  m_Name: ShotGunDamage
+  m_Name: Orbital
   m_EditorClassIdentifier: 
-  name: Damage
-  description: "Les d\xE9gats inflig\xE9s"
-  level: 0
+  TheStats:
+  - name: Damage
+    description: Les damages
+    level: 0
+    valeurs: 
+  - name: Size
+    description: La Size
+    level: 0
+    valeurs: 
+  - name: Vitesse Rota
+    description: La vitesse rota
+    level: 0
+    valeurs: 

@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 42802447}
   - component: {fileID: 42802446}
   - component: {fileID: 42802445}
+  - component: {fileID: 42802448}
   m_Layer: 5
   m_Name: Boost2
   m_TagString: Untagged
@@ -456,6 +457,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42802443}
   m_CullTransparentMesh: 1
+--- !u!114 &42802448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42802443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
 --- !u!1 &60503690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,9 +1420,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
-  upgradeScriptableObject1: {fileID: 0}
-  upgradeScriptableObject2: {fileID: 0}
-  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &278965484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,9 +1873,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
-  upgradeScriptableObject1: {fileID: 0}
-  upgradeScriptableObject2: {fileID: 0}
-  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &410637954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,6 +2871,7 @@ GameObject:
   - component: {fileID: 753515018}
   - component: {fileID: 753515017}
   - component: {fileID: 753515016}
+  - component: {fileID: 753515019}
   m_Layer: 5
   m_Name: Boost3
   m_TagString: Untagged
@@ -2987,6 +2996,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753515014}
   m_CullTransparentMesh: 1
+--- !u!114 &753515019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753515014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
 --- !u!1 &800821167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,9 +3488,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
-  upgradeScriptableObject1: {fileID: 0}
-  upgradeScriptableObject2: {fileID: 0}
-  upgradeScriptableObject3: {fileID: 0}
 --- !u!1001 &888600438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3689,9 +3708,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
-  upgradeScriptableObject1: {fileID: 0}
-  upgradeScriptableObject2: {fileID: 0}
-  upgradeScriptableObject3: {fileID: 0}
 --- !u!1 &894178940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,6 +4436,7 @@ GameObject:
   - component: {fileID: 1215003860}
   - component: {fileID: 1215003859}
   - component: {fileID: 1215003858}
+  - component: {fileID: 1215003861}
   m_Layer: 5
   m_Name: Boost1
   m_TagString: Untagged
@@ -4544,6 +4561,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215003856}
   m_CullTransparentMesh: 1
+--- !u!114 &1215003861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215003856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
 --- !u!1 &1220521981
 GameObject:
   m_ObjectHideFlags: 0
@@ -8276,9 +8306,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
-  upgradeScriptableObject1: {fileID: 11400000, guid: 48547debc95ea684fa085af6bdcade9b, type: 2}
-  upgradeScriptableObject2: {fileID: 11400000, guid: 2d2d5c2d54f4feb46ae03a66be9a532d, type: 2}
-  upgradeScriptableObject3: {fileID: 11400000, guid: 41312d7cb98bc3f4f8361b52a8f07496, type: 2}
 --- !u!1001 &3625682232443770167
 PrefabInstance:
   m_ObjectHideFlags: 0
