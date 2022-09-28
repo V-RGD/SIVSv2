@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
-    private float speed = 1;
+    private float speed = 3;
     public EnemyType enemyType;
     public float health;
     public float damage;
