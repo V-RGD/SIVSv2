@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject player;
-    public int health = 1000;
-
+    private GameObject player;
     private float speed = 1;
-    private float maxSpeed = 2;
+    public EnemyType enemyType;
+    public float health;
+    public float damage;
+    public Spawner spawner;
 
-    // Start is called before the first frame update
+    public GameObject damageUI;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            spawner.enemyPoses.Remove(gameObject.transform);
             Destroy(gameObject);
         }
     }

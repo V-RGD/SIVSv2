@@ -13,7 +13,7 @@ public class PlayerAttacks : MonoBehaviour
     //modules
     public bool shotgunIsExplosive;
     public bool shotgunIsPiercing;
-    public bool shotgunIsDoubleShot;
+    //public bool shotgunIsDoubleShot;
     //------------missile guidé ------------- Instancie un missile qui ne touche pas le joueur mais se dirige vers l'ennemi le plus proche
     public float rocketRate;
     public float rocketAngleDiff = 0;
@@ -25,11 +25,15 @@ public class PlayerAttacks : MonoBehaviour
     public float mineRate;
     public float mineRadius;
     //modules
-    public bool rocketIsShrapnel;
+    public bool mineIsShrapnel;
+    public bool mineIsIce;
     //-----------------shield ------------------ orbite a une certaine distance du joueur 
     public float shieldRate;
     public float shieldRange;
     public float shieldSpeed = 1;//reliés
+
+    public bool shieldIsDouble;
+    public bool shieldIsPewPew;
     
     //tweak values to balance 
     public float shotgunProjectileDamage;
@@ -69,15 +73,22 @@ public class PlayerAttacks : MonoBehaviour
     public float rocketCooldown = 4;
     public float mineCooldown = 3;
 
+    public bool isShotGunManual;
+
+    private void Awake()
+    {
+        spawner = GameObject.Find("EnemySpawner").GetComponent<Spawner>();
+    }
+
     void Update()
     {
-        //FindClosestEnemy();
+        FindClosestEnemy();
         if (target != null)
         {
             attackDir = (target.transform.position - transform.position).normalized;
         }
 
-        if (shotgunTimer <= 0)
+        if (shotgunTimer <= 0 && !isShotGunManual)
         {
             shotgunTimer = shotgunCooldown;
             ShotgunShot();
@@ -141,10 +152,13 @@ public class PlayerAttacks : MonoBehaviour
 
     void FindClosestEnemy()
     {
-        //spawner adds each enemy to the array enemies
-        enemyPoses = spawner.enemyPoses.ToArray();
-        //takes the closest one from the player
-        target = GetClosestEnemy(enemyPoses).gameObject;
+        if (spawner.enemyPoses.Count != 0)
+        {
+            //spawner adds each enemy to the array enemies
+            enemyPoses = spawner.enemyPoses.ToArray();
+            //takes the closest one from the player
+            target = GetClosestEnemy(enemyPoses).gameObject;
+        }
     }
     
     Transform GetClosestEnemy (Transform[] enemies)
