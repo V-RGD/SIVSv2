@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 42802446}
   - component: {fileID: 42802445}
   - component: {fileID: 42802448}
+  - component: {fileID: 42802449}
   m_Layer: 5
   m_Name: Boost2
   m_TagString: Untagged
@@ -431,6 +432,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 42802449}
+        m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2110740152}
+        m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
+        m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &42802446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +522,18 @@ MonoBehaviour:
   SpeOrbital: {fileID: 0}
   SpeTronc: {fileID: 0}
   BarName: 
+--- !u!114 &42802449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42802443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60503690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3389,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2110740152}
+        m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
+        m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &719005176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3563,6 +3612,7 @@ GameObject:
   - component: {fileID: 753515017}
   - component: {fileID: 753515016}
   - component: {fileID: 753515019}
+  - component: {fileID: 753515020}
   m_Layer: 5
   m_Name: Boost3
   m_TagString: Untagged
@@ -3661,6 +3711,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 753515020}
+        m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2110740152}
+        m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
+        m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &753515017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,6 +3801,18 @@ MonoBehaviour:
   SpeOrbital: {fileID: 0}
   SpeTronc: {fileID: 0}
   BarName: 
+--- !u!114 &753515020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753515014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775515718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,6 +5426,7 @@ GameObject:
   - component: {fileID: 1215003859}
   - component: {fileID: 1215003858}
   - component: {fileID: 1215003861}
+  - component: {fileID: 1215003862}
   m_Layer: 5
   m_Name: Boost1
   m_TagString: Untagged
@@ -5438,6 +5525,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1215003862}
+        m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2110740152}
+        m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
+        m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215003859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5504,6 +5615,18 @@ MonoBehaviour:
   SpeOrbital: {fileID: 0}
   SpeTronc: {fileID: 0}
   BarName: 
+--- !u!114 &1215003862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215003856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1220521981
 GameObject:
   m_ObjectHideFlags: 0
@@ -8599,6 +8722,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2110740152}
+        m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
+        m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1913838792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9504,6 +9639,7 @@ MonoBehaviour:
   TiersMissile: -1
   TiersOrbital: -1
   TiersTronc: -1
+  ButtonName: 
 --- !u!1001 &2988416316384485050
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class NumberOfUpdates : MonoBehaviour
     public int TiersOrbital;
     public int TiersTronc;
 
+    private string BarName;
+    public string ButtonName;
+
     public static NumberOfUpdates instance;
      private void Awake()
     {
@@ -30,5 +33,44 @@ public class NumberOfUpdates : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void TheUpgrades()
+    {
+        BarName = BoostersParents.instance.TheBar;
+
+        // Barre 1
+        if(BarName == "LevelBar1")
+        {
+            if(ButtonName == "Boost1")
+            {
+                Debug.Log("Damage");
+            }
+            if(ButtonName == "Boost2")
+            {
+                Debug.Log("Radius");
+            }
+            if(ButtonName == "Boost3")
+            {
+                Debug.Log("Cadence");
+            }
+        }
+
+        // Barre 2
+        if(BarName == "LevelBar2")
+        {
+            if(ButtonName == "Boost1")
+            {
+                Debug.Log("DamageMine");
+            }
+            if(ButtonName == "Boost2")
+            {
+                Debug.Log("RadiusMine");
+            }
+            if(ButtonName == "Boost3")
+            {
+                Debug.Log("CadenceMine");
+            }
+        }
     }
 }
