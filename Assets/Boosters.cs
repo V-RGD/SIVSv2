@@ -12,7 +12,10 @@ public class Boosters : MonoBehaviour
 
     public UpgradeWeapons Weapons;
     public UpgradeWeapons ShotGun;
+    public UpgradeWeapons Mine;
+    public UpgradeWeapons Missile;
     public UpgradeWeapons Orbital;
+    public UpgradeWeapons Tronc;
     // Start is called before the first frame update
     void Start()
     {

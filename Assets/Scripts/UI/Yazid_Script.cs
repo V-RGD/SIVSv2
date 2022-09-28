@@ -12,8 +12,11 @@ public class Yazid_Script : MonoBehaviour
     public float currentHealth;
 
     // Experience
-    public LevelBar level;
-    public float currentlevel;
+    public LevelBar level1;
+    public LevelBar level2;
+    public LevelBar level3;
+    public LevelBar level4;
+    public LevelBar level5;
 
     // Score
     private GameObject TheScore;
@@ -38,7 +41,6 @@ public class Yazid_Script : MonoBehaviour
         UpgradePanel.SetActive(false);
         TheScore = GameObject.Find("Score");
         currentHealth = health.GetComponent<Slider>().value;
-        currentlevel = level.GetComponent<Slider>().value;
         PauseMenu = GameObject.Find("PauseMenuPanel");
         PauseMenu.SetActive(false);
         PanelSettings = GameObject.Find("SettingsPanel");
@@ -63,13 +65,27 @@ public class Yazid_Script : MonoBehaviour
             health.GetComponent<HealthBar>().SetHealth(currentHealth);
         }
 
-        // Experience
-        currentlevel = level.GetComponent<Slider>().value;
 
-        if(Input.GetKeyDown(KeyCode.L))
+        // LevelBar
+        if(Input.GetKeyDown(KeyCode.Keypad1))
         {
-            currentlevel += 10;
-            level.GetComponent<LevelBar>().SetLevel(currentlevel);
+            level1.GetComponent<LevelBar>().BoostLevel(10);
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            level2.GetComponent<LevelBar>().BoostLevel(10);
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            level3.GetComponent<LevelBar>().BoostLevel(10);
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            level4.GetComponent<LevelBar>().BoostLevel(10);
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            level5.GetComponent<LevelBar>().BoostLevel(10);
         }
 
         // Score
