@@ -7,6 +7,16 @@ using UnityEngine.SceneManagement;
 public class Yazid_Script : MonoBehaviour
 {
 
+    public static Yazid_Script instance;
+     private void Awake()
+    {
+            if (instance != null)
+            {
+              return;
+            }
+            instance = this;
+    }
+
     // Health
     public HealthBar health;
     public float currentHealth;
@@ -23,7 +33,7 @@ public class Yazid_Script : MonoBehaviour
 
     // Pause
     private GameObject PauseMenu;
-    private bool isPaused;
+    public bool isPaused;
 
     // Settings
     private GameObject PanelSettings;
@@ -40,6 +50,7 @@ public class Yazid_Script : MonoBehaviour
         PauseMenu.SetActive(false);
         PanelSettings = GameObject.Find("SettingsPanel");
         PanelSettings.SetActive(false);
+        BoostersParents.instance.ResetLevel();
     }
 
     // Update is called once per frame
@@ -99,6 +110,10 @@ public class Yazid_Script : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
         // Pause Menu
@@ -118,6 +133,7 @@ public class Yazid_Script : MonoBehaviour
         PauseMenu.SetActive(false);
         isPaused = false;
         SceneManager.LoadScene("Yazid");
+        BoostersParents.instance.ResetLevel();
     }
 
     // Main Menu
@@ -125,12 +141,14 @@ public class Yazid_Script : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         PauseMenu.SetActive(false);
+        BoostersParents.instance.ResetLevel();
     }
 
     // Quit Button
     public void Quit()
     {
         Application.Quit();
+        BoostersParents.instance.ResetLevel();
     }
 
     // Start Button
@@ -139,6 +157,7 @@ public class Yazid_Script : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         SceneManager.LoadScene("Yazid");
+        BoostersParents.instance.ResetLevel();
     }
 
         public void OpenSettings()

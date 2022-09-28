@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -186,6 +187,16 @@ public class PlayerController : MonoBehaviour
             inputDir.x = Input.GetAxisRaw("Horizontal");
             inputDir.y = Input.GetAxisRaw("Vertical");
             movementDir = inputDir;
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.CompareTag("Enemy"))
+            {
+                gameManager.health -= col.GetComponent<Enemy>().damage;
+                Debug.Log("lost damage");
+                //GetComponent<Animator>().SetTrigger("Hurt");
+            }
         }
 }
 

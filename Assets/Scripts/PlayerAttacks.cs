@@ -73,6 +73,8 @@ public class PlayerAttacks : MonoBehaviour
     public float rocketCooldown = 4;
     public float mineCooldown = 3;
 
+    public bool isShotGunManual;
+
     private void Awake()
     {
         spawner = GameObject.Find("EnemySpawner").GetComponent<Spawner>();
@@ -86,7 +88,7 @@ public class PlayerAttacks : MonoBehaviour
             attackDir = (target.transform.position - transform.position).normalized;
         }
 
-        if (shotgunTimer <= 0)
+        if (shotgunTimer <= 0 && !isShotGunManual)
         {
             shotgunTimer = shotgunCooldown;
             ShotgunShot();

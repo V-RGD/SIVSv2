@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float damage;
     public Spawner spawner;
 
+    public GameObject damageUI;
+
     void Start()
     {
         player = GameObject.Find("Player");

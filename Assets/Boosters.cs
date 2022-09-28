@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Boosters : MonoBehaviour
 {
 
-    private Transform name;
-    private Transform description;
-    private Transform level;
+    public Transform name;
+    public Transform description;
+    public Transform level;
 
     public UpgradeWeapons Weapons;
     public UpgradeWeapons ShotGun;
@@ -68,19 +68,32 @@ public class Boosters : MonoBehaviour
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].description;
-                level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].level;
+                level.transform.GetChild(0).GetComponent<Text>().text = "" + Weapons.TheStats[0].niveau;
             }
     if(gameObject.name == "Boost2")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].description;
-                level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].level;
+                level.transform.GetChild(0).GetComponent<Text>().text = "" + Weapons.TheStats[1].niveau;
             }
     if(gameObject.name == "Boost3")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].description;
-                level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].level;
+                level.transform.GetChild(0).GetComponent<Text>().text = "" + Weapons.TheStats[2].niveau;
             }
    } 
+
+   public void FirstChoice()
+   {
+     Weapons.TheStats[0].niveau += 1;
+   }
+      public void SecondChoice()
+   {
+     Weapons.TheStats[1].niveau += 1;
+   }
+         public void LastChoice()
+   {
+     Weapons.TheStats[2].niveau += 1;
+   }
 }

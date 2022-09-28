@@ -16,12 +16,15 @@ MonoBehaviour:
   - name: Damage
     description: SHot gun
     level: 0
+    niveau: 5
     valeurs: 
   - name: Radius
     description: Le Radius
     level: 0
+    niveau: 3
     valeurs: 
   - name: Cadence
     description: La Cadence
     level: 0
+    niveau: 4
     valeurs: 

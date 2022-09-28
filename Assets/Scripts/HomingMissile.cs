@@ -30,7 +30,7 @@ public class HomingMissile : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            
         }
     }
 }
