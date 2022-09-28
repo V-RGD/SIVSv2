@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TheStats:
   - name: Damage
-    description: SHot gun
+    description: Shotgun
     level: 0
-    niveau: 5
+    niveau: 0
     valeurs: 
-  - name: Radius
-    description: Le Radius
+  - name: radius
+    description: Le radius
     level: 0
-    niveau: 3
+    niveau: 0
     valeurs: 
   - name: Cadence
-    description: La Cadence
+    description: La cadence
     level: 0
-    niveau: 4
+    niveau: 0
     valeurs: 
