@@ -55,6 +55,9 @@ public class PlayerController : MonoBehaviour
     //used to change direction accordingly to sprite direction
     public int dirCoef;
 
+    [Header("Movement")] 
+    public Animator playerAnimator;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        playerAnimator.SetBool("isRunning", false);
         canMove = true;
         isAttacking = false;
     }
@@ -92,6 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         if (movementDir!= Vector2.zero && speedFactor != 0)
         {
+            playerAnimator.SetBool("isRunning", true);
             rb.AddForce(new Vector3(movementDir.x * acceleration, movementDir.y * acceleration));
             
             //cap x speed
@@ -116,6 +121,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            playerAnimator.SetBool("isRunning", false);
             rb.velocity = Vector2.zero;
         }
         if (movementDir.x == 0)

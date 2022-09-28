@@ -330,6 +330,7 @@ MonoBehaviour:
   invincibleTime: 2
   inputDir: {x: 0, y: 0}
   dirCoef: 1
+  playerAnimator: {fileID: 8518646027766302684}
 --- !u!114 &1967861324312598675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ Animator:
   m_GameObject: {fileID: 8518646027766302687}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f54664df6b2461d468e1fa6c7bedbaef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -490,7 +491,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1808945831, guid: 2080d5b79c508fc42acef955dc760a9c, type: 3}
+  m_Sprite: {fileID: 1695951469, guid: 98c0b083b2f752e44b2492dfdfc49da3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
