@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour
@@ -74,21 +71,28 @@ public class PlayerAttacks : MonoBehaviour
     public float mineCooldown = 3;
 
     public bool isShotGunManual;
+    private Vector2 mousePos;
+    private Vector2 mouseDir;
+    public Camera cam;
 
     private void Awake()
     {
         spawner = GameObject.Find("EnemySpawner").GetComponent<Spawner>();
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     void Update()
     {
+        LookAtMouse();
         FindClosestEnemy();
         if (target != null)
         {
             attackDir = (target.transform.position - transform.position).normalized;
         }
 
-        if (shotgunTimer <= 0 && !isShotGunManual)
+        mouseDir = (mousePos - new Vector2(transform.position.x, transform.position.y)).normalized;
+
+        if (shotgunTimer <= 0 && (!isShotGunManual || Input.GetKeyDown(KeyCode.Mouse0)))
         {
             shotgunTimer = shotgunCooldown;
             ShotgunShot();
@@ -128,13 +132,23 @@ public class PlayerAttacks : MonoBehaviour
         //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
         for (int i = 0; i < shotgunProjectileNumber; i++)
         {
-            Vector2 rotateDir = Quaternion.Euler(0, 0, rotationDiff) * attackDir;
+            Vector2 rotateDir;
             GameObject projo = Instantiate(shotgunProjo, transform.position, Quaternion.identity);
+            if (!isShotGunManual)
+            {
+                rotateDir = Quaternion.Euler(0, 0, rotationDiff) * attackDir;
+            }
+            else
+            {
+                rotateDir = Quaternion.Euler(0, 0, rotationDiff) * mouseDir;
+            }
             projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * shotgunSpeed);
             projo.GetComponent<HomingMissile>().enemy = target;
             projo.GetComponent<HomingMissile>().isRocket = false;
             projo.GetComponent<HomingMissile>().rotationDiff = rotateDir;
             rotationDiff += shotgunSpread;
+            
+            
         }
     }
 
@@ -178,5 +192,10 @@ public class PlayerAttacks : MonoBehaviour
         }
      
         return bestTarget;
+    }
+
+    void LookAtMouse()
+    {
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 }
