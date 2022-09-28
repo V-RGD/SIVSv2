@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TheStats:
   - name: Missile Bonus
-    description: Nombre de missile en plus
+    description: missile
     level: 0
     valeurs: 
   - name: Radius

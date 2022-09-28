@@ -16,6 +16,20 @@ public class Boosters : MonoBehaviour
     public UpgradeWeapons Missile;
     public UpgradeWeapons Orbital;
     public UpgradeWeapons Tronc;
+
+    public string BarName;
+
+     // Singelton
+     public static Boosters instance;
+     private void Awake()
+    {
+            if (instance != null)
+            {
+              return;
+            }
+            instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,34 +39,48 @@ public class Boosters : MonoBehaviour
         Weapons = ShotGun;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RefreshBar()
     {
-        if(Input.GetKeyDown(KeyCode.B))
+        if(BarName == "LevelBar1")
+        {
+            Weapons = ShotGun;
+        }
+        if(BarName == "LevelBar2")
+        {
+            Weapons = Mine;
+        }
+        if(BarName == "LevelBar3")
+        {
+            Weapons = Missile;
+        }
+        if(BarName == "LevelBar4")
         {
             Weapons = Orbital;
         }
-
-        if(Input.GetKeyDown(KeyCode.N))
+        if(BarName == "LevelBar5")
         {
-            if(gameObject.name == "Boost1")
+            Weapons = Tronc;
+        }
+    }
+   public void RefreshSelectPanel()
+   {
+    if(gameObject.name == "Boost1")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].description;
                 level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[0].level;
             }
-            if(gameObject.name == "Boost2")
+    if(gameObject.name == "Boost2")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].description;
                 level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[1].level;
             }
-            if(gameObject.name == "Boost3")
+    if(gameObject.name == "Boost3")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].description;
                 level.transform.GetChild(0).GetComponent<Text>().text = Weapons.TheStats[2].level;
             }
-        }
-    }
+   } 
 }

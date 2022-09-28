@@ -407,8 +407,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858453141}
-        m_TargetAssemblyTypeName: Yazid_Script, Assembly-CSharp
+      - m_Target: {fileID: 3204399186494565867}
+        m_TargetAssemblyTypeName: LevelBar, Assembly-CSharp
         m_MethodName: SelectUpgrade
         m_Mode: 1
         m_Arguments:
@@ -475,6 +475,7 @@ MonoBehaviour:
   Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
   Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
   Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  BarName: 
 --- !u!1 &60503690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217985, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Name
-      value: LevelBar (1)
+      value: LevelBar2
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217986, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Pivot.x
@@ -1425,6 +1426,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
+  UpgradePanel: {fileID: 2110740148}
 --- !u!1 &278965484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217985, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Name
-      value: LevelBar (3)
+      value: LevelBar4
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217986, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Pivot.x
@@ -1878,6 +1880,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
+  UpgradePanel: {fileID: 2110740148}
 --- !u!1 &410637954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,8 +2954,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858453141}
-        m_TargetAssemblyTypeName: Yazid_Script, Assembly-CSharp
+      - m_Target: {fileID: 3204399186494565867}
+        m_TargetAssemblyTypeName: LevelBar, Assembly-CSharp
         m_MethodName: SelectUpgrade
         m_Mode: 1
         m_Arguments:
@@ -3019,6 +3022,7 @@ MonoBehaviour:
   Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
   Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
   Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  BarName: 
 --- !u!1 &800821167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,7 +3299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217985, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Name
-      value: LevelBar (4)
+      value: LevelBar5
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217986, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Pivot.x
@@ -3498,6 +3502,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
+  UpgradePanel: {fileID: 2110740148}
 --- !u!1001 &888600438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3515,7 +3520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217985, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Name
-      value: LevelBar (2)
+      value: LevelBar3
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217986, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Pivot.x
@@ -3718,6 +3723,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
+  UpgradePanel: {fileID: 2110740148}
 --- !u!1 &894178940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,8 +4527,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858453141}
-        m_TargetAssemblyTypeName: Yazid_Script, Assembly-CSharp
+      - m_Target: {fileID: 3204399186494565867}
+        m_TargetAssemblyTypeName: LevelBar, Assembly-CSharp
         m_MethodName: SelectUpgrade
         m_Mode: 1
         m_Arguments:
@@ -4589,6 +4595,7 @@ MonoBehaviour:
   Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
   Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
   Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  BarName: 
 --- !u!1 &1220521981
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,6 +5080,7 @@ GameObject:
   - component: {fileID: 1408467867}
   - component: {fileID: 1408467869}
   - component: {fileID: 1408467868}
+  - component: {fileID: 1408467870}
   m_Layer: 5
   m_Name: Upgrades
   m_TagString: Untagged
@@ -5141,6 +5149,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408467866}
   m_CullTransparentMesh: 1
+--- !u!114 &1408467870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408467866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6662f867d602e8c4da5208f46c60bbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheBar: 
 --- !u!1 &1413754175
 GameObject:
   m_ObjectHideFlags: 0
@@ -6930,8 +6951,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 1168028897}
   currentHealth: 0
-  level: {fileID: 3204399186494565867}
-  currentlevel: 0
+  level1: {fileID: 3204399186494565867}
+  level2: {fileID: 275140864}
+  level3: {fileID: 888600443}
+  level4: {fileID: 381710419}
+  level5: {fileID: 885218546}
   sound: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
 --- !u!114 &1858453142
 MonoBehaviour:
@@ -8118,7 +8142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217985, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Name
-      value: LevelBar
+      value: LevelBar1
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217986, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Pivot.x
@@ -8321,6 +8345,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
+  UpgradePanel: {fileID: 2110740148}
 --- !u!1001 &3625682232443770167
 PrefabInstance:
   m_ObjectHideFlags: 0

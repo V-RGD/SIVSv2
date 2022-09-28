@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TheStats:
   - name: Damage
-    description: Les damages
+    description: Tronc
     level: 0
     valeurs: 
   - name: Size

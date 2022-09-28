@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TheStats:
   - name: Damage
-    description: Les Damages
+    description: Mine
     level: 0
     valeurs: 
   - name: Radius

@@ -21,9 +21,6 @@ public class Yazid_Script : MonoBehaviour
     // Score
     private GameObject TheScore;
 
-    // Panel Selection amélioration
-    private GameObject UpgradePanel;
-
     // Pause
     private GameObject PauseMenu;
     private bool isPaused;
@@ -37,8 +34,6 @@ public class Yazid_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpgradePanel = GameObject.Find("SelectUpgradePanel");
-        UpgradePanel.SetActive(false);
         TheScore = GameObject.Find("Score");
         currentHealth = health.GetComponent<Slider>().value;
         PauseMenu = GameObject.Find("PauseMenuPanel");
@@ -94,11 +89,6 @@ public class Yazid_Script : MonoBehaviour
             TheScore.GetComponent<Score>().currentScore += 1;
         }
 
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            UpgradePanel.SetActive(true);
-        }
-
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = true;
@@ -110,11 +100,6 @@ public class Yazid_Script : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-
-        public  void SelectUpgrade()
-        {
-            UpgradePanel.SetActive(false);
-        }
 
         // Pause Menu
 
