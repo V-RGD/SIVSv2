@@ -419,6 +419,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 42802448}
+        m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
+        m_MethodName: SecondChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &42802446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1439,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
   UpgradePanel: {fileID: 2110740148}
+  Weapons: {fileID: 0}
 --- !u!1 &278965484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,6 +1894,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
   UpgradePanel: {fileID: 2110740148}
+  Weapons: {fileID: 0}
 --- !u!1 &410637954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +2980,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 753515019}
+        m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
+        m_MethodName: LastChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &753515017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3503,6 +3529,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
   UpgradePanel: {fileID: 2110740148}
+  Weapons: {fileID: 0}
 --- !u!1001 &888600438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3724,6 +3751,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
   UpgradePanel: {fileID: 2110740148}
+  Weapons: {fileID: 0}
 --- !u!1 &894178940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,6 +4481,7 @@ GameObject:
   - component: {fileID: 1215003859}
   - component: {fileID: 1215003858}
   - component: {fileID: 1215003861}
+  - component: {fileID: 1215003862}
   m_Layer: 5
   m_Name: Boost1
   m_TagString: Untagged
@@ -4539,6 +4568,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1215003861}
+        m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
+        m_MethodName: FirstChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215003859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4596,6 +4637,18 @@ MonoBehaviour:
   Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
   Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
   BarName: 
+--- !u!114 &1215003862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215003856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b22ae688cd54c41a2d0c98c97b80db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1220521981
 GameObject:
   m_ObjectHideFlags: 0
@@ -8346,6 +8399,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
   UpgradePanel: {fileID: 2110740148}
+  Weapons: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
 --- !u!1001 &3625682232443770167
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ public class LevelBar : MonoBehaviour
 
     // Panel Selection amélioration
     public GameObject UpgradePanel;
+
+    // ScripatbleObject
+    public UpgradeWeapons Weapons;
     
 
     void Start()
@@ -85,6 +88,5 @@ public class LevelBar : MonoBehaviour
     public  void SelectUpgrade()
         {
             UpgradePanel.SetActive(false);
-         //  BoostersParents.instance.Transition();
         } 
 }
