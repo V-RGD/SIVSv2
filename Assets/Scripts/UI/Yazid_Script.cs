@@ -7,6 +7,16 @@ using UnityEngine.SceneManagement;
 public class Yazid_Script : MonoBehaviour
 {
 
+    public static Yazid_Script instance;
+     private void Awake()
+    {
+            if (instance != null)
+            {
+              return;
+            }
+            instance = this;
+    }
+
     // Health
     public HealthBar health;
     public float currentHealth;
@@ -23,7 +33,7 @@ public class Yazid_Script : MonoBehaviour
 
     // Pause
     private GameObject PauseMenu;
-    private bool isPaused;
+    public bool isPaused;
 
     // Settings
     private GameObject PanelSettings;
@@ -99,6 +109,10 @@ public class Yazid_Script : MonoBehaviour
         if(isPaused)
         {
             Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
         }
     }
 

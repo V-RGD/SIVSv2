@@ -82,11 +82,13 @@ public class LevelBar : MonoBehaviour
          BoostersParents.instance.Transition();
         SetLevel(0);
         UpgradePanel.SetActive(true);
+        Yazid_Script.instance.isPaused = true;
        }
     }
 
     public  void SelectUpgrade()
         {
             UpgradePanel.SetActive(false);
+            Yazid_Script.instance.isPaused = false;
         } 
 }
