@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerAnimator.SetBool("isRunning", false);
+        playerAnimator.SetBool("isHit", false);
         canMove = true;
         isAttacking = false;
     }
@@ -199,10 +200,12 @@ public class PlayerController : MonoBehaviour
         {
             if (col.CompareTag("Enemy"))
             {
+                //playerAnimator.SetBool("isHit", true);
                 gameManager.health -= col.GetComponent<Enemy>().damage;
                 Debug.Log("lost damage");
                 //GetComponent<Animator>().SetTrigger("Hurt");
             }
+            
         }
 }
 
