@@ -15,9 +15,7 @@ public class LevelBar : MonoBehaviour
 
     // Panel Selection amélioration
     public GameObject UpgradePanel;
-
-    // ScripatbleObject
-    public UpgradeWeapons Weapons;
+    public GameObject SpeUpgradePanel;
     
 
     void Start()
@@ -29,6 +27,7 @@ public class LevelBar : MonoBehaviour
 
   //      UpgradePanel = GameObject.Find("SelectUpgradePanel");
         UpgradePanel.SetActive(false);
+        SpeUpgradePanel.SetActive(false);
     }
 
     void Update()
@@ -60,28 +59,96 @@ public class LevelBar : MonoBehaviour
        {
         if(gameObject.name == "LevelBar1")
         {
+            NumberOfUpdates.instance.TiersShotGun += 1;
             BoostersParents.instance.TheBar = "LevelBar1";
+          if(NumberOfUpdates.instance.TiersShotGun == 4)
+          {
+            SpeBoostersParents.instance.TheBar = "LevelBar1";
+
+            SpeUpgradePanel.SetActive(true);
+            SpeBoostersParents.instance.NameUpdate();
+            SpeBoostersParents.instance.Transition();
+          }
+        else
+        {
+            UpgradePanel.SetActive(true);
+            BoostersParents.instance.NameUpdate();
+            BoostersParents.instance.Transition();
+        }
         }
         if(gameObject.name == "LevelBar2")
         {
+            NumberOfUpdates.instance.TiersMine += 1;
             BoostersParents.instance.TheBar = "LevelBar2";
+          if(NumberOfUpdates.instance.TiersMine == 4)
+          {
+            SpeBoostersParents.instance.TheBar = "LevelBar2";
+            SpeUpgradePanel.SetActive(true);
+            SpeBoostersParents.instance.NameUpdate();
+            SpeBoostersParents.instance.Transition();
+          }
+          else
+        {
+            UpgradePanel.SetActive(true);
+            BoostersParents.instance.NameUpdate();
+            BoostersParents.instance.Transition();
+        }
         }
         if(gameObject.name == "LevelBar3")
         {
+            NumberOfUpdates.instance.TiersMissile += 1;
             BoostersParents.instance.TheBar = "LevelBar3";
+          if(NumberOfUpdates.instance.TiersMissile == 4)
+          {
+            SpeBoostersParents.instance.TheBar = "LevelBar3";
+            SpeUpgradePanel.SetActive(true);
+            SpeBoostersParents.instance.NameUpdate();
+            SpeBoostersParents.instance.Transition();
+          }
+          else
+        {
+            UpgradePanel.SetActive(true);
+            BoostersParents.instance.NameUpdate();
+            BoostersParents.instance.Transition();
+        }
         }
         if(gameObject.name == "LevelBar4")
         {
+            NumberOfUpdates.instance.TiersOrbital += 1;
             BoostersParents.instance.TheBar = "LevelBar4";
+          if(NumberOfUpdates.instance.TiersOrbital == 4)
+          {
+            SpeBoostersParents.instance.TheBar = "LevelBar4";
+            SpeUpgradePanel.SetActive(true);
+            SpeBoostersParents.instance.NameUpdate();
+            SpeBoostersParents.instance.Transition();
+          }
+          else
+        {
+            UpgradePanel.SetActive(true);
+            BoostersParents.instance.NameUpdate();
+            BoostersParents.instance.Transition();
+        }
         }
         if(gameObject.name == "LevelBar5")
         {
+            NumberOfUpdates.instance.TiersTronc += 1;
             BoostersParents.instance.TheBar = "LevelBar5";
+          if(NumberOfUpdates.instance.TiersTronc == 4)
+          {
+            SpeBoostersParents.instance.TheBar = "LevelBar5";
+            SpeUpgradePanel.SetActive(true);
+            SpeBoostersParents.instance.NameUpdate();
+            SpeBoostersParents.instance.Transition();
+          }
+          else
+        {
+            UpgradePanel.SetActive(true);
+            BoostersParents.instance.NameUpdate();
+            BoostersParents.instance.Transition();
         }
-         BoostersParents.instance.NameUpdate();
-         BoostersParents.instance.Transition();
+        }
         SetLevel(0);
-        UpgradePanel.SetActive(true);
         Yazid_Script.instance.isPaused = true;
        }
     }
@@ -89,6 +156,7 @@ public class LevelBar : MonoBehaviour
     public  void SelectUpgrade()
         {
             UpgradePanel.SetActive(false);
+            SpeUpgradePanel.SetActive(false);
             Yazid_Script.instance.isPaused = false;
         } 
 }

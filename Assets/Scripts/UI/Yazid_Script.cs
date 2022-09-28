@@ -17,10 +17,6 @@ public class Yazid_Script : MonoBehaviour
             instance = this;
     }
 
-    // Health
-    public HealthBar health;
-    public float currentHealth;
-
     // Experience
     public LevelBar level1;
     public LevelBar level2;
@@ -45,7 +41,6 @@ public class Yazid_Script : MonoBehaviour
     void Start()
     {
         TheScore = GameObject.Find("Score");
-        currentHealth = health.GetComponent<Slider>().value;
         PauseMenu = GameObject.Find("PauseMenuPanel");
         PauseMenu.SetActive(false);
         PanelSettings = GameObject.Find("SettingsPanel");
@@ -60,15 +55,6 @@ public class Yazid_Script : MonoBehaviour
          if(Input.GetKeyDown(KeyCode.W))
         {
             AudioManager.instance.PlayClipAt(sound, transform.position);
-        }
-
-        // Health
-        currentHealth = health.GetComponent<Slider>().value;
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            currentHealth -= 10;
-            health.GetComponent<HealthBar>().SetHealth(currentHealth);
         }
 
 

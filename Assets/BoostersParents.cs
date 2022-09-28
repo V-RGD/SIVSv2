@@ -43,6 +43,16 @@ public class BoostersParents : MonoBehaviour
 
     public void Transition()
     {
+     /*   if(gameObject.transform.parent.name == "SelectSpePanel")
+        {
+        gameObject.transform.GetChild(0).GetComponent<Boosters>().RefreshBar();
+        gameObject.transform.GetChild(1).GetComponent<Boosters>().RefreshBar(); 
+
+        gameObject.transform.GetChild(0).GetComponent<Boosters>().RefreshSelectPanel();
+        gameObject.transform.GetChild(1).GetComponent<Boosters>().RefreshSelectPanel();     
+        } */
+
+
         gameObject.transform.GetChild(0).GetComponent<Boosters>().RefreshBar();
         gameObject.transform.GetChild(1).GetComponent<Boosters>().RefreshBar();
         gameObject.transform.GetChild(2).GetComponent<Boosters>().RefreshBar();
@@ -50,6 +60,7 @@ public class BoostersParents : MonoBehaviour
         gameObject.transform.GetChild(0).GetComponent<Boosters>().RefreshSelectPanel();
         gameObject.transform.GetChild(1).GetComponent<Boosters>().RefreshSelectPanel();
         gameObject.transform.GetChild(2).GetComponent<Boosters>().RefreshSelectPanel();
+
     }
 
     public void ResetLevel()
