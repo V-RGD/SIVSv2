@@ -40,6 +40,7 @@ public class Yazid_Script : MonoBehaviour
         PauseMenu.SetActive(false);
         PanelSettings = GameObject.Find("SettingsPanel");
         PanelSettings.SetActive(false);
+        BoostersParents.instance.ResetLevel();
     }
 
     // Update is called once per frame
@@ -118,6 +119,7 @@ public class Yazid_Script : MonoBehaviour
         PauseMenu.SetActive(false);
         isPaused = false;
         SceneManager.LoadScene("Yazid");
+        BoostersParents.instance.ResetLevel();
     }
 
     // Main Menu
@@ -125,12 +127,14 @@ public class Yazid_Script : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         PauseMenu.SetActive(false);
+        BoostersParents.instance.ResetLevel();
     }
 
     // Quit Button
     public void Quit()
     {
         Application.Quit();
+        BoostersParents.instance.ResetLevel();
     }
 
     // Start Button
@@ -139,6 +143,7 @@ public class Yazid_Script : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         SceneManager.LoadScene("Yazid");
+        BoostersParents.instance.ResetLevel();
     }
 
         public void OpenSettings()

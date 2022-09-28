@@ -5223,6 +5223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6662f867d602e8c4da5208f46c60bbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
+  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
+  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
+  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
+  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
   TheBar: 
 --- !u!1 &1413754175
 GameObject:
