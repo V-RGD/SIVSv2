@@ -3281,7 +3281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 1802012931}
-  description: {fileID: 1802012931}
+  description: {fileID: 1622717427}
   level: {fileID: 1730456490}
   Weapons: {fileID: 0}
   ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
@@ -8527,9 +8527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  description: {fileID: 0}
-  level: {fileID: 0}
+  name: {fileID: 1689316322}
+  description: {fileID: 621388068}
+  level: {fileID: 947095584}
   Weapons: {fileID: 0}
   ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
   Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}

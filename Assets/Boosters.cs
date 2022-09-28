@@ -132,7 +132,7 @@ public class Boosters : MonoBehaviour
                 name.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].description;
             }
-    if(gameObject.name == "Spe2")
+        if(gameObject.name == "Spe2")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[1].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[1].description;
