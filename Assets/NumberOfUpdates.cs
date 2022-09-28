@@ -12,6 +12,7 @@ public class NumberOfUpdates : MonoBehaviour
     public int TiersTronc;
 
     private string BarName;
+    private string SpeBarName;
     public string ButtonName;
 
     public static NumberOfUpdates instance;
@@ -38,6 +39,7 @@ public class NumberOfUpdates : MonoBehaviour
     public void TheUpgrades()
     {
         BarName = BoostersParents.instance.TheBar;
+        SpeBarName = SpeBoostersParents.instance.TheBar;
 
         // Barre 1
         if(BarName == "LevelBar1")
@@ -70,6 +72,19 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceMine");
+            }
+        }
+
+        // Spe1
+        if(BarName == "LevelBar1")
+        {
+            if(ButtonName == "Spe1")
+            {
+                Debug.Log("Spe1");
+            }
+            if(ButtonName == "Spe2")
+            {
+                Debug.Log("Spe2");
             }
         }
     }
