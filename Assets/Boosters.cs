@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Boosters : MonoBehaviour
 {
 
-    private Transform name;
-    private Transform description;
-    private Transform level;
+    public Transform name;
+    public Transform description;
+    public Transform level;
 
     public UpgradeWeapons Weapons;
     public UpgradeWeapons ShotGun;
