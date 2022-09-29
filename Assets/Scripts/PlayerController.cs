@@ -58,6 +58,9 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")] 
     public Animator playerAnimator;
 
+    // Sound Effects
+    public AudioClip TakeDamage;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -200,6 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             if (col.CompareTag("Enemy"))
             {
+                AudioManager.instance.PlayClipAt(TakeDamage, transform.position);
                 //playerAnimator.SetBool("isHit", true);
                 gameManager.health -= col.GetComponent<Enemy>().damage;
                 Debug.Log("lost damage");
