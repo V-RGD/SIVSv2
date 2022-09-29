@@ -221,6 +221,7 @@ MonoBehaviour:
   shotgunCooldown: 2
   rocketCooldown: 4
   mineCooldown: 3
+  shieldPewPewCooldown: 3
   isShotGunManual: 1
   cam: {fileID: 0}
 --- !u!95 &8518646027766302684
@@ -277,7 +278,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4746, y: 0.07489014}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

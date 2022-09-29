@@ -4757,6 +4757,7 @@ MonoBehaviour:
   spawnRate: 1
   enemyPoses: []
   cam: {fileID: 0}
+  goldenTimer: 120
   canSpawnGreen: 0
   canSpawnYellow: 0
   canSpawnOrange: 0
@@ -4771,7 +4772,7 @@ MonoBehaviour:
   goldenWaves: 060000000a00000010000000160000001c00000022000000
   currentWave: 0
   waveTimer: 0
-  enemyHealths: 204e000004000000100000002000000038000000
+  enemyHealths: 0200000004000000100000002000000038000000
   H_Upgrades: 020000000400000006000000080000000a000000
   enemyDamages: 0400000005000000060000000700000008000000
   enemyPrefabs:
@@ -7574,6 +7575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959448524}
   - component: {fileID: 1959448523}
+  - component: {fileID: 1959448525}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -7626,7 +7628,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959448522}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7635,6 +7637,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959448525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959448522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4f8b258f1b9dc4abc1d50bd25d5349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977966793
 GameObject:
   m_ObjectHideFlags: 0

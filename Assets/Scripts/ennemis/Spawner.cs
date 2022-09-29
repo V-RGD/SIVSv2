@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     private float orangeTimer;
     private float redTimer;
     private float blueTimer;
-    private float goldenTimer = 120;
+    public float goldenTimer = 0;
 
     public bool canSpawnGreen;
     public bool canSpawnYellow;
@@ -43,6 +43,8 @@ public class Spawner : MonoBehaviour
     public int[] enemyDamages = new []{4, 5, 6, 7, 8};
 
     private int[] goldenHealths = new []{50, 100, 150, 200, 250, 300};
+    private int[] goldenDamages = new []{5, 10, 15, 20, 25, 30};
+    private int goldenToSpawn = 1;
 
     private float cameraHeight;
     private float cameraLenght;
@@ -143,8 +145,6 @@ public class Spawner : MonoBehaviour
         {
             canSpawnGolden = true;
         }
-        
-        goldenTimer += Time.deltaTime;
     }
     #endregion
     #region SpawnTimers
@@ -183,6 +183,8 @@ public class Spawner : MonoBehaviour
         if (goldenTimer <= 0)
         {
             goldenTimer = 180;
+            goldenToSpawn++;
+            Debug.Log("golden dino spawned");
             EnemySpawn(5);
         }
     }
@@ -217,8 +219,16 @@ public class Spawner : MonoBehaviour
         spawnPoint += new Vector2(player.transform.position.x, player.transform.position.y);
         #endregion
         GameObject enemyToSpawn = Instantiate(enemyPrefabs[enemyType], spawnPoint, quaternion.identity);
-        enemyToSpawn.GetComponent<Enemy>().health = enemyHealths[enemyType] + currentWave * H_Upgrades[enemyType];
-        enemyToSpawn.GetComponent<Enemy>().damage = enemyDamages[enemyType];
+        if (enemyType == 5)
+        {
+            enemyToSpawn.GetComponent<Enemy>().health = goldenHealths[goldenToSpawn];
+            enemyToSpawn.GetComponent<Enemy>().damage = goldenDamages[goldenToSpawn];
+        }
+        else
+        {
+            enemyToSpawn.GetComponent<Enemy>().health = enemyHealths[enemyType] + currentWave * H_Upgrades[enemyType];
+            enemyToSpawn.GetComponent<Enemy>().damage = enemyDamages[enemyType];
+        }
         enemyToSpawn.GetComponent<Enemy>().spawner = this;
         enemyPoses.Add(enemyToSpawn.transform);
     }

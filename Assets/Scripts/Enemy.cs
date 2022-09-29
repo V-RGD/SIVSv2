@@ -68,7 +68,6 @@ public class Enemy : MonoBehaviour
         ui.GetComponent<TMP_Text>().text = burnDamage.ToString();
         yield return new WaitForSeconds(1);
         canBurn = true;
-        Debug.Log("took flame damage");
     }
     
     
