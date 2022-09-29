@@ -7337,9 +7337,9 @@ MonoBehaviour:
   slider: {fileID: 1539252373}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.3584906, g: 0.3538405, b: 0.06899251, a: 1}
-    key1: {r: 1, g: 0.91166264, b: 0, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
+    key0: {r: 0.2924528, g: 0.08357845, b: 0.04248842, a: 1}
+    key1: {r: 1, g: 0.10717313, b: 0, a: 1}
+    key2: {r: 1, g: 0.91166264, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -9831,8 +9831,8 @@ MonoBehaviour:
   slider: {fileID: 1905947487}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.3207547, g: 0.20175636, b: 0.016340308, a: 1}
-    key1: {r: 1, g: 0.6552105, b: 0, a: 1}
+    key0: {r: 0.35686275, g: 0.3529412, b: 0.07058824, a: 1}
+    key1: {r: 1, g: 0.9098039, b: 0, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -10061,8 +10061,8 @@ MonoBehaviour:
   slider: {fileID: 1912515765}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.3679245, g: 0.12755387, b: 0.07427909, a: 1}
-    key1: {r: 1, g: 0, b: 0.09850311, a: 1}
+    key0: {r: 0.3679245, g: 0.2526307, b: 0.0673371, a: 1}
+    key1: {r: 1, g: 0.6341777, b: 0, a: 1}
     key2: {r: 1, g: 0, b: 0.09850311, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
