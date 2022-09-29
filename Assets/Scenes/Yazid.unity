@@ -1748,6 +1748,9 @@ MonoBehaviour:
   maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
+  GainXP: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  UpgradeSelection: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  OpenUpgrade: {fileID: 8300000, guid: 55eb72bbc4d8431438f50deb41e18391, type: 3}
 --- !u!1 &278965484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,6 +2211,9 @@ MonoBehaviour:
   maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
+  GainXP: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  UpgradeSelection: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  OpenUpgrade: {fileID: 8300000, guid: 55eb72bbc4d8431438f50deb41e18391, type: 3}
 --- !u!1 &419041067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,6 +4525,9 @@ MonoBehaviour:
   maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
+  GainXP: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  UpgradeSelection: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  OpenUpgrade: {fileID: 8300000, guid: 55eb72bbc4d8431438f50deb41e18391, type: 3}
 --- !u!1001 &888600438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4746,6 +4755,9 @@ MonoBehaviour:
   maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
+  GainXP: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  UpgradeSelection: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  OpenUpgrade: {fileID: 8300000, guid: 55eb72bbc4d8431438f50deb41e18391, type: 3}
 --- !u!1 &894178940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6692,6 +6704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1356597062}
+  ChestBox: {fileID: 8300000, guid: ea31cc61d9e32c54483e6db9c0044567, type: 3}
 --- !u!61 &1356597065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10992,6 +11005,9 @@ MonoBehaviour:
   maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
+  GainXP: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  UpgradeSelection: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
+  OpenUpgrade: {fileID: 8300000, guid: 55eb72bbc4d8431438f50deb41e18391, type: 3}
 --- !u!1001 &3625682232443770167
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class LevelBar : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class LevelBar : MonoBehaviour
     // Panel Selection amélioration
     public GameObject UpgradePanel;
     public GameObject SpeUpgradePanel;
-    
+
+    // SoundEffects
+    public AudioClip GainXP;
+    public AudioClip UpgradeSelection;
+    public AudioClip OpenUpgrade;
 
     void Start()
     {
@@ -54,11 +59,13 @@ public class LevelBar : MonoBehaviour
 
         public void BoostLevel(float boost)
     {
+       AudioManager.instance.PlayClipAt(GainXP, transform.position);
        currentlevel += boost;
        SetLevel(currentlevel);
 
        if(currentlevel + 10 > maxLevel)
        {
+        AudioManager.instance.PlayClipAt(OpenUpgrade, transform.position);
         if(gameObject.name == "LevelBar1")
         {
             gameObject.GetComponent<Slider>().maxValue += 10;
@@ -167,6 +174,7 @@ public class LevelBar : MonoBehaviour
 
     public  void SelectUpgrade()
         {
+            AudioManager.instance.PlayClipAt(UpgradeSelection, transform.position);
             UpgradePanel.SetActive(false);
             SpeUpgradePanel.SetActive(false);
             Yazid_Script.instance.isPaused = false;
