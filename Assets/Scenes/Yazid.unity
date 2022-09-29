@@ -1628,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -1713,8 +1717,8 @@ MonoBehaviour:
   slider: {fileID: 275140863}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.031372547, g: 0.7243108, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0.67604685, a: 1}
+    key0: {r: 0.3207547, g: 0.20175636, b: 0.016340308, a: 1}
+    key1: {r: 1, g: 0.6552105, b: 0, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1741,6 +1745,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &278965484
@@ -2083,6 +2088,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -2168,8 +2177,8 @@ MonoBehaviour:
   slider: {fileID: 381710418}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.031372547, g: 0.7243108, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0.67604685, a: 1}
+    key0: {r: 0.3584906, g: 0.3538405, b: 0.06899251, a: 1}
+    key1: {r: 1, g: 0.91166264, b: 0, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2196,6 +2205,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &419041067
@@ -4389,6 +4399,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -4502,6 +4516,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1001 &888600438
@@ -4611,6 +4626,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -4696,9 +4715,9 @@ MonoBehaviour:
   slider: {fileID: 888600442}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.031372547, g: 0.7243108, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0.67604685, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
+    key0: {r: 0.3679245, g: 0.12755387, b: 0.07427909, a: 1}
+    key1: {r: 1, g: 0, b: 0.09850311, a: 1}
+    key2: {r: 1, g: 0, b: 0.09850311, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -4724,6 +4743,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &894178940
@@ -10852,6 +10872,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -10937,15 +10961,15 @@ MonoBehaviour:
   slider: {fileID: 3204399186494565866}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.03137255, g: 0.7254902, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0.67604685, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
+    key0: {r: 0.06386613, g: 0.3679245, b: 0.06924049, a: 1}
+    key1: {r: 0.46938062, g: 1, b: 0, a: 1}
+    key2: {r: 0.46938062, g: 1, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
+    ctime0: 964
     ctime1: 65535
     ctime2: 65535
     ctime3: 0
@@ -10965,6 +10989,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1001 &3625682232443770167

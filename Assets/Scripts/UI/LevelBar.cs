@@ -12,6 +12,7 @@ public class LevelBar : MonoBehaviour
     private GameObject Boost3;
     
     private float currentlevel;
+    public float maxLevel;
 
     // Panel Selection amélioration
     public GameObject UpgradePanel;
@@ -24,6 +25,7 @@ public class LevelBar : MonoBehaviour
         Boost1 = GameObject.Find("Boost1");
         Boost2 = GameObject.Find("Boost2");
         Boost3 = GameObject.Find("Boost3");
+        maxLevel = gameObject.GetComponent<Slider>().maxValue;
 
   //      UpgradePanel = GameObject.Find("SelectUpgradePanel");
         UpgradePanel.SetActive(false);
@@ -55,10 +57,12 @@ public class LevelBar : MonoBehaviour
        currentlevel += boost;
        SetLevel(currentlevel);
 
-       if(currentlevel + 10 > 100)
+       if(currentlevel + 10 > maxLevel)
        {
         if(gameObject.name == "LevelBar1")
         {
+            gameObject.GetComponent<Slider>().maxValue += 10;
+            maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersShotGun += 1;
             BoostersParents.instance.TheBar = "LevelBar1";
           if(NumberOfUpdates.instance.TiersShotGun == 4 || NumberOfUpdates.instance.TiersShotGun == 9)
@@ -78,6 +82,8 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar2")
         {
+            gameObject.GetComponent<Slider>().maxValue += 20;
+            maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMine += 1;
             BoostersParents.instance.TheBar = "LevelBar2";
           if(NumberOfUpdates.instance.TiersMine == 4 || NumberOfUpdates.instance.TiersMine == 9)
@@ -96,6 +102,8 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar3")
         {
+            gameObject.GetComponent<Slider>().maxValue += 30;
+            maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMissile += 1;
             BoostersParents.instance.TheBar = "LevelBar3";
           if(NumberOfUpdates.instance.TiersMissile == 4 || NumberOfUpdates.instance.TiersMissile == 9)
@@ -114,6 +122,8 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar4")
         {
+            gameObject.GetComponent<Slider>().maxValue += 40;
+            maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersOrbital += 1;
             BoostersParents.instance.TheBar = "LevelBar4";
           if(NumberOfUpdates.instance.TiersOrbital == 4 || NumberOfUpdates.instance.TiersOrbital == 9)
@@ -132,6 +142,8 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar5")
         {
+            gameObject.GetComponent<Slider>().maxValue += 50;
+            maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersTronc += 1;
             BoostersParents.instance.TheBar = "LevelBar5";
           if(NumberOfUpdates.instance.TiersTronc == 4 || NumberOfUpdates.instance.TiersTronc == 9)
