@@ -108,7 +108,7 @@ public class PlayerAttacks : MonoBehaviour
 
         if (isShieldActive)
         {
-            shieldProjo.SetActive(true);
+            shieldProjo.transform.GetChild(0).gameObject.SetActive(true);
             //rotates around players
             shieldRotation += Time.deltaTime * 360 * shieldSpeed;
             shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
@@ -117,6 +117,24 @@ public class PlayerAttacks : MonoBehaviour
             {
                 shieldRotation = 0;
             }
+
+            if (shieldIsDouble)
+            {
+                shieldProjo.transform.GetChild(1).gameObject.SetActive(true);
+                shieldProjo.transform.GetChild(2).gameObject.SetActive(true);
+            }
+            else
+            {
+                shieldProjo.transform.GetChild(1).gameObject.SetActive(false);
+                shieldProjo.transform.GetChild(2).gameObject.SetActive(false);
+            }
+            shieldProjo.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+            shieldProjo.transform.GetChild(1).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+            shieldProjo.transform.GetChild(2).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+        }
+        else
+        {
+            shieldProjo.SetActive(false);
         }
 
         shotgunTimer -= Time.deltaTime;
@@ -141,6 +159,16 @@ public class PlayerAttacks : MonoBehaviour
             }
             projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * shotgunSpeed);
             projo.GetComponent<AttackDamage>().damage = shotgunDamage;
+            if (shotgunIsPiercing)
+            {
+                //for piercing module
+                projo.GetComponent<AttackDamage>().destroyedOnContact = false;
+            }
+
+            if (shotgunIsBurning)
+            {
+                projo.GetComponent<AttackDamage>().isFireAmmo = true;
+            }
             rotationDiff += shotgunSpread;
         }
     }
@@ -149,11 +177,29 @@ public class PlayerAttacks : MonoBehaviour
     {
         GameObject rocket = Instantiate(rocketProjo, transform.position, Quaternion.identity);
         rocket.GetComponent<HomingMissile>().speed = rocketSpeed;
+        if (rocketIsResidual)
+        {
+            rocket.GetComponent<HomingMissile>().isResidual = true;
+        }
+
+        if (rocketIsDoubleBounce)
+        {
+            
+        }
     }
 
     void MineLaunch()
     {
-        Instantiate(mineProjo, transform.position, Quaternion.identity);
+        GameObject mine = Instantiate(mineProjo, transform.position, Quaternion.identity);
+        if (mineIsShrapnel)
+        {
+            mine.GetComponent<Mine>().isShrapnel = true;
+        }
+
+        if (mineIsIce)
+        {
+            mine.GetComponent<Mine>().isIce = true;
+        }
     }
 
     void FindClosestEnemy()

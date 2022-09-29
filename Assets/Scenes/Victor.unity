@@ -4771,7 +4771,7 @@ MonoBehaviour:
   goldenWaves: 060000000a00000010000000160000001c00000022000000
   currentWave: 0
   waveTimer: 0
-  enemyHealths: 0100000004000000100000002000000038000000
+  enemyHealths: 204e000004000000100000002000000038000000
   H_Upgrades: 020000000400000006000000080000000a000000
   enemyDamages: 0400000005000000060000000700000008000000
   enemyPrefabs:
@@ -6714,6 +6714,18 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 282050813}
+    Ordinal: 5
+    Priority: 0
+    IconType: 125250
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
 --- !u!4 &1847646851
 Transform:
   m_ObjectHideFlags: 0
@@ -8542,10 +8554,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1274695924581348086, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435656856328245895, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1437233107915067024, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 03150f9207cf9ec4fa06024d25386661, type: 3}
+    - target: {fileID: 1437233107915067025, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1437233107915067026, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.3333334
@@ -8572,11 +8596,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1967861324312598675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: shotgunProjectileNumber
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5468831776824257908, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593491667974945426, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610737998028196334, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8518646027766302675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_RootOrder

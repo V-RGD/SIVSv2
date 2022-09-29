@@ -7,6 +7,9 @@ public class AttackDamage : MonoBehaviour
     public GameObject player;
     public bool isShield;
     private float recoilForce = 10;
+    public bool destroyedOnContact = true;
+    public bool isFireAmmo;
+    public bool burnDamage;
 
     private void Start()
     {
@@ -27,6 +30,15 @@ public class AttackDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") && !isShield)
         {
             other.GetComponent<Enemy>().health -= damage;
+            if (isFireAmmo)
+            {
+                //burns the enemy
+                other.GetComponent<Enemy>().burnTimer = 3;
+                //tells the enemy how much damage it should take every second
+                other.GetComponent<Enemy>().burnDamage = 1;
+                //don't forget ui
+            }
+            
             //pop up UI
             GameObject ui = Instantiate(other.GetComponent<Enemy>().damageUI, other.transform);
             ui.transform.position = Vector3.zero;
@@ -34,7 +46,10 @@ public class AttackDamage : MonoBehaviour
             ui.GetComponent<Animator>().SetTrigger("DamageTaken");
             ui.GetComponent<TMP_Text>().text = damage.ToString();
 
-            Destroy(gameObject);
+            if (destroyedOnContact)
+            {
+                Destroy(gameObject);
+            }
             //other.GetComponent<Rigidbody2D>().AddForce(-(player.transform.position - transform.position).normalized * recoilForce);
         }
     }
