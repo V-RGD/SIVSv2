@@ -26,14 +26,18 @@ public class RandomLootBox : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Keypad6))
         {
-           PanelLootBox.SetActive(true);
-           IndexLootBox = Random.Range(0,3);
-           Debug.Log(IndexLootBox);
-           ChargeLootBox();
+           OpenLootBox();
         }
     }
 
-    void ChargeLootBox()
+    public void OpenLootBox()
+    {
+        Time.timeScale = 0;
+        PanelLootBox.SetActive(true);
+        IndexLootBox = Random.Range(0,3);
+        ChargeLootBox();
+    }
+    public void ChargeLootBox()
     {
         name.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
         description.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
@@ -42,6 +46,7 @@ public class RandomLootBox : MonoBehaviour
     public void ApplyLootBox()
     {
         PanelLootBox.SetActive(false);
+        Time.timeScale = 1;
         if(IndexLootBox == 0)
         {
             Debug.Log("Amélioration 1");
