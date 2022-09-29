@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4329952272776381719}
   - component: {fileID: 6556601808718777454}
   m_Layer: 0
-  m_Name: BlueDino
+  m_Name: RainbowDino
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
