@@ -5826,6 +5826,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278203665}
   m_CullTransparentMesh: 1
+--- !u!1 &1303823330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303823332}
+  - component: {fileID: 1303823331}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1303823331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303823330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a01b36d613d48441b92332eb783c383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 1
+  enemyPoses: []
+  cam: {fileID: 0}
+  canSpawnGreen: 0
+  canSpawnYellow: 0
+  canSpawnOrange: 0
+  canSpawnRed: 0
+  canSpawnBlue: 0
+  canSpawnGolden: 0
+  greenWaves: 0000000002000000060000000a0000000e00000014000000160000001a0000001e0000002000000024000000280000002a000000
+  yellowWaves: 0200000004000000080000000c0000000e00000012000000180000002000000026000000280000002a000000
+  orangeWaves: 06000000080000000c0000001000000012000000160000001a0000001c00000022000000240000002a000000
+  redWaves: 0a0000000c0000001000000014000000180000001e00000022000000260000002a000000
+  blueWaves: 0e0000001000000014000000160000001a0000001c000000200000002200000026000000280000002a000000
+  goldenWaves: 060000000a00000010000000160000001c00000022000000
+  currentWave: 0
+  waveTimer: 0
+  enemyHealths: 0100000004000000100000002000000038000000
+  H_Upgrades: 020000000400000006000000080000000a000000
+  enemyDamages: 0400000005000000060000000700000008000000
+  enemyPrefabs:
+  - {fileID: 4329952272776381722, guid: 5a0d1fae20170714a83631bd19809f0a, type: 3}
+  - {fileID: 4329952272776381722, guid: 27465a0b5cbb17e4b9ca2a8b15b2b8bc, type: 3}
+  - {fileID: 4329952272776381722, guid: e2ed48218c2744045a8b172ee87e1b58, type: 3}
+  - {fileID: 4329952272776381722, guid: a06c925d3106f1445bb18181f4dd6e56, type: 3}
+  - {fileID: 4329952272776381722, guid: befddfedf45ae794ba5976e539bf50a1, type: 3}
+  - {fileID: 4329952272776381722, guid: 66489bbfac667c64ea3cb901bd10b181, type: 3}
+--- !u!4 &1303823332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303823330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5501394, y: 1.5125935, z: 0.0012131992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319580976
 GameObject:
   m_ObjectHideFlags: 0
