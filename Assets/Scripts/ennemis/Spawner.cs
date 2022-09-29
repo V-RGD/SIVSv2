@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour
     private float timer;
     
     private Vector3 spawnVector;
-    public List<GameObject> enemiesInGame;
     public List<Transform> enemyPoses;
     public Camera cam;
 

@@ -15,9 +15,15 @@ public class AttackDamage : MonoBehaviour
 
     private void Update()
     {
+        //if it's neither a missile nor a mine
         if ((player.transform.position - transform.position).magnitude > 40)
         {
             Destroy(gameObject);
+        }
+
+        if (GetComponent<HomingMissile>() != null && (player.transform.position - transform.position).magnitude <= 1)
+        {
+            
         }
     }
 
