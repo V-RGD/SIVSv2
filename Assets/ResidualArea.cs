@@ -10,7 +10,6 @@ public class ResidualArea : MonoBehaviour
         {
             //burns the enemy
             col.GetComponent<Enemy>().burnTimer = 3;
-            Debug.Log("burned by area");
             //tells the enemy how much damage it should take every second
             col.GetComponent<Enemy>().burnDamage = damage;
         }

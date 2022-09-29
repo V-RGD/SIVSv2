@@ -17,21 +17,18 @@ public class Spawner : MonoBehaviour
     private float yellowTimer;
     private float orangeTimer;
     private float redTimer;
-    private float blueTimer;
-    private float goldenTimer = 120;
+    public float goldenTimer = 0;
 
     public bool canSpawnGreen;
     public bool canSpawnYellow;
     public bool canSpawnOrange;
     public bool canSpawnRed;
-    public bool canSpawnBlue;
     public bool canSpawnGolden;
 
     public List<int> greenWaves;
     public List<int> yellowWaves;
     public List<int> orangeWaves;
     public List<int> redWaves;
-    public List<int> blueWaves;
     public List<int> goldenWaves;
 
     public int currentWave;
@@ -43,6 +40,8 @@ public class Spawner : MonoBehaviour
     public int[] enemyDamages = new []{4, 5, 6, 7, 8};
 
     private int[] goldenHealths = new []{50, 100, 150, 200, 250, 300};
+    private int[] goldenDamages = new []{5, 10, 15, 20, 25, 30};
+    private int goldenToSpawn = 1;
 
     private float cameraHeight;
     private float cameraLenght;
@@ -68,7 +67,6 @@ public class Spawner : MonoBehaviour
         yellowTimer -= Time.deltaTime;
         orangeTimer -= Time.deltaTime;
         redTimer -= Time.deltaTime;
-        blueTimer -= Time.deltaTime;
         goldenTimer -= Time.deltaTime;
 
         ColorActivations();
@@ -128,23 +126,11 @@ public class Spawner : MonoBehaviour
             canSpawnRed = false;
         }
 
-        //-----------BLUE------------
-        if (blueWaves.Contains(currentWave))
-        {
-            canSpawnBlue = true;
-        }
-        else
-        {
-            canSpawnBlue = false;
-        }
-        
         //--------------DORE------------
         if (goldenWaves.Contains(currentWave))
         {
             canSpawnGolden = true;
         }
-        
-        goldenTimer += Time.deltaTime;
     }
     #endregion
     #region SpawnTimers
@@ -154,35 +140,59 @@ public class Spawner : MonoBehaviour
         {
             greenTimer = 1 / spawnRate;
             EnemySpawn(0);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (yellowTimer <= 0 && canSpawnYellow)
         {
             yellowTimer = 1 / spawnRate;
             EnemySpawn(1);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (orangeTimer <= 0 && canSpawnOrange)
         {
             orangeTimer = 1 / spawnRate;         
             EnemySpawn(2);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (redTimer <= 0 && canSpawnRed)
         {
             redTimer = 1 / spawnRate;
             EnemySpawn(3);
-        }
-
-        if (blueTimer <= 0 && canSpawnBlue)
-        {
-            blueTimer = 1 / spawnRate;
-            EnemySpawn(4);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (goldenTimer <= 0)
         {
             goldenTimer = 180;
+            goldenToSpawn++;
+            Debug.Log("golden dino spawned");
             EnemySpawn(5);
         }
     }
@@ -217,8 +227,16 @@ public class Spawner : MonoBehaviour
         spawnPoint += new Vector2(player.transform.position.x, player.transform.position.y);
         #endregion
         GameObject enemyToSpawn = Instantiate(enemyPrefabs[enemyType], spawnPoint, quaternion.identity);
-        enemyToSpawn.GetComponent<Enemy>().health = enemyHealths[enemyType] + currentWave * H_Upgrades[enemyType];
-        enemyToSpawn.GetComponent<Enemy>().damage = enemyDamages[enemyType];
+        if (enemyType == 5)
+        {
+            enemyToSpawn.GetComponent<Enemy>().health = goldenHealths[goldenToSpawn];
+            enemyToSpawn.GetComponent<Enemy>().damage = goldenDamages[goldenToSpawn];
+        }
+        else
+        {
+            enemyToSpawn.GetComponent<Enemy>().health = enemyHealths[enemyType] + currentWave * H_Upgrades[enemyType];
+            enemyToSpawn.GetComponent<Enemy>().damage = enemyDamages[enemyType];
+        }
         enemyToSpawn.GetComponent<Enemy>().spawner = this;
         enemyPoses.Add(enemyToSpawn.transform);
     }

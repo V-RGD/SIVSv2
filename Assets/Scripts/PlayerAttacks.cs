@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour
@@ -61,12 +62,14 @@ public class PlayerAttacks : MonoBehaviour
     private float shotgunTimer;
     private float rocketTimer;
     private float mineTimer;
+    private float shieldPewPewTimer;
     private float shieldRotation;
     
     //cooldown for all weapons
     public float shotgunCooldown = 2;
     public float rocketCooldown = 4;
     public float mineCooldown = 3;
+    public float shieldPewPewCooldown = 3;
 
     public bool isShotGunManual = true;
     private Vector2 mousePos;
@@ -112,6 +115,7 @@ public class PlayerAttacks : MonoBehaviour
             //rotates around players
             shieldRotation += Time.deltaTime * 360 * shieldSpeed;
             shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
+            
 
             if (shieldRotation > 360)
             {
@@ -122,6 +126,8 @@ public class PlayerAttacks : MonoBehaviour
             {
                 shieldProjo.transform.GetChild(1).gameObject.SetActive(true);
                 shieldProjo.transform.GetChild(2).gameObject.SetActive(true);
+                
+                shieldProjo.transform.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, 0, shieldRotation * 2.7f);
             }
             else
             {
@@ -131,6 +137,12 @@ public class PlayerAttacks : MonoBehaviour
             shieldProjo.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
             shieldProjo.transform.GetChild(1).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
             shieldProjo.transform.GetChild(2).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+
+            if (shieldIsPewPew && shieldPewPewTimer <= 0)
+            {
+                shieldPewPewTimer = shieldPewPewCooldown;
+                StartCoroutine(ShieldBarrel());
+            }
         }
         else
         {
@@ -140,6 +152,7 @@ public class PlayerAttacks : MonoBehaviour
         shotgunTimer -= Time.deltaTime;
         rocketTimer -= Time.deltaTime;
         mineTimer -= Time.deltaTime;
+        shieldPewPewTimer -= Time.deltaTime;
     }
     void ShotgunShot()
     {
@@ -210,6 +223,34 @@ public class PlayerAttacks : MonoBehaviour
             enemyPoses = spawner.enemyPoses.ToArray();
             //takes the closest one from the player
             target = GetClosestEnemy(enemyPoses).gameObject;
+        }
+    }
+
+    IEnumerator ShieldBarrel()
+    {
+        ShieldShot();
+        yield return new WaitForSeconds(0.2f);
+        ShieldShot();
+    }
+
+    void ShieldShot()
+    {
+        Transform[] shields;
+        if (shieldIsDouble)
+        {
+            shields = new[] {shieldProjo.transform.GetChild(0), shieldProjo.transform.GetChild(1), shieldProjo.transform.GetChild(2)};
+        }
+        else
+        {
+            shields = new[] {shieldProjo.transform.GetChild(0)};
+        }
+
+        foreach (var shield in shields)
+        {
+            Vector2 launchDir = (shield.transform.position - transform.position).normalized;
+            GameObject projo = Instantiate(shotgunProjo, shield.transform.position, Quaternion.identity);
+            projo.GetComponent<Rigidbody2D>().AddForce(launchDir * 100);
+            projo.GetComponent<AttackDamage>().damage = shotgunDamage;
         }
     }
     

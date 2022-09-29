@@ -12,19 +12,23 @@ public class Mine : MonoBehaviour
     public GameObject shrapnel;
 
     public GameObject iceZone;
+    public GameObject camera;
+
+    public bool autoExplode;
     IEnumerator Start()
     {
+        camera = GameObject.Find("CM vcam1");
         Aoe = transform.GetChild(0).gameObject;
         canDamage = true;
         iceZone = transform.GetChild(1).gameObject;
         yield return new WaitForSeconds(10);
-        StartCoroutine(AreaOfDamage());
+        autoExplode = true;
         canDamage = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (canDamage && other.gameObject.CompareTag("Enemy"))
+        if (canDamage && other.gameObject.CompareTag("Enemy") && autoExplode)
         {
             canDamage = false;
             StartCoroutine(AreaOfDamage());
@@ -70,7 +74,6 @@ public class Mine : MonoBehaviour
     
     IEnumerator ResidualZone()
     {
-        Debug.Log("ice spawned");
         iceZone.SetActive(true);
         yield return new WaitForSeconds(5);
         iceZone.SetActive(false);

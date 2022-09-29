@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
     public float slowedTimer;
     public float speedCoef = 1;
 
+    public GameObject xpDropped;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -44,6 +46,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             spawner.enemyPoses.Remove(gameObject.transform);
+            Instantiate(xpDropped, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
@@ -68,7 +71,6 @@ public class Enemy : MonoBehaviour
         ui.GetComponent<TMP_Text>().text = burnDamage.ToString();
         yield return new WaitForSeconds(1);
         canBurn = true;
-        Debug.Log("took flame damage");
     }
     
     

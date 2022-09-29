@@ -277,7 +277,7 @@ MonoBehaviour:
   rocketRate: 1
   rocketNumber: 1
   rocketIsResidual: 1
-  rocketIsDoubleBounce: 0
+  rocketIsDoubleBounce: 1
   mineRate: 1
   mineRadius: 1
   mineDamage: 5
@@ -286,8 +286,8 @@ MonoBehaviour:
   shieldDamage: 5
   shieldSize: 1
   shieldSpeed: 1
-  shieldIsDouble: 0
-  shieldIsPewPew: 0
+  shieldIsDouble: 1
+  shieldIsPewPew: 1
   rocketDamage: 10
   shotgunSpread: 15
   shotgunProjo: {fileID: 8865965525024252180, guid: d571c8ebd84ce9c4fa1d51a6ae9f09c6, type: 3}
@@ -306,6 +306,7 @@ MonoBehaviour:
   shotgunCooldown: 2
   rocketCooldown: 4
   mineCooldown: 3
+  shieldPewPewCooldown: 3
   isShotGunManual: 1
   cam: {fileID: 0}
 --- !u!95 &8518646027766302684
@@ -348,7 +349,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8518646027766302672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -359,10 +360,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4746, y: 0.07489014}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

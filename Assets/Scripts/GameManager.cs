@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] items;
     public Slider healthBar;
 
+    public float greenXP;
+    public float yellowXP;
+    public float orangeXP;
+    public float redXP;
+
+
     private void Awake()
     {
         player = GameObject.Find("Player");

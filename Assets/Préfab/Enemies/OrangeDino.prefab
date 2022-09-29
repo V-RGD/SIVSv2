@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4329952272776381717}
   - component: {fileID: 4329952272776381718}
   - component: {fileID: 4329952272776381719}
+  - component: {fileID: 3797767578452857536}
   m_Layer: 0
   m_Name: OrangeDino
   m_TagString: Enemy
@@ -104,6 +105,11 @@ MonoBehaviour:
   damage: 0
   spawner: {fileID: 0}
   damageUI: {fileID: 4279177516061526664, guid: 0e29a3bb4d4b9af48960e7178c824ccd, type: 3}
+  burnTimer: 0
+  burnDamage: 1
+  slowedTimer: 0
+  speedCoef: 1
+  xpDropped: {fileID: 2502803966036417107, guid: 7149bc14a7020324b9be751f699d1ffe, type: 3}
 --- !u!50 &4329952272776381718
 Rigidbody2D:
   serializedVersion: 4
@@ -151,3 +157,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61329556, y: 0.7147263}
   m_EdgeRadius: 0
+--- !u!95 &3797767578452857536
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4329952272776381722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b39f38397d2afe4096516769901f586, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
