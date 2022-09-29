@@ -9,5 +9,6 @@ public class Stats
     public string description;
     public string level;
     public int niveau;
+    public Sprite icon;
     public int[] valeurs;
 }
