@@ -46,12 +46,13 @@ public class RandomLootBox : MonoBehaviour
         Time.timeScale = 0;
         PanelLootBox.SetActive(true);
         IndexLootBox = Random.Range(0,3);
+        Debug.Log(IndexLootBox);
         ChargeLootBox();
     }
     public void ChargeLootBox()
     {
-        Childname.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
-        ChildDescription.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
+        Childname.GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
+        ChildDescription.GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
     }
 
     public void ApplyLootBox()
