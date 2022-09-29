@@ -16,12 +16,18 @@ MonoBehaviour:
   - name: Missile Bonus
     description: missile
     level: 0
+    niveau: 0
+    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
   - name: Radius
     description: Le Radius
     level: 0
+    niveau: 0
+    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
   - name: Cadence
     description: La cadence
     level: 0
+    niveau: 0
+    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
