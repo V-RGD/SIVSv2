@@ -18,8 +18,8 @@ MonoBehaviour:
     level: 0
     niveau: 0
     valeurs: 
-  - name: radius
-    description: Le radius
+  - name: Nombres Projectiles
+    description: Le Nombre
     level: 0
     niveau: 0
     valeurs: 

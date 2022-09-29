@@ -15,6 +15,8 @@ public class NumberOfUpdates : MonoBehaviour
     private string SpeBarName;
     public string ButtonName;
 
+    private GameObject player;
+
     // ShotGun
     [HideInInspector] public bool Spe1ShotGun = false;
     [HideInInspector] public bool Spe2ShotGun = false;
@@ -47,7 +49,7 @@ public class NumberOfUpdates : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -67,14 +69,17 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("DamageShotGun");
+                player.GetComponent<PlayerAttacks>().shotgunDamage += 2;
             }
             if(ButtonName == "Boost2")
             {
-                Debug.Log("RadiusShotGun");
+                Debug.Log("ProjectileNumber");
+                player.GetComponent<PlayerAttacks>().shotgunProjectileNumber += 2;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceShotGun");
+                player.GetComponent<PlayerAttacks>().shotgunRate += 2;
             }
         }
 
@@ -84,14 +89,17 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("DamageMine");
+                player.GetComponent<PlayerAttacks>().mineDamage += 2;
             }
             if(ButtonName == "Boost2")
             {
                 Debug.Log("RadiusMine");
+                player.GetComponent<PlayerAttacks>().mineRadius += 2;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceMine");
+                player.GetComponent<PlayerAttacks>().mineRate += 2;
             }
         }
         // Barre 3
@@ -100,14 +108,17 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("Missile Bonus");
+               player.GetComponent<PlayerAttacks>().rocketNumber += 1;
             }
             if(ButtonName == "Boost2")
             {
                 Debug.Log("RadiusMissile");
+      //          player.GetComponent<PlayerAttacks>().rocketNumber += 2;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceMissile");
+                player.GetComponent<PlayerAttacks>().rocketRate += 2;
             }
         }
         // Barre 4
@@ -116,14 +127,17 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("DamageOrbital");
+                player.GetComponent<PlayerAttacks>().shieldDamage += 2;
             }
             if(ButtonName == "Boost2")
             {
                 Debug.Log("SizeOrbital");
+                player.GetComponent<PlayerAttacks>().shieldSize += 2;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("VitesseRotaOrbital");
+                player.GetComponent<PlayerAttacks>().shieldSpeed += 2;
             }
         }
         // Barre 5
@@ -150,11 +164,13 @@ public class NumberOfUpdates : MonoBehaviour
             {
                 Debug.Log("Spe1ShotGun");
                 Spe1ShotGun = true;
+                player.GetComponent<PlayerAttacks>().shotgunIsBurning = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2ShotGun");
                 Spe2ShotGun = true;
+                player.GetComponent<PlayerAttacks>().shotgunIsPiercing = true;
             }
         }
         // Spe Mine
@@ -164,11 +180,13 @@ public class NumberOfUpdates : MonoBehaviour
             {
                 Debug.Log("Spe1Mine");
                 Spe1Mine = true;
+                player.GetComponent<PlayerAttacks>().mineIsShrapnel = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Mine");
                 Spe2Mine = true;
+                player.GetComponent<PlayerAttacks>().mineIsIce = true;
             }
         }
         // Spe Missile
@@ -178,11 +196,13 @@ public class NumberOfUpdates : MonoBehaviour
             {
                 Debug.Log("Spe1Missile");
                 Spe1Missile = true;
+                player.GetComponent<PlayerAttacks>().rocketIsResidual = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Missile");
                 Spe2Missile = true;
+                player.GetComponent<PlayerAttacks>().rocketIsDoubleBounce = true;
             }
         }
         // Spe Orbital
@@ -192,11 +212,13 @@ public class NumberOfUpdates : MonoBehaviour
             {
                 Debug.Log("Spe1Orbital");
                 Spe1Orbital = true;
+                player.GetComponent<PlayerAttacks>().shieldIsDouble = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Orbital");
                 Spe2Orbital = true;
+                player.GetComponent<PlayerAttacks>().shieldIsPewPew = true;
             }
         }
         // Spe Tronc
