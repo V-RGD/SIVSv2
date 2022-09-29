@@ -105,6 +105,11 @@ MonoBehaviour:
   damage: 0
   spawner: {fileID: 0}
   damageUI: {fileID: 4279177516061526664, guid: 0e29a3bb4d4b9af48960e7178c824ccd, type: 3}
+  burnTimer: 0
+  burnDamage: 1
+  slowedTimer: 0
+  speedCoef: 1
+  xpDropped: {fileID: 6587195552284973399, guid: 72ecfd60d02aa7f43be7ad4477b8f1aa, type: 3}
 --- !u!50 &4329952272776381718
 Rigidbody2D:
   serializedVersion: 4

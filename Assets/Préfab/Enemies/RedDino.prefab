@@ -109,6 +109,7 @@ MonoBehaviour:
   burnDamage: 1
   slowedTimer: 0
   speedCoef: 1
+  xpDropped: {fileID: 4912392333344865560, guid: 1b7e072f13b8b084287bd3b66050138c, type: 3}
 --- !u!50 &4329952272776381718
 Rigidbody2D:
   serializedVersion: 4

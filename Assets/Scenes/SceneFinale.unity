@@ -1746,6 +1746,10 @@ MonoBehaviour:
   maxHealth: 100
   items: []
   healthBar: {fileID: 1804818550}
+  greenXP: 0
+  yellowXP: 0
+  orangeXP: 0
+  redXP: 0
 --- !u!4 &282050818
 Transform:
   m_ObjectHideFlags: 0
@@ -2000,6 +2004,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 1556895076}
+  maxLevel: 0
   UpgradePanel: {fileID: 0}
   SpeUpgradePanel: {fileID: 0}
 --- !u!114 &332217329 stripped
@@ -3042,6 +3047,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 1427332032}
+  maxLevel: 0
   UpgradePanel: {fileID: 0}
   SpeUpgradePanel: {fileID: 0}
 --- !u!114 &656300502 stripped
@@ -3221,6 +3227,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 357966429}
+  maxLevel: 0
   UpgradePanel: {fileID: 0}
   SpeUpgradePanel: {fileID: 0}
 --- !u!114 &722408153 stripped
@@ -7299,6 +7306,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 1458358461}
+  maxLevel: 0
   UpgradePanel: {fileID: 0}
   SpeUpgradePanel: {fileID: 0}
 --- !u!114 &1921805514 stripped
@@ -8182,6 +8190,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 1253741576}
+  maxLevel: 0
   UpgradePanel: {fileID: 0}
   SpeUpgradePanel: {fileID: 0}
 --- !u!114 &2057512189 stripped
