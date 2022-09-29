@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class HomingMissile : MonoBehaviour
 {
-    public GameObject target;
+    public Transform target;
     public float speed;
     public Vector2 rotationDiff;
     public PlayerAttacks p_a;
-    private Transform[] enemyPoses;
     public bool canDamage;
     public int damage = 5;
     public GameObject Aoe;
@@ -26,22 +25,21 @@ public class HomingMissile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        enemyPoses = p_a.enemyPoses;
         FindClosestEnemy();
         //si un ennemy est à l'écran
         if (target != null && canMove)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-            transform.right = target.transform.position - transform.position;
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            transform.right = target.position - transform.position;
         }
     }
     
     void FindClosestEnemy()
     {
-        if (enemyPoses.Length != 0)
+        if (p_a.enemyPoses.Length != 0)
         {
             //takes the closest one from the missile
-            target = GetClosestEnemy(enemyPoses).gameObject;
+            target = GetClosestEnemy(p_a.enemyPoses);
         }
     }
     
@@ -52,12 +50,15 @@ public class HomingMissile : MonoBehaviour
         Vector3 currentPosition = transform.position;
         foreach(Transform potentialTarget in enemies)
         {
-            Vector3 directionToTarget = potentialTarget.position - currentPosition;
-            float dSqrToTarget = directionToTarget.sqrMagnitude;
-            if(dSqrToTarget < closestDistanceSqr)
+            if (potentialTarget != null)
             {
-                closestDistanceSqr = dSqrToTarget;
-                bestTarget = potentialTarget;
+                Vector3 directionToTarget = potentialTarget.position - currentPosition;
+                float dSqrToTarget = directionToTarget.sqrMagnitude;
+                if(dSqrToTarget < closestDistanceSqr)
+                {
+                    closestDistanceSqr = dSqrToTarget;
+                    bestTarget = potentialTarget;
+                }
             }
         }
      

@@ -5,10 +5,9 @@ public class Mine : MonoBehaviour
     public bool canDamage;
     public int damage = 5;
     public GameObject Aoe;
-    IEnumerator Start()
+    void Start()
     {
         Aoe = transform.GetChild(0).gameObject;
-        yield return new WaitForSeconds(2);
         canDamage = true;
     }
 
