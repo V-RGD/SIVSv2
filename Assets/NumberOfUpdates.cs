@@ -46,15 +46,15 @@ public class NumberOfUpdates : MonoBehaviour
         {
             if(ButtonName == "Boost1")
             {
-                Debug.Log("Damage");
+                Debug.Log("DamageShotGun");
             }
             if(ButtonName == "Boost2")
             {
-                Debug.Log("Radius");
+                Debug.Log("RadiusShotGun");
             }
             if(ButtonName == "Boost3")
             {
-                Debug.Log("Cadence");
+                Debug.Log("CadenceShotGun");
             }
         }
 
@@ -74,17 +74,113 @@ public class NumberOfUpdates : MonoBehaviour
                 Debug.Log("CadenceMine");
             }
         }
+        // Barre 3
+        if(BarName == "LevelBar3")
+        {
+            if(ButtonName == "Boost1")
+            {
+                Debug.Log("Missile Bonus");
+            }
+            if(ButtonName == "Boost2")
+            {
+                Debug.Log("RadiusMissile");
+            }
+            if(ButtonName == "Boost3")
+            {
+                Debug.Log("CadenceMissile");
+            }
+        }
+        // Barre 4
+        if(BarName == "LevelBar4")
+        {
+            if(ButtonName == "Boost1")
+            {
+                Debug.Log("DamageOrbital");
+            }
+            if(ButtonName == "Boost2")
+            {
+                Debug.Log("SizeOrbital");
+            }
+            if(ButtonName == "Boost3")
+            {
+                Debug.Log("VitesseRotaOrbital");
+            }
+        }
+                // Barre 4
+        if(BarName == "LevelBar5")
+        {
+            if(ButtonName == "Boost1")
+            {
+                Debug.Log("DamageTronc");
+            }
+            if(ButtonName == "Boost2")
+            {
+                Debug.Log("RadiusTronc");
+            }
+            if(ButtonName == "Boost3")
+            {
+                Debug.Log("CadencTronc");
+            }
+        }
 
-        // Spe1
+        // Spe ShotGun
         if(BarName == "LevelBar1")
         {
             if(ButtonName == "Spe1")
             {
-                Debug.Log("Spe1");
+                Debug.Log("Spe1ShotGun");
             }
             if(ButtonName == "Spe2")
             {
-                Debug.Log("Spe2");
+                Debug.Log("Spe2ShotGun");
+            }
+        }
+        // Spe Mine
+        if(BarName == "LevelBar2")
+        {
+            if(ButtonName == "Spe1")
+            {
+                Debug.Log("Spe1Mine");
+            }
+            if(ButtonName == "Spe2")
+            {
+                Debug.Log("Spe2Mine");
+            }
+        }
+        // Spe Missile
+        if(BarName == "LevelBar3")
+        {
+            if(ButtonName == "Spe1")
+            {
+                Debug.Log("Spe1Missile");
+            }
+            if(ButtonName == "Spe2")
+            {
+                Debug.Log("Spe2Missile");
+            }
+        }
+        // Spe Orbital
+        if(BarName == "LevelBar4")
+        {
+            if(ButtonName == "Spe1")
+            {
+                Debug.Log("Spe1Orbital");
+            }
+            if(ButtonName == "Spe2")
+            {
+                Debug.Log("Spe2Orbital");
+            }
+        }
+        // Spe Tronc
+        if(BarName == "LevelBar5")
+        {
+            if(ButtonName == "Spe1")
+            {
+                Debug.Log("Spe1Tronc");
+            }
+            if(ButtonName == "Spe2")
+            {
+                Debug.Log("Spe2Tronc");
             }
         }
     }
