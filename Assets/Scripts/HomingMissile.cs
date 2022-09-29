@@ -6,12 +6,17 @@ public class HomingMissile : MonoBehaviour
 {
     public Transform target;
     public float speed;
+    public int damage = 5;
+    private float burningDamage = 3;
+    
+    public GameObject Aoe;
+    public GameObject residualArea;
     public Vector2 rotationDiff;
     public PlayerAttacks p_a;
-    public bool canDamage;
-    public int damage = 5;
-    public GameObject Aoe;
+    
     public bool canMove = true;
+    public bool canDamage;
+    public bool isResidual;
     private void Start()
     {
         p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
@@ -20,6 +25,7 @@ public class HomingMissile : MonoBehaviour
             transform.right = (target.transform.position - transform.position);
         }
         Aoe = transform.GetChild(0).gameObject;
+        residualArea = transform.GetChild(1).gameObject;
         canDamage = true;
     }
 
@@ -71,6 +77,10 @@ public class HomingMissile : MonoBehaviour
         {
             canDamage = false;
             StartCoroutine(AreaOfDamage());
+            if (isResidual)
+            {
+                StartCoroutine(ResidualZone());
+            }
         }
     }
 
@@ -82,6 +92,19 @@ public class HomingMissile : MonoBehaviour
         Aoe.GetComponent<AreaOfDamage>().damage = damage;
         yield return new WaitForSeconds(1);
         Aoe.SetActive(false);
+        if (!isResidual)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
+    IEnumerator ResidualZone()
+    {
+        residualArea.SetActive(true);
+        residualArea.GetComponent<ResidualArea>().damage = burningDamage;
+        yield return new WaitForSeconds(5);
+        residualArea.SetActive(false);
         Destroy(gameObject);
     }
+    
 }
