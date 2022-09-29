@@ -15,7 +15,9 @@ MonoBehaviour:
   SpeTheStats:
   - name: autres tronc
     description: les autres tronc
+    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 
   - name: moins de tronc
     description: les moins de tronc
+    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 

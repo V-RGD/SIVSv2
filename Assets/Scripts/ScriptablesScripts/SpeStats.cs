@@ -7,5 +7,6 @@ public class SpeStats
 {
     public string name;
     public string description;
+    public Sprite icon;
     public int[] valeurs;
 }

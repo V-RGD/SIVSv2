@@ -144,11 +144,13 @@ public class Boosters : MonoBehaviour
                 Debug.Log("oui");
                 name.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].description;
+                TheIcon.GetComponent<Image>().sprite = TheSpe.SpeTheStats[0].icon;
             }
         if(gameObject.name == "Spe2")
             {
                 name.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[1].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[1].description;
+                TheIcon.GetComponent<Image>().sprite = TheSpe.SpeTheStats[1].icon;
             }
     }
     else
