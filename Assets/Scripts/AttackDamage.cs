@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ public class AttackDamage : MonoBehaviour
     private void Update()
     {
         //destroy if too far
-        if ((player.transform.position - transform.position).magnitude > 40)
+        if ((player.transform.position - transform.position).magnitude > 20)
         {
             Destroy(gameObject);
         }
@@ -51,6 +52,17 @@ public class AttackDamage : MonoBehaviour
                 Destroy(gameObject);
             }
             //other.GetComponent<Rigidbody2D>().AddForce(-(player.transform.position - transform.position).normalized * recoilForce);
+        }
+    }
+
+    IEnumerator EnemyBlink(GameObject enemy)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            enemy.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(0.1f);
+            enemy.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

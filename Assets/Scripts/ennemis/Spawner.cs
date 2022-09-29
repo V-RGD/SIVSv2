@@ -17,21 +17,18 @@ public class Spawner : MonoBehaviour
     private float yellowTimer;
     private float orangeTimer;
     private float redTimer;
-    private float blueTimer;
     public float goldenTimer = 0;
 
     public bool canSpawnGreen;
     public bool canSpawnYellow;
     public bool canSpawnOrange;
     public bool canSpawnRed;
-    public bool canSpawnBlue;
     public bool canSpawnGolden;
 
     public List<int> greenWaves;
     public List<int> yellowWaves;
     public List<int> orangeWaves;
     public List<int> redWaves;
-    public List<int> blueWaves;
     public List<int> goldenWaves;
 
     public int currentWave;
@@ -70,7 +67,6 @@ public class Spawner : MonoBehaviour
         yellowTimer -= Time.deltaTime;
         orangeTimer -= Time.deltaTime;
         redTimer -= Time.deltaTime;
-        blueTimer -= Time.deltaTime;
         goldenTimer -= Time.deltaTime;
 
         ColorActivations();
@@ -130,16 +126,6 @@ public class Spawner : MonoBehaviour
             canSpawnRed = false;
         }
 
-        //-----------BLUE------------
-        if (blueWaves.Contains(currentWave))
-        {
-            canSpawnBlue = true;
-        }
-        else
-        {
-            canSpawnBlue = false;
-        }
-        
         //--------------DORE------------
         if (goldenWaves.Contains(currentWave))
         {
@@ -154,30 +140,52 @@ public class Spawner : MonoBehaviour
         {
             greenTimer = 1 / spawnRate;
             EnemySpawn(0);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (yellowTimer <= 0 && canSpawnYellow)
         {
             yellowTimer = 1 / spawnRate;
             EnemySpawn(1);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (orangeTimer <= 0 && canSpawnOrange)
         {
             orangeTimer = 1 / spawnRate;         
             EnemySpawn(2);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (redTimer <= 0 && canSpawnRed)
         {
             redTimer = 1 / spawnRate;
             EnemySpawn(3);
-        }
-
-        if (blueTimer <= 0 && canSpawnBlue)
-        {
-            blueTimer = 1 / spawnRate;
-            EnemySpawn(4);
+            
+            int lgbtDinoSpawn = Random.Range(0, 1000);
+            if (lgbtDinoSpawn == 69)
+            {
+                EnemySpawn(4);
+                Debug.Log("GAY DINO WOO");
+            }
         }
 
         if (goldenTimer <= 0)
