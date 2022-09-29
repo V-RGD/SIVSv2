@@ -1441,6 +1441,8 @@ MonoBehaviour:
   SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
   SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
   TheBar: 
+  Spe1: {fileID: 719005175}
+  Spe2: {fileID: 1913838791}
 --- !u!1001 &275140859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3405,6 +3407,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2110740152}
         m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
         m_MethodName: TheUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 265892990}
+        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
+        m_MethodName: ResetButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8772,6 +8786,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 265892990}
+        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
+        m_MethodName: ResetButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1913838792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9690,6 +9716,8 @@ MonoBehaviour:
   TiersOrbital: -1
   TiersTronc: -1
   ButtonName: 
+  Spe1ShotGun: 0
+  Spe2ShotGun: 0
 --- !u!1001 &2988416316384485050
 PrefabInstance:
   m_ObjectHideFlags: 0

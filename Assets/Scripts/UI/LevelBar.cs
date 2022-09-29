@@ -61,7 +61,7 @@ public class LevelBar : MonoBehaviour
         {
             NumberOfUpdates.instance.TiersShotGun += 1;
             BoostersParents.instance.TheBar = "LevelBar1";
-          if(NumberOfUpdates.instance.TiersShotGun == 4)
+          if(NumberOfUpdates.instance.TiersShotGun == 4 || NumberOfUpdates.instance.TiersShotGun == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar1";
 
@@ -80,7 +80,7 @@ public class LevelBar : MonoBehaviour
         {
             NumberOfUpdates.instance.TiersMine += 1;
             BoostersParents.instance.TheBar = "LevelBar2";
-          if(NumberOfUpdates.instance.TiersMine == 4)
+          if(NumberOfUpdates.instance.TiersMine == 4 || NumberOfUpdates.instance.TiersMine == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar2";
             SpeUpgradePanel.SetActive(true);
@@ -98,7 +98,7 @@ public class LevelBar : MonoBehaviour
         {
             NumberOfUpdates.instance.TiersMissile += 1;
             BoostersParents.instance.TheBar = "LevelBar3";
-          if(NumberOfUpdates.instance.TiersMissile == 4)
+          if(NumberOfUpdates.instance.TiersMissile == 4 || NumberOfUpdates.instance.TiersMissile == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar3";
             SpeUpgradePanel.SetActive(true);
@@ -116,7 +116,7 @@ public class LevelBar : MonoBehaviour
         {
             NumberOfUpdates.instance.TiersOrbital += 1;
             BoostersParents.instance.TheBar = "LevelBar4";
-          if(NumberOfUpdates.instance.TiersOrbital == 4)
+          if(NumberOfUpdates.instance.TiersOrbital == 4 || NumberOfUpdates.instance.TiersOrbital == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar4";
             SpeUpgradePanel.SetActive(true);
@@ -134,7 +134,7 @@ public class LevelBar : MonoBehaviour
         {
             NumberOfUpdates.instance.TiersTronc += 1;
             BoostersParents.instance.TheBar = "LevelBar5";
-          if(NumberOfUpdates.instance.TiersTronc == 4)
+          if(NumberOfUpdates.instance.TiersTronc == 4 || NumberOfUpdates.instance.TiersTronc == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar5";
             SpeUpgradePanel.SetActive(true);
