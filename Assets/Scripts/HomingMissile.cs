@@ -1,20 +1,27 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 public class HomingMissile : MonoBehaviour
 {
     public GameObject target;
     public float speed;
-    public bool isRocket = true;
     public Vector2 rotationDiff;
     public PlayerAttacks p_a;
     private Transform[] enemyPoses;
+    public bool canDamage;
+    public int damage = 5;
+    public GameObject Aoe;
+    public bool canMove = true;
     private void Start()
     {
         p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
-        if (!isRocket && target != null)
+        if (target != null)
         {
             transform.right = (target.transform.position - transform.position);
         }
+        Aoe = transform.GetChild(0).gameObject;
+        canDamage = true;
     }
 
     private void FixedUpdate()
@@ -22,7 +29,7 @@ public class HomingMissile : MonoBehaviour
         enemyPoses = p_a.enemyPoses;
         FindClosestEnemy();
         //si un ennemy est à l'écran
-        if (target != null && isRocket)
+        if (target != null && canMove)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
             transform.right = target.transform.position - transform.position;
@@ -34,7 +41,7 @@ public class HomingMissile : MonoBehaviour
         if (enemyPoses.Length != 0)
         {
             //takes the closest one from the missile
-            //target = GetClosestEnemy(enemyPoses).gameObject;
+            target = GetClosestEnemy(enemyPoses).gameObject;
         }
     }
     
@@ -55,5 +62,25 @@ public class HomingMissile : MonoBehaviour
         }
      
         return bestTarget;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (canDamage && other.gameObject.CompareTag("Enemy"))
+        {
+            canDamage = false;
+            StartCoroutine(AreaOfDamage());
+        }
+    }
+
+    IEnumerator AreaOfDamage()
+    {
+        canMove = false;   
+        GetComponent<SpriteRenderer>().enabled = false;
+        Aoe.SetActive(true);
+        Aoe.GetComponent<AreaOfDamage>().damage = damage;
+        yield return new WaitForSeconds(1);
+        Aoe.SetActive(false);
+        Destroy(gameObject);
     }
 }

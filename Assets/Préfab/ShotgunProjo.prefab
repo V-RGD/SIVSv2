@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8865965525024252179}
   - component: {fileID: 7365022762870616141}
   - component: {fileID: 7556469439009575057}
-  - component: {fileID: 4303312604066328999}
   - component: {fileID: 1353070366596054358}
   - component: {fileID: 4863469436089317644}
+  - component: {fileID: 1283766206219451002}
   m_Layer: 6
   m_Name: ShotgunProjo
   m_TagString: PlayerAttack
@@ -152,23 +152,6 @@ MonoBehaviour:
   damage: 5
   player: {fileID: 0}
   isShield: 0
---- !u!114 &4303312604066328999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8865965525024252180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af44c0198d5ee4f4f8ee035ea241924f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  speed: 0
-  isRocket: 1
-  rotationDiff: {x: 0, y: 0}
-  p_a: {fileID: 0}
 --- !u!95 &1353070366596054358
 Animator:
   serializedVersion: 4
@@ -297,3 +280,23 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1283766206219451002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865965525024252180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13273b8adcdd45444b0eece0722fb6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 0
+  isRocket: 1
+  rotationDiff: {x: 0, y: 0}
+  p_a: {fileID: 0}
+  canDamage: 0
+  damage: 5
+  Aoe: {fileID: 0}

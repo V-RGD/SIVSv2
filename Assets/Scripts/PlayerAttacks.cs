@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttacks : MonoBehaviour
 {
     //--------------shotgun ------------------envoie X balles en Y arc de cercle toutes les Z secondes
-    public float shotgunRate;
+    public float shotgunRate = 1;
     public float shotgunProjectileNumber = 15;
     public float shotgunDamage;
     //modules
@@ -11,13 +11,13 @@ public class PlayerAttacks : MonoBehaviour
     public bool shotgunIsPiercing;
     //public bool shotgunIsDoubleShot;
     //------------missile guidé ------------- Instancie un missile qui ne touche pas le joueur mais se dirige vers l'ennemi le plus proche
-    public float rocketRate;
+    public float rocketRate = 1;
     public float rocketNumber;
     //modules
     public bool rocketIsResidual;
     public bool rocketIsDoubleBounce;
     //-----------------mines ----------------- instancie une mine qui explose toutes les X secondes
-    public float mineRate;
+    public float mineRate = 1;
     public float mineRadius;
     public float mineDamage;
     //modules
@@ -68,7 +68,7 @@ public class PlayerAttacks : MonoBehaviour
     public float rocketCooldown = 4;
     public float mineCooldown = 3;
 
-    public bool isShotGunManual;
+    public bool isShotGunManual = true;
     private Vector2 mousePos;
     private Vector2 mouseDir;
     public Camera cam;
@@ -88,20 +88,20 @@ public class PlayerAttacks : MonoBehaviour
         {
             attackDir = (target.transform.position - transform.position).normalized;
             
-            if (shotgunTimer <= 0 && (!isShotGunManual || Input.GetKeyDown(KeyCode.Mouse0)))
+            if (shotgunTimer <= 0)
             {
-                shotgunTimer = shotgunCooldown;
+                shotgunTimer = shotgunCooldown/shotgunRate;
                 ShotgunShot();
             }
             if (rocketTimer <= 0 && isRocketActive)
             {
-                rocketTimer = rocketCooldown;
+                rocketTimer = rocketCooldown/rocketRate;
                 RocketShot();
             }
 
             if (mineTimer <= 0 && isMinesActive)
             {
-                mineTimer = mineCooldown;
+                mineTimer = mineCooldown/mineRate;
                 MineLaunch();
             }
         }
@@ -140,12 +140,8 @@ public class PlayerAttacks : MonoBehaviour
                 rotateDir = Quaternion.Euler(0, 0, rotationDiff) * mouseDir;
             }
             projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * shotgunSpeed);
-            projo.GetComponent<HomingMissile>().target = target;
-            projo.GetComponent<HomingMissile>().isRocket = false;
-            projo.GetComponent<HomingMissile>().rotationDiff = rotateDir;
+            projo.GetComponent<AttackDamage>().damage = shotgunDamage;
             rotationDiff += shotgunSpread;
-            
-            
         }
     }
 

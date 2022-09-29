@@ -343,30 +343,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f230d7bd37481e9409796ca56c92427c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgunRate: 0
-  shotgunSpread: 15
+  shotgunRate: 1
   shotgunProjectileNumber: 3
-  shotgunRange: 0
-  shotgunIsExplosive: 0
+  shotgunDamage: 1
+  shotgunIsBurning: 0
   shotgunIsPiercing: 0
-  rocketRate: 0
-  rocketAngleDiff: 0
+  rocketRate: 1
+  rocketNumber: 1
   rocketIsResidual: 0
-  rocketIsBonusRocket: 0
   rocketIsDoubleBounce: 0
-  mineRate: 0
-  mineRadius: 0
+  mineRate: 1
+  mineRadius: 1
+  mineDamage: 5
   mineIsShrapnel: 0
   mineIsIce: 0
-  shieldRate: 0
-  shieldRange: 0
+  shieldDamage: 5
+  shieldSize: 1
   shieldSpeed: 1
   shieldIsDouble: 0
   shieldIsPewPew: 0
-  shotgunProjectileDamage: 0
-  rocketDamage: 0
-  mineDamage: 0
-  shieldDamage: 0
+  rocketDamage: 10
+  shotgunSpread: 15
   shotgunProjo: {fileID: 8865965525024252180, guid: d571c8ebd84ce9c4fa1d51a6ae9f09c6, type: 3}
   rocketProjo: {fileID: 6689219710273432464, guid: bbec3ce80b77edd40bfe82c19fe2ad16, type: 3}
   mineProjo: {fileID: 9114584235997046971, guid: ce4db7881fafa0a4996ff7426287237b, type: 3}
@@ -376,13 +373,15 @@ MonoBehaviour:
   isMinesActive: 1
   isShieldActive: 1
   shotgunSpeed: 100
-  rocketSpeed: 3
+  rocketSpeed: 4
   attackDir: {x: 0, y: 0}
   target: {fileID: 0}
+  enemyPoses: []
   shotgunCooldown: 2
   rocketCooldown: 4
   mineCooldown: 3
-  isShotGunManual: 0
+  isShotGunManual: 1
+  cam: {fileID: 0}
 --- !u!95 &8518646027766302684
 Animator:
   serializedVersion: 4

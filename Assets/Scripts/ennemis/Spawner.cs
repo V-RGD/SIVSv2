@@ -74,7 +74,6 @@ public class Spawner : MonoBehaviour
         ColorActivations();
         DinoSpawners();
     }
-
     #region ColorDinoActivations
     void ColorActivations()
     {
@@ -148,7 +147,7 @@ public class Spawner : MonoBehaviour
         goldenTimer += Time.deltaTime;
     }
     #endregion
-
+    #region SpawnTimers
     void DinoSpawners()
     {
         if (greenTimer <= 0 && canSpawnGreen)
@@ -187,31 +186,33 @@ public class Spawner : MonoBehaviour
             EnemySpawn(5);
         }
     }
-
+    #endregion
     void EnemySpawn(int enemyType)
     {
         Vector2 spawnPoint = Vector2.zero;
         int randDir = Random.Range(0, 4);
+        float randPos = Random.Range(0, 100);
+        randPos = randPos / 100;
         #region randomise dir
         if (randDir == 0)
         {
             //spawns down
-            spawnPoint = new Vector2( -cameraLenght/2 + (Random.Range(0, 100) / 100 * cameraLenght), -cameraHeight);
+            spawnPoint = new Vector2( -cameraLenght/2 + ( randPos * cameraLenght), -cameraHeight);
         }
         if (randDir == 1)
         {
             //spawns left
-            spawnPoint = new Vector2( -cameraLenght, -cameraHeight/2 + (Random.Range(0, 100) / 100 * cameraHeight));
+            spawnPoint = new Vector2( -cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
         }
         if (randDir == 2)
         {
             //spawns up
-            spawnPoint = new Vector2(-cameraLenght/2 + (Random.Range(0, 100) / 100 * cameraLenght), cameraHeight);
+            spawnPoint = new Vector2(-cameraLenght/2 + (randPos * cameraLenght), cameraHeight);
         }
         if (randDir == 3)
         {
             //spawns right
-            spawnPoint = new Vector2( cameraLenght, -cameraHeight/2 + (Random.Range(0, 100) / 100 * cameraHeight));
+            spawnPoint = new Vector2( cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
         }
         spawnPoint += new Vector2(player.transform.position.x, player.transform.position.y);
         #endregion
