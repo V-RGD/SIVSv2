@@ -2001,7 +2001,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1556895076}
   UpgradePanel: {fileID: 0}
-  Weapons: {fileID: 0}
+  SpeUpgradePanel: {fileID: 0}
 --- !u!114 &332217329 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
@@ -2990,7 +2990,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1427332032}
   UpgradePanel: {fileID: 0}
-  Weapons: {fileID: 0}
+  SpeUpgradePanel: {fileID: 0}
 --- !u!114 &656300502 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
@@ -3169,7 +3169,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 357966429}
   UpgradePanel: {fileID: 0}
-  Weapons: {fileID: 0}
+  SpeUpgradePanel: {fileID: 0}
 --- !u!114 &722408153 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
@@ -7237,7 +7237,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1458358461}
   UpgradePanel: {fileID: 0}
-  Weapons: {fileID: 0}
+  SpeUpgradePanel: {fileID: 0}
 --- !u!114 &1921805514 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
@@ -8107,7 +8107,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1253741576}
   UpgradePanel: {fileID: 0}
-  Weapons: {fileID: 0}
+  SpeUpgradePanel: {fileID: 0}
 --- !u!114 &2057512189 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
@@ -8512,7 +8512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1967861324312598675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: shotgunProjectileNumber
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5468831776824257908, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_IsActive
