@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1437233107915067027
 Transform:
   m_ObjectHideFlags: 0
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f230d7bd37481e9409796ca56c92427c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgunRate: 1
-  shotgunProjectileNumber: 3
+  shotgunRate: 2
+  shotgunProjectileNumber: 1
   shotgunDamage: 1
   shotgunIsBurning: 0
   shotgunIsPiercing: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   isMinesActive: 1
   isShieldActive: 1
   shotgunSpeed: 100
-  rocketSpeed: 4
+  rocketSpeed: 15
   attackDir: {x: 0, y: 0}
   target: {fileID: 0}
   enemyPoses: []
