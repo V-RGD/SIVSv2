@@ -332,8 +332,8 @@ GameObject:
   - component: {fileID: 42802447}
   - component: {fileID: 42802446}
   - component: {fileID: 42802445}
-  - component: {fileID: 42802448}
   - component: {fileID: 42802449}
+  - component: {fileID: 42802448}
   m_Layer: 5
   m_Name: Boost2
   m_TagString: Untagged
@@ -420,7 +420,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 42802448}
+      - m_Target: {fileID: 42802449}
         m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
         m_MethodName: SecondChoice
         m_Mode: 1
@@ -432,7 +432,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 42802449}
+      - m_Target: {fileID: 42802448}
         m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -503,25 +503,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 42802443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f5fc0c5684ddf439df6053173e92fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
-  description: {fileID: 0}
-  level: {fileID: 0}
-  Weapons: {fileID: 0}
-  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
-  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
-  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
-  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
-  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
-  TheSpe: {fileID: 0}
-  SpeShotGun: {fileID: 0}
-  SpeMine: {fileID: 0}
-  SpeMissile: {fileID: 0}
-  SpeOrbital: {fileID: 0}
-  SpeTronc: {fileID: 0}
-  BarName: 
 --- !u!114 &42802449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,9 +515,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 42802443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 655f0b80758f93d4dbaae3082929ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: {fileID: 187986852}
+  description: {fileID: 240417261}
+  level: {fileID: 2066613829}
+  Weapons: {fileID: 0}
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
+  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
+  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
+  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
+  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  TheSpe: {fileID: 0}
+  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
+  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
+  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
+  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
+  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
+  BarName: 
 --- !u!1 &60503690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 265892985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271468fc1bbf6334c8497ab0c95ef847, type: 3}
+  m_Script: {fileID: 11500000, guid: 096b480c74b879042a33c3bc20f593a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
@@ -3276,7 +3276,7 @@ GameObject:
   - component: {fileID: 719005177}
   - component: {fileID: 719005176}
   - component: {fileID: 719005175}
-  - component: {fileID: 719005174}
+  - component: {fileID: 719005179}
   - component: {fileID: 719005178}
   m_Layer: 5
   m_Name: Spe1
@@ -3308,34 +3308,6 @@ RectTransform:
   m_AnchoredPosition: {x: -160.2, y: -0.000015259}
   m_SizeDelta: {x: 160, y: 390.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &719005174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719005171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: {fileID: 1802012931}
-  description: {fileID: 1622717427}
-  level: {fileID: 1730456490}
-  Weapons: {fileID: 0}
-  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
-  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
-  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
-  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
-  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
-  TheSpe: {fileID: 0}
-  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
-  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
-  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
-  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
-  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
-  BarName: 
 --- !u!114 &719005175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3392,6 +3364,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 265892990}
+        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
+        m_MethodName: ResetButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 719005178}
         m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
         m_MethodName: Activate
@@ -3407,18 +3391,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2110740152}
         m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
         m_MethodName: TheUpgrades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 265892990}
-        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
-        m_MethodName: ResetButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3475,9 +3447,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 719005171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f5fc0c5684ddf439df6053173e92fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &719005179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719005171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f0b80758f93d4dbaae3082929ca9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: {fileID: 1802012931}
+  description: {fileID: 1622717427}
+  level: {fileID: 1730456490}
+  Weapons: {fileID: 0}
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
+  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
+  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
+  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
+  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  TheSpe: {fileID: 0}
+  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
+  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
+  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
+  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
+  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
+  BarName: 
 --- !u!1 &728171678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,8 +3650,8 @@ GameObject:
   - component: {fileID: 753515018}
   - component: {fileID: 753515017}
   - component: {fileID: 753515016}
-  - component: {fileID: 753515019}
   - component: {fileID: 753515020}
+  - component: {fileID: 753515019}
   m_Layer: 5
   m_Name: Boost3
   m_TagString: Untagged
@@ -3738,7 +3738,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 753515019}
+      - m_Target: {fileID: 753515020}
         m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
         m_MethodName: LastChoice
         m_Mode: 1
@@ -3750,7 +3750,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 753515020}
+      - m_Target: {fileID: 753515019}
         m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -3821,7 +3821,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 753515014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f5fc0c5684ddf439df6053173e92fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &753515020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753515014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f0b80758f93d4dbaae3082929ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 359676105}
@@ -3834,24 +3846,12 @@ MonoBehaviour:
   Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
   Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
   TheSpe: {fileID: 0}
-  SpeShotGun: {fileID: 0}
-  SpeMine: {fileID: 0}
-  SpeMissile: {fileID: 0}
-  SpeOrbital: {fileID: 0}
-  SpeTronc: {fileID: 0}
+  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
+  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
+  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
+  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
+  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
   BarName: 
---- !u!114 &753515020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753515014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &775515718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,8 +5464,8 @@ GameObject:
   - component: {fileID: 1215003860}
   - component: {fileID: 1215003859}
   - component: {fileID: 1215003858}
-  - component: {fileID: 1215003861}
   - component: {fileID: 1215003862}
+  - component: {fileID: 1215003861}
   m_Layer: 5
   m_Name: Boost1
   m_TagString: Untagged
@@ -5552,7 +5552,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1215003861}
+      - m_Target: {fileID: 1215003862}
         m_TargetAssemblyTypeName: Boosters, Assembly-CSharp
         m_MethodName: FirstChoice
         m_Mode: 1
@@ -5564,7 +5564,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1215003862}
+      - m_Target: {fileID: 1215003861}
         m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -5635,25 +5635,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1215003856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f5fc0c5684ddf439df6053173e92fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 1214566884}
-  description: {fileID: 1214566884}
-  level: {fileID: 800821168}
-  Weapons: {fileID: 0}
-  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
-  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
-  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
-  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
-  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
-  TheSpe: {fileID: 0}
-  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
-  SpeMine: {fileID: 0}
-  SpeMissile: {fileID: 0}
-  SpeOrbital: {fileID: 0}
-  SpeTronc: {fileID: 0}
-  BarName: 
 --- !u!114 &1215003862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5663,9 +5647,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1215003856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 655f0b80758f93d4dbaae3082929ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: {fileID: 1214566884}
+  description: {fileID: 894178941}
+  level: {fileID: 800821168}
+  Weapons: {fileID: 0}
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
+  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
+  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
+  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
+  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  TheSpe: {fileID: 0}
+  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
+  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
+  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
+  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
+  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
+  BarName: 
 --- !u!1 &1220521981
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,7 +6228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408467866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6662f867d602e8c4da5208f46c60bbee, type: 3}
+  m_Script: {fileID: 11500000, guid: 77434210a30f7584f95c366d5cf01183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
@@ -8646,7 +8646,7 @@ GameObject:
   - component: {fileID: 1913838793}
   - component: {fileID: 1913838792}
   - component: {fileID: 1913838791}
-  - component: {fileID: 1913838790}
+  - component: {fileID: 1913838795}
   - component: {fileID: 1913838794}
   m_Layer: 5
   m_Name: Spe2
@@ -8678,34 +8678,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.1, y: -0.000015259}
   m_SizeDelta: {x: 160, y: 390.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1913838790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913838788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20699afb699f6af4ea8c50450cad0884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: {fileID: 1689316322}
-  description: {fileID: 621388068}
-  level: {fileID: 947095584}
-  Weapons: {fileID: 0}
-  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
-  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
-  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
-  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
-  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
-  TheSpe: {fileID: 0}
-  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
-  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
-  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
-  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
-  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
-  BarName: 
 --- !u!114 &1913838791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8762,6 +8734,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 265892990}
+        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
+        m_MethodName: ResetButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1913838794}
         m_TargetAssemblyTypeName: NameButton, Assembly-CSharp
         m_MethodName: Activate
@@ -8777,18 +8761,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2110740152}
         m_TargetAssemblyTypeName: NumberOfUpdates, Assembly-CSharp
         m_MethodName: TheUpgrades
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 265892990}
-        m_TargetAssemblyTypeName: SpeBoostersParents, Assembly-CSharp
-        m_MethodName: ResetButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8845,9 +8817,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1913838788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87806071dbfbd8844a9d4011ac2c4d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f5fc0c5684ddf439df6053173e92fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1913838795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913838788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f0b80758f93d4dbaae3082929ca9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: {fileID: 1689316322}
+  description: {fileID: 621388068}
+  level: {fileID: 947095584}
+  Weapons: {fileID: 0}
+  ShotGun: {fileID: 11400000, guid: 115f22c8f6b27494ab523163d5bfe6c5, type: 2}
+  Mine: {fileID: 11400000, guid: 6baa77fb0262a764cacd6642958a8fc2, type: 2}
+  Missile: {fileID: 11400000, guid: d0029aa401b9b2c4a90d6ede5eb1f7f9, type: 2}
+  Orbital: {fileID: 11400000, guid: 64fbc5d97f800f444b62ddc6d08192a2, type: 2}
+  Tronc: {fileID: 11400000, guid: 169321238dd91664a9a413e99c809f62, type: 2}
+  TheSpe: {fileID: 0}
+  SpeShotGun: {fileID: 11400000, guid: 9b5a92bcd47cc87469a8550476fc26e3, type: 2}
+  SpeMine: {fileID: 11400000, guid: 5086212d8e6d3cc448c03acfb4e0d43e, type: 2}
+  SpeMissile: {fileID: 11400000, guid: d94447afbb137374d9c099ea950bf66f, type: 2}
+  SpeOrbital: {fileID: 11400000, guid: f5dbb6bcf18fb994c8207b544bb2b75b, type: 2}
+  SpeTronc: {fileID: 11400000, guid: 6b69316da06b50d4ebaa466d5940338d, type: 2}
+  BarName: 
 --- !u!1 &1938031465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,17 +9707,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110740148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22b679776cf5204a8f9df7f2eafea8f, type: 3}
+  m_Script: {fileID: 11500000, guid: ce4fd516db36659488052d5d647cc2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TiersShotGun: -1
-  TiersMine: -1
-  TiersMissile: -1
-  TiersOrbital: -1
-  TiersTronc: -1
+  TiersShotGun: 0
+  TiersMine: 0
+  TiersMissile: 0
+  TiersOrbital: 0
+  TiersTronc: 0
   ButtonName: 
   Spe1ShotGun: 0
   Spe2ShotGun: 0
+  Spe1Mine: 0
+  Spe2Mine: 0
+  Spe1Missile: 0
+  Spe2Missile: 0
+  Spe1Orbital: 0
+  Spe2Orbital: 0
+  Spe1Tronc: 0
+  Spe2Tronc: 0
 --- !u!1001 &2988416316384485050
 PrefabInstance:
   m_ObjectHideFlags: 0

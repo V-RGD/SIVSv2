@@ -28,6 +28,7 @@ public class Boosters : MonoBehaviour
 
     // Est-ce qu'il est au niveau 5
     private bool isLevel5;
+    private bool isLevel10;
 
      // Singelton
      public static Boosters instance;
@@ -53,9 +54,10 @@ public class Boosters : MonoBehaviour
     {
         if(BarName == "LevelBar1")
         {
-            if(NumberOfUpdates.instance.TiersShotGun == 4)
+            if(NumberOfUpdates.instance.TiersShotGun == 4 || NumberOfUpdates.instance.TiersShotGun == 9)
             {
                 isLevel5 = true;
+                isLevel10 = true;
                 Debug.Log("On passe au niveau 5");
                 TheSpe = SpeShotGun;
             }
@@ -63,13 +65,15 @@ public class Boosters : MonoBehaviour
             {
               Weapons = ShotGun;
               isLevel5 = false;
+              isLevel10 = false;
             }
         }
         if(BarName == "LevelBar2")
         {
-            if(NumberOfUpdates.instance.TiersMine == 4)
+            if(NumberOfUpdates.instance.TiersMine == 4 || NumberOfUpdates.instance.TiersMine == 9)
             {
                 isLevel5 = true;
+                isLevel10 = true;
                 Debug.Log("On passe au niveau 5");
                 TheSpe = SpeMine;
             }
@@ -77,13 +81,15 @@ public class Boosters : MonoBehaviour
             {
               Weapons = Mine;
               isLevel5 = false;
+              isLevel10 = false;
             }
         }
         if(BarName == "LevelBar3")
         {
-            if(NumberOfUpdates.instance.TiersMissile == 4)
+            if(NumberOfUpdates.instance.TiersMissile == 4 || NumberOfUpdates.instance.TiersMissile == 9 )
             {
                 isLevel5 = true;
+                isLevel10 = true;
                 Debug.Log("On passe au niveau 5");
                 TheSpe = SpeMissile;
             }
@@ -91,13 +97,15 @@ public class Boosters : MonoBehaviour
             {
               Weapons = Missile;
               isLevel5 = false;
+              isLevel10 = false;
             }
         }
         if(BarName == "LevelBar4")
         {
-            if(NumberOfUpdates.instance.TiersOrbital == 4)
+            if(NumberOfUpdates.instance.TiersOrbital == 4 || NumberOfUpdates.instance.TiersOrbital == 9)
             {
                 isLevel5 = true;
+                isLevel10 = true;
                 Debug.Log("On passe au niveau 5");
                 TheSpe = SpeOrbital;
             }
@@ -105,13 +113,15 @@ public class Boosters : MonoBehaviour
             {
               Weapons = Orbital;
               isLevel5 = false;
+              isLevel10 = false;
             }
         }
         if(BarName == "LevelBar5")
         {
-            if(NumberOfUpdates.instance.TiersTronc == 4)
+            if(NumberOfUpdates.instance.TiersTronc == 4 || NumberOfUpdates.instance.TiersTronc == 9)
             {
                 isLevel5 = true;
+                isLevel10 = true;
                 Debug.Log("On passe au niveau 5");
                 TheSpe = SpeTronc;
             }
@@ -119,12 +129,13 @@ public class Boosters : MonoBehaviour
             {
               Weapons = Tronc;
               isLevel5 = false;
+              isLevel10 = false;
             }
         }
     }
    public void RefreshSelectPanel()
    {
-    if(isLevel5)
+    if(isLevel5 || isLevel10)
     {
         if(gameObject.name == "Spe1")
             {

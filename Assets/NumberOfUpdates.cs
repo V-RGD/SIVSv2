@@ -15,6 +15,26 @@ public class NumberOfUpdates : MonoBehaviour
     private string SpeBarName;
     public string ButtonName;
 
+    // ShotGun
+    [HideInInspector] public bool Spe1ShotGun = false;
+    [HideInInspector] public bool Spe2ShotGun = false;
+
+    // Mine
+    [HideInInspector] public bool Spe1Mine = false;
+    [HideInInspector] public bool Spe2Mine = false;
+
+    // Mine
+    [HideInInspector] public bool Spe1Missile = false;
+    [HideInInspector] public bool Spe2Missile = false;
+
+    // Mine
+    [HideInInspector] public bool Spe1Orbital = false;
+    [HideInInspector] public bool Spe2Orbital = false;
+
+    // Mine
+    [HideInInspector] public bool Spe1Tronc = false;
+    [HideInInspector] public bool Spe2Tronc = false;
+
     public static NumberOfUpdates instance;
      private void Awake()
     {
@@ -106,7 +126,7 @@ public class NumberOfUpdates : MonoBehaviour
                 Debug.Log("VitesseRotaOrbital");
             }
         }
-                // Barre 4
+        // Barre 5
         if(BarName == "LevelBar5")
         {
             if(ButtonName == "Boost1")
@@ -129,10 +149,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Spe1")
             {
                 Debug.Log("Spe1ShotGun");
+                Spe1ShotGun = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2ShotGun");
+                Spe2ShotGun = true;
             }
         }
         // Spe Mine
@@ -141,10 +163,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Spe1")
             {
                 Debug.Log("Spe1Mine");
+                Spe1Mine = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Mine");
+                Spe2Mine = true;
             }
         }
         // Spe Missile
@@ -153,10 +177,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Spe1")
             {
                 Debug.Log("Spe1Missile");
+                Spe1Missile = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Missile");
+                Spe2Missile = true;
             }
         }
         // Spe Orbital
@@ -165,10 +191,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Spe1")
             {
                 Debug.Log("Spe1Orbital");
+                Spe1Orbital = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Orbital");
+                Spe2Orbital = true;
             }
         }
         // Spe Tronc
@@ -177,10 +205,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Spe1")
             {
                 Debug.Log("Spe1Tronc");
+                Spe1Tronc = true;
             }
             if(ButtonName == "Spe2")
             {
                 Debug.Log("Spe2Tronc");
+                Spe2Tronc = true;
             }
         }
     }
