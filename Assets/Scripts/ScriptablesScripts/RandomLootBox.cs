@@ -5,20 +5,31 @@ using UnityEngine.UI;
 
 public class RandomLootBox : MonoBehaviour
 {
-
     private int IndexLootBox;
     public GameObject PanelLootBox;
     public Transform name;
     public Transform description;
+    public Transform Childname;
+    public Transform ChildDescription;
 
     public LootScripts TheLoot;
 
+
+     public static RandomLootBox instance;
+     private void Awake()
+    {
+            if (instance != null)
+            {
+              return;
+            }
+            instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
         PanelLootBox.SetActive(false);
-        name = gameObject.transform.GetChild(0);
-        description = gameObject.transform.GetChild(1);
+        Childname = name.transform.GetChild(0);
+        ChildDescription = description.transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -39,8 +50,8 @@ public class RandomLootBox : MonoBehaviour
     }
     public void ChargeLootBox()
     {
-        name.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
-        description.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
+        Childname.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
+        ChildDescription.transform.GetChild(0).GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
     }
 
     public void ApplyLootBox()
