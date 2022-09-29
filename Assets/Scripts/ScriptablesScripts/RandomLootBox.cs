@@ -16,7 +16,7 @@ public class RandomLootBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  PanelLootBox.SetActive(false);
+        PanelLootBox.SetActive(false);
         name = gameObject.transform.GetChild(0);
         description = gameObject.transform.GetChild(1);
     }
