@@ -192,7 +192,7 @@ MonoBehaviour:
   rocketRate: 1
   rocketNumber: 1
   rocketIsResidual: 1
-  rocketIsDoubleBounce: 0
+  rocketIsDoubleBounce: 1
   mineRate: 1
   mineRadius: 1
   mineDamage: 5
@@ -201,8 +201,8 @@ MonoBehaviour:
   shieldDamage: 5
   shieldSize: 1
   shieldSpeed: 1
-  shieldIsDouble: 0
-  shieldIsPewPew: 0
+  shieldIsDouble: 1
+  shieldIsPewPew: 1
   rocketDamage: 10
   shotgunSpread: 15
   shotgunProjo: {fileID: 8865965525024252180, guid: d571c8ebd84ce9c4fa1d51a6ae9f09c6, type: 3}

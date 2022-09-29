@@ -152,6 +152,9 @@ MonoBehaviour:
   damage: 5
   player: {fileID: 0}
   isShield: 0
+  destroyedOnContact: 1
+  isFireAmmo: 0
+  burnDamage: 0
 --- !u!95 &1353070366596054358
 Animator:
   serializedVersion: 4
@@ -244,7 +247,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.49115866, b: 0.11792451, a: 1}
+      key0: {r: 1, g: 0, b: 0.8520417, a: 1}
       key1: {r: 1, g: 0.49115866, b: 0.11792451, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -292,11 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13273b8adcdd45444b0eece0722fb6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 0
-  isRocket: 1
-  rotationDiff: {x: 0, y: 0}
   p_a: {fileID: 0}
-  canDamage: 0
   damage: 5
-  Aoe: {fileID: 0}
+  isPiercing: 0
