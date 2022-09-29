@@ -1628,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -1741,6 +1745,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 275140861}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &278965484
@@ -2083,6 +2088,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -2196,6 +2205,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 381710416}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &419041067
@@ -4389,6 +4399,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -4502,6 +4516,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 885218543}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1001 &888600438
@@ -4610,6 +4625,10 @@ PrefabInstance:
     - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Value
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
@@ -4724,6 +4743,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 888600440}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1 &894178940
@@ -10852,6 +10872,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864915459950217987, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
+      propertyPath: m_MaxValue
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4864915459950217988, guid: 761733c06aad90e4b918ea5dcde63206, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -10965,6 +10989,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3204399186494565864}
+  maxLevel: 0
   UpgradePanel: {fileID: 2110740148}
   SpeUpgradePanel: {fileID: 1049150438}
 --- !u!1001 &3625682232443770167
