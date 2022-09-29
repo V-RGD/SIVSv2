@@ -9,6 +9,7 @@ public class RandomLootBox : MonoBehaviour
     public GameObject PanelLootBox;
     public Transform name;
     public Transform description;
+    public Transform icon;
     public Transform Childname;
     public Transform ChildDescription;
 
@@ -53,6 +54,7 @@ public class RandomLootBox : MonoBehaviour
     {
         Childname.GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].name;
         ChildDescription.GetComponent<Text>().text = TheLoot.theLootBox[IndexLootBox].description;
+        icon.GetComponent<Image>().sprite = TheLoot.theLootBox[IndexLootBox].icon;
     }
 
     public void ApplyLootBox()
