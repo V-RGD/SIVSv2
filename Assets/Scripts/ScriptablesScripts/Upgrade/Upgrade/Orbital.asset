@@ -23,11 +23,11 @@ MonoBehaviour:
     description: "Taille de l'orbital augment\xE9e"
     level: 0
     niveau: 0
-    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
+    icon: {fileID: 21300000, guid: ecc9fff4472d29f44bd6938ce2f940c2, type: 3}
     valeurs: 
   - name: Vitesse
     description: "Vitesse de rotation augment\xE9e"
     level: 0
     niveau: 0
-    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
+    icon: {fileID: 21300000, guid: c2ab8c1bd0b52a94d9504361e0e1ea8c, type: 3}
     valeurs: 
