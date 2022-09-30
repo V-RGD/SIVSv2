@@ -12,6 +12,8 @@ public class RandomLootBox : MonoBehaviour
     public Transform icon;
     public Transform Childname;
     public Transform ChildDescription;
+    private GameObject player;
+    private GameObject TheGameManager;
 
     public LootScripts TheLoot;
 
@@ -31,6 +33,8 @@ public class RandomLootBox : MonoBehaviour
         PanelLootBox.SetActive(false);
         Childname = name.transform.GetChild(0);
         ChildDescription = description.transform.GetChild(0);
+        player = GameObject.Find("Player");
+        TheGameManager = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
@@ -64,15 +68,21 @@ public class RandomLootBox : MonoBehaviour
         Time.timeScale = 1;
         if(IndexLootBox == 0)
         {
-            Debug.Log("Amélioration 1");
+            Debug.Log("MaxSpeed");
+            player.GetComponent<PlayerController>().maxSpeed += 1;
         }
         if(IndexLootBox == 1)
         {
-            Debug.Log("Amélioration 2");
+            Debug.Log("MaxHP");
+            TheGameManager.GetComponent<GameManager>().maxHealth += 20;
         }
         if(IndexLootBox == 2)
         {
-            Debug.Log("Amélioration 3");
+            Debug.Log("Dégats");
+            player.GetComponent<PlayerController>().maxSpeed += 1;
+            player.GetComponent<PlayerAttacks>().shotgunDamage += 1;
+            player.GetComponent<PlayerAttacks>().mineDamage += 1;
+            player.GetComponent<PlayerAttacks>().shieldDamage += 1f;
         }
     }
 }
