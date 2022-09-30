@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            Score.instance.currentScore += 1;
             spawner.enemyPoses.Remove(gameObject.transform);
             if (canSpawnXP)
             {

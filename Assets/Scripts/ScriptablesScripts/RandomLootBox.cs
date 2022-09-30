@@ -59,6 +59,7 @@ public class RandomLootBox : MonoBehaviour
 
     public void ApplyLootBox()
     {
+        Time.timeScale = 1;
         PanelLootBox.SetActive(false);
         Time.timeScale = 1;
         if(IndexLootBox == 0)

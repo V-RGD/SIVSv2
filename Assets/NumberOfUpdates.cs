@@ -74,12 +74,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost2")
             {
                 Debug.Log("ProjectileNumber");
-                player.GetComponent<PlayerAttacks>().shotgunProjectileNumber += 2;
+                player.GetComponent<PlayerAttacks>().shotgunProjectileNumber += 1;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceShotGun");
-                player.GetComponent<PlayerAttacks>().shotgunRate += 2;
+                player.GetComponent<PlayerAttacks>().shotgunRate += 1.2f;
             }
         }
 

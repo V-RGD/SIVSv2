@@ -23,6 +23,7 @@ public class LootBox : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Player"))
         {
+          Time.timeScale = 0;
           AudioManager.instance.PlayClipAt(ChestBox, transform.position);
           animator.SetBool("isOpening",true);
           RandomLootBox.instance.OpenLootBox();
