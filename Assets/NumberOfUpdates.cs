@@ -60,6 +60,7 @@ public class NumberOfUpdates : MonoBehaviour
 
     public void TheUpgrades()
     {
+        Time.timeScale = 1;
         BarName = BoostersParents.instance.TheBar;
         SpeBarName = SpeBoostersParents.instance.TheBar;
 
@@ -94,12 +95,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost2")
             {
                 Debug.Log("RadiusMine");
-                player.GetComponent<PlayerAttacks>().mineRadius += 2;
+                player.GetComponent<PlayerAttacks>().mineRadius += 1.4f;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceMine");
-                player.GetComponent<PlayerAttacks>().mineRate += 2;
+                player.GetComponent<PlayerAttacks>().mineRate += 1.2f;
             }
         }
         // Barre 3
@@ -113,12 +114,12 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost2")
             {
                 Debug.Log("RadiusMissile");
-      //          player.GetComponent<PlayerAttacks>().rocketNumber += 2;
+               player.GetComponent<PlayerAttacks>().rocketNumber += 1.4f;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("CadenceMissile");
-                player.GetComponent<PlayerAttacks>().rocketRate += 2;
+                player.GetComponent<PlayerAttacks>().rocketRate += 1.2f;
             }
         }
         // Barre 4
@@ -127,17 +128,17 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("DamageOrbital");
-                player.GetComponent<PlayerAttacks>().shieldDamage += 2;
+                player.GetComponent<PlayerAttacks>().shieldDamage += 1.2f;
             }
             if(ButtonName == "Boost2")
             {
                 Debug.Log("SizeOrbital");
-                player.GetComponent<PlayerAttacks>().shieldSize += 2;
+                player.GetComponent<PlayerAttacks>().shieldSize += 1.2f;
             }
             if(ButtonName == "Boost3")
             {
                 Debug.Log("VitesseRotaOrbital");
-                player.GetComponent<PlayerAttacks>().shieldSpeed += 2;
+                player.GetComponent<PlayerAttacks>().shieldSpeed += 1.2f;
             }
         }
 
