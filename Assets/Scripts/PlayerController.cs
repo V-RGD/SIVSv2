@@ -6,6 +6,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerController : MonoBehaviour
 {
+    public Texture2D cursorAim;
+    
     public float maxSpeed;
     private float speedFactor = 1;
     public Vector2 movementDir;
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetBool("isHit", false);
         canMove = true;
         isAttacking = false;
+        Cursor.SetCursor(cursorAim, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     void Update()

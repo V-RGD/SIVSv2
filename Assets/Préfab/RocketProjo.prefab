@@ -335,11 +335,13 @@ MonoBehaviour:
   damage: 5
   Aoe: {fileID: 0}
   residualArea: {fileID: 0}
+  clonePrefab: {fileID: 6689219710273432464}
   rotationDiff: {x: 0, y: 0}
   p_a: {fileID: 0}
   canMove: 1
   canDamage: 0
   isResidual: 0
+  isDoubleBounce: 0
 --- !u!212 &435108247291351025
 SpriteRenderer:
   m_ObjectHideFlags: 0
