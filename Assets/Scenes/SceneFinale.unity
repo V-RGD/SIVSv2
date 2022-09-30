@@ -693,7 +693,7 @@ MonoBehaviour:
     m_DissipationRate: 0.25
     m_RawSignal: {fileID: 11400000, guid: 70a893493d9502c419b77eebcbf93da8, type: 2}
     m_AmplitudeGain: 0.2
-    m_FrequencyGain: 0.4
+    m_FrequencyGain: 0.6
     m_RepeatMode: 0
     m_Randomize: 1
     m_TimeEnvelope:
@@ -711,12 +711,12 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0
       m_SustainTime: 0.2
-      m_DecayTime: 0.7
+      m_DecayTime: 0
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
     m_DirectionMode: 0
-    m_DissipationMode: 2
+    m_DissipationMode: 0
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 0, y: -1, z: 0}
@@ -804,6 +804,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: cursorAim
+      value: 
+      objectReference: {fileID: 2800000, guid: baf9f761123771b4cbb9f47ad1e03c54, type: 3}
     - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: TakeDamage
       value: 
@@ -1429,17 +1433,6 @@ MonoBehaviour:
     m_FrequencyGain: 1
     m_Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
---- !u!114 &2023277280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8094487562432434285, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
-  m_PrefabInstance: {fileID: 8094487562825142925}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea70bbe7673f0141ae6162750a91213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8094487562825142925
 PrefabInstance:
   m_ObjectHideFlags: 0
