@@ -60,6 +60,7 @@ public class NumberOfUpdates : MonoBehaviour
 
     public void TheUpgrades()
     {
+        Time.timeScale = 1;
         BarName = BoostersParents.instance.TheBar;
         SpeBarName = SpeBoostersParents.instance.TheBar;
 
