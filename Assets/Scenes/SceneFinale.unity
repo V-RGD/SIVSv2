@@ -371,6 +371,7 @@ MonoBehaviour:
   level4: {fileID: 8094487562825142926}
   isPaused: 0
   sound: {fileID: 8300000, guid: 184e9b55bd8f7694083f21bd0aa00ab7, type: 3}
+  deathSound: {fileID: 8300000, guid: fe9fdad5877b86243ba68d46a8227ac7, type: 3}
   PauseAnimator: {fileID: 0}
 --- !u!1 &346001440 stripped
 GameObject:
@@ -1264,6 +1265,10 @@ PrefabInstance:
     - target: {fileID: 8518646027766302675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518646027766302684, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8518646027766302687, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_Name

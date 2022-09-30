@@ -35,10 +35,13 @@ public class Yazid_Script : MonoBehaviour
 
     // Sound
     public AudioClip sound;
+    public AudioClip deathSound;
 
     // The Animator
     public Animator PauseAnimator;
- //   public Animator DeathAnimator;
+    private Animator PlayerAnimator;
+
+    private GameObject Player;
 
     // Mort
     private GameObject PanelDeath;
@@ -57,7 +60,8 @@ public class Yazid_Script : MonoBehaviour
         PanelDeath = GameObject.Find("PanelDeath");
         TheGameManager = GameObject.Find("GameManager");
         PanelDeath.SetActive(false);
-     //   DeathAnimator = PanelDeath.GetComponent<Animator>();
+        Player = GameObject.Find("Player");
+        PlayerAnimator = Player.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -66,7 +70,9 @@ public class Yazid_Script : MonoBehaviour
         // Mort
         if(TheGameManager.GetComponent<GameManager>().health <= 0)
         {
+            PlayerAnimator.SetBool("isDead",true);
             Time.timeScale = 0;
+       //     AudioManager.instance.PlayClipAt(deathSound, transform.position);
             PanelDeath.SetActive(true);
         }
         // Sound
@@ -74,6 +80,11 @@ public class Yazid_Script : MonoBehaviour
         {
             AudioManager.instance.PlayClipAt(sound, transform.position);
         }
+
+    /*    private IEnumerator SoundPlay()
+        {
+            new
+        } */
 
 
         // LevelBar
@@ -129,6 +140,7 @@ public class Yazid_Script : MonoBehaviour
          // Restart Button
     public void Restart()
     {
+        PlayerAnimator.SetBool("isDead",false);
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
         TheGameManager.GetComponent<GameManager>().health = 100;

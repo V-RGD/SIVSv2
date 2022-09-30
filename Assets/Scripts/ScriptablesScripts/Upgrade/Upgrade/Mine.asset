@@ -17,7 +17,7 @@ MonoBehaviour:
     description: "D\xE9g\xE2ts des mines augment\xE9s"
     level: 0
     niveau: 0
-    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
+    icon: {fileID: 21300000, guid: eb593d1b782f9e540bc39cc4a5237d67, type: 3}
     valeurs: 
   - name: Radius
     description: "Zone de l'explosion augment\xE9e"

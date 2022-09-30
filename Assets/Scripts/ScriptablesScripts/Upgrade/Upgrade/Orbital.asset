@@ -17,7 +17,7 @@ MonoBehaviour:
     description: "D\xE9g\xE2ts de l'orbital augment\xE9s"
     level: 0
     niveau: 0
-    icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
+    icon: {fileID: 21300000, guid: b75aceaada49b8b4798ad93b48b3da9a, type: 3}
     valeurs: 
   - name: Taille
     description: "Taille de l'orbital augment\xE9e"
