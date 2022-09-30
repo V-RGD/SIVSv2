@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SpeOrbitale
   m_EditorClassIdentifier: 
   SpeTheStats:
-  - name: Deux orbital bonus
-    description: Les Deux orbital bonus
+  - name: "Faut que \xE7a tourne !!!"
+    description: + 2 Orbitaux autour du joueur
     icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 
   - name: Pew Pew Pew
-    description: le Pew Pew Pew
+    description: Orbitaux = Pew Pew Pew
     icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 
