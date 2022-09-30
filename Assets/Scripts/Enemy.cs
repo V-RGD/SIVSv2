@@ -133,7 +133,6 @@ public class Enemy : MonoBehaviour
             int randXpColor = Random.Range(0, 4);
             Instantiate(xpDropped[randXpColor], transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.25f);
-            Debug.Log("xp");
             counter--;
         }
 
