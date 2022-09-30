@@ -15,7 +15,7 @@ MonoBehaviour:
   SpeTheStats:
   - name: Zone de feu
     description: "Une zone de feu se cr\xE9e \xE0 l'impact"
-    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
+    icon: {fileID: 21300000, guid: 7da27f0006887d04d80ea9f2452cb1f5, type: 3}
     valeurs: 
   - name: Rebond
     description: "Le missile a 2 impact suppl\xE9mentaires"
