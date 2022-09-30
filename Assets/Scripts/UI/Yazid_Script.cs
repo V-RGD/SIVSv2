@@ -121,7 +121,7 @@ public class Yazid_Script : MonoBehaviour
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
         isPaused = false;
-        SceneManager.LoadScene("Yazid");
+        SceneManager.LoadScene("SceneFinale");
         BoostersParents.instance.ResetLevel();
     }
 
@@ -145,7 +145,7 @@ public class Yazid_Script : MonoBehaviour
     {
         Time.timeScale = 1;
         isPaused = false;
-        SceneManager.LoadScene("Yazid");
+        SceneManager.LoadScene("SceneFinale");
         BoostersParents.instance.ResetLevel();
     }
 
