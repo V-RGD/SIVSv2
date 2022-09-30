@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
-    public float speed = 3;
+    public float speed = 1.5f;
     public int enemyType;
     public float health;
     public float damage;
@@ -23,6 +23,10 @@ public class Enemy : MonoBehaviour
     public float speedCoef = 1;
 
     public GameObject[] xpDropped;
+    public GameObject fireStatus;
+    public GameObject iceStatus;
+    private SpriteRenderer sprite;
+    private Rigidbody2D rb;
     private bool canSpawnXP = true;
 
     public GameObject food;
@@ -30,6 +34,10 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        fireStatus = transform.GetChild(0).gameObject;
+        iceStatus = transform.GetChild(1).gameObject;
     }
 
     private void FixedUpdate()
@@ -48,6 +56,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        Flip();
+        StatusVFX();
         if (health <= 0)
         {
             Score.instance.currentScore += 1;
@@ -132,6 +142,39 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    
+
+
+    void Flip()
+    {
+        //Flips the sprite when turning around
+        if (player.transform.position.x - transform.position.x > 0.1f)
+        {
+            sprite.flipX = false;
+        }
+
+        else if (player.transform.position.x - transform.position.x < -0.1f)
+        {
+            sprite.flipX = true;
+        }
+    }
+
+    void StatusVFX()
+    {
+        if (burnTimer > 0)
+        {
+            fireStatus.SetActive(true);
+        }
+        else
+        {
+            fireStatus.SetActive(false);
+        }
+        if (speedCoef < 1)
+        {
+            iceStatus.SetActive(true);
+        }
+        else
+        {
+            iceStatus.SetActive(false);
+        }
+    }
 }
