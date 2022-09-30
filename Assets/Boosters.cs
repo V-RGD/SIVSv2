@@ -118,22 +118,6 @@ public class Boosters : MonoBehaviour
               isLevel10 = false;
             }
         }
-        if(BarName == "LevelBar5")
-        {
-            if(NumberOfUpdates.instance.TiersTronc == 4 || NumberOfUpdates.instance.TiersTronc == 9)
-            {
-                isLevel5 = true;
-                isLevel10 = true;
-                Debug.Log("On passe au niveau 5");
-                TheSpe = SpeTronc;
-            }
-            else
-            {
-              Weapons = Tronc;
-              isLevel5 = false;
-              isLevel10 = false;
-            }
-        }
     }
    public void RefreshSelectPanel()
    {

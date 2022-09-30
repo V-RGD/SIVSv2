@@ -35,7 +35,6 @@ public class LevelBar : MonoBehaviour
         maxLevel = gameObject.GetComponent<Slider>().maxValue;
         player = GameObject.Find("Player");
 
-  //      UpgradePanel = GameObject.Find("SelectUpgradePanel");
         UpgradePanel.SetActive(false);
         SpeUpgradePanel.SetActive(false);
     }
@@ -142,26 +141,6 @@ public class LevelBar : MonoBehaviour
           if(NumberOfUpdates.instance.TiersOrbital == 4 || NumberOfUpdates.instance.TiersOrbital == 9)
           {
             SpeBoostersParents.instance.TheBar = "LevelBar4";
-            SpeUpgradePanel.SetActive(true);
-            SpeBoostersParents.instance.NameUpdate();
-            SpeBoostersParents.instance.Transition();
-          }
-          else
-        {
-            UpgradePanel.SetActive(true);
-            BoostersParents.instance.NameUpdate();
-            BoostersParents.instance.Transition();
-        }
-        }
-        if(gameObject.name == "LevelBar5")
-        {
-            gameObject.GetComponent<Slider>().maxValue += 50;
-            maxLevel = gameObject.GetComponent<Slider>().maxValue;
-            NumberOfUpdates.instance.TiersTronc += 1;
-            BoostersParents.instance.TheBar = "LevelBar5";
-          if(NumberOfUpdates.instance.TiersTronc == 4 || NumberOfUpdates.instance.TiersTronc == 9)
-          {
-            SpeBoostersParents.instance.TheBar = "LevelBar5";
             SpeUpgradePanel.SetActive(true);
             SpeBoostersParents.instance.NameUpdate();
             SpeBoostersParents.instance.Transition();
