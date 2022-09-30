@@ -399,6 +399,10 @@ MonoBehaviour:
   maxHealth: 0
   items: []
   healthBar: {fileID: 0}
+  greenXP: 0
+  yellowXP: 0
+  orangeXP: 0
+  redXP: 0
 --- !u!4 &810808110
 Transform:
   m_ObjectHideFlags: 0
@@ -5804,6 +5808,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: cursorAim
+      value: 
+      objectReference: {fileID: 2800000, guid: baf9f761123771b4cbb9f47ad1e03c54, type: 3}
     - target: {fileID: 8518646027766302675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: m_RootOrder
       value: 9
