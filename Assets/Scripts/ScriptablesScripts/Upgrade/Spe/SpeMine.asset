@@ -15,7 +15,7 @@ MonoBehaviour:
   SpeTheStats:
   - name: Schrapnel
     description: "Les mines se fragmentent en plusieurs morceaux \xE0 l'explosion"
-    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
+    icon: {fileID: 21300000, guid: bdc2bfc7c6e23c349884155b25cd10ab, type: 3}
     valeurs: 
   - name: Blizzard
     description: Les ennemis sont ralentis

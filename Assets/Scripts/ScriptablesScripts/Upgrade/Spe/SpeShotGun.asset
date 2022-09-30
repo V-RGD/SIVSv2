@@ -19,5 +19,5 @@ MonoBehaviour:
     valeurs: 
   - name: Balles perforantes
     description: "Les balles transper\xE7ent les ennemis"
-    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
+    icon: {fileID: 21300000, guid: 75ab7e65ef8f1444bbff5b6d3fc2cbd3, type: 3}
     valeurs: 
