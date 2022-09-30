@@ -38,6 +38,11 @@ public class Yazid_Script : MonoBehaviour
 
     // The Animator
     public Animator PauseAnimator;
+ //   public Animator DeathAnimator;
+
+    // Mort
+    private GameObject PanelDeath;
+    private GameObject TheGameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -49,11 +54,21 @@ public class Yazid_Script : MonoBehaviour
         PanelSettings.SetActive(false);
         BoostersParents.instance.ResetLevel();
         PauseAnimator = PauseMenu.GetComponent<Animator>();
+        PanelDeath = GameObject.Find("PanelDeath");
+        TheGameManager = GameObject.Find("GameManager");
+        PanelDeath.SetActive(false);
+     //   DeathAnimator = PanelDeath.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Mort
+        if(TheGameManager.GetComponent<GameManager>().health <= 0)
+        {
+            Time.timeScale = 0;
+            PanelDeath.SetActive(true);
+        }
         // Sound
          if(Input.GetKeyDown(KeyCode.W))
         {
@@ -116,6 +131,7 @@ public class Yazid_Script : MonoBehaviour
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
+        PanelDeath.SetActive(false);
         isPaused = false;
         SceneManager.LoadScene("SceneFinale");
         BoostersParents.instance.ResetLevel();
@@ -124,8 +140,10 @@ public class Yazid_Script : MonoBehaviour
     // Main Menu
     public void LoadMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
         PauseMenu.SetActive(false);
+        PanelDeath.SetActive(false);
         BoostersParents.instance.ResetLevel();
     }
 
