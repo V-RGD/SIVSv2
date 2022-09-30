@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetBool("isHit", false);
         canMove = true;
         isAttacking = false;
+        
         Cursor.SetCursor(cursorAim, Vector2.zero, CursorMode.ForceSoftware);
     }
 
