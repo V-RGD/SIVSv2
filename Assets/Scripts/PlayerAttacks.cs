@@ -50,7 +50,7 @@ public class PlayerAttacks : MonoBehaviour
     public bool isShieldActive;
 
     public float shotgunSpeed = 100;
-    public float rocketSpeed = 3;
+    private float rocketSpeed = 8;
 
     public Vector2 attackDir;
     public GameObject target;
