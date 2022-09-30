@@ -744,7 +744,7 @@ MonoBehaviour:
     m_DissipationRate: 0.25
     m_RawSignal: {fileID: 11400000, guid: 70a893493d9502c419b77eebcbf93da8, type: 2}
     m_AmplitudeGain: 0.2
-    m_FrequencyGain: 0.6
+    m_FrequencyGain: 0.4
     m_RepeatMode: 0
     m_Randomize: 1
     m_TimeEnvelope:

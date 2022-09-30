@@ -18,9 +18,9 @@ public class Food : MonoBehaviour
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             gm.health += healthRestored;
             Destroy(gameObject);
