@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -80,6 +81,10 @@ public class PlayerAttacks : MonoBehaviour
     private GameObject shield1;
     private GameObject shield2;
     private GameObject shield3;
+
+    private List<GameObject> bulletsPooling;
+    private List<GameObject> rocketsPooling;
+    private List<GameObject> minesPooling;
 
     private void Awake()
     {
@@ -172,6 +177,8 @@ public class PlayerAttacks : MonoBehaviour
     }
     void ShotgunShot()
     {
+        
+        #region oldSystem
         float rotationDiff = -shotgunSpread * shotgunProjectileNumber / 2;
         //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
         for (int i = 0; i < shotgunProjectileNumber; i++)
@@ -200,9 +207,62 @@ public class PlayerAttacks : MonoBehaviour
             }
             rotationDiff += shotgunSpread;
         }
+        #endregion
+        /*
+        #region newSystem
+        
+        float rotationDiff = -shotgunSpread * shotgunProjectileNumber / 2;
+        //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
+        for (int i = 0; i < shotgunProjectileNumber; i++)
+        {
+            Vector2 rotateDir;
+            GameObject projo;
+            foreach (GameObject bullet in bulletsPooling)
+            {
+                if (bullet.gameObject.activeInHierarchy)
+                {
+                    break;
+                }
+                else
+                {
+                    projo = bullet;
+                    return;
+                }
+            }
 
-        //recoil
-        //StartCoroutine(Recoil());
+            if (projo == null)
+            {
+                //creates more
+            }
+            else
+            {
+                
+            }
+            //GameObject projo = Instantiate(shotgunProjo, transform.position, Quaternion.identity);
+            if (!isShotGunManual)
+            {
+                rotateDir = Quaternion.Euler(0, 0, rotationDiff) * attackDir;
+            }
+            else
+            {
+                rotateDir = Quaternion.Euler(0, 0, rotationDiff) * mouseDir;
+            }
+            projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * shotgunSpeed);
+            projo.GetComponent<AttackDamage>().damage = shotgunDamage;
+            if (shotgunIsPiercing)
+            {
+                //for piercing module
+                projo.GetComponent<AttackDamage>().destroyedOnContact = false;
+            }
+
+            if (shotgunIsBurning)
+            {
+                projo.GetComponent<AttackDamage>().isFireAmmo = true;
+            }
+            rotationDiff += shotgunSpread;
+        }
+        #endregion
+        */
     }
 
     IEnumerator RocketShot()
@@ -310,5 +370,39 @@ public class PlayerAttacks : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(-mouseDir * 500);
         yield return new WaitForSeconds(0.2f);
         GetComponent<PlayerController>().canMove = true;
+    }
+
+    void WeaponsPoolingInstances()
+    {
+        
+        
+        for (int i = 0; i < 30; i++)
+        {
+            GameObject projo = Instantiate(shotgunProjo, Vector2.zero, Quaternion.identity);
+            bulletsPooling.Add(projo);
+            projo.SetActive(false);
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject projo = Instantiate(rocketProjo, Vector2.zero, Quaternion.identity);
+            rocketsPooling.Add(projo);
+            projo.SetActive(false);
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject projo = Instantiate(mineProjo, Vector2.zero, Quaternion.identity);
+            minesPooling.Add(projo);
+            projo.SetActive(false);
+        }
+/*
+        ObjectPool poolComponent = new ObjectPool();
+        poolComponent.POOL_SIZE = 30;
+        List<GameObject> poolist = poolComponent.PrePool(shotgunProjo);
+        foreach (GameObject go in poolist)
+        {
+            poolComponent.PrePool(go);
+        }*/
     }
 }
