@@ -23,6 +23,7 @@ public class Food : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             gm.health += healthRestored;
+            other.GetComponent<PlayerController>().healthVfxTimer = 1;
             Destroy(gameObject);
         }
     }

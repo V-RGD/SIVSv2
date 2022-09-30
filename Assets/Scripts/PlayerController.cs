@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
     
     public bool isAttacking;
 
-    public GameObject SmashHitBox;
-    public GameObject JabHitBox;
+    public GameObject healthVfx;
+    public float healthVfxTimer;
 
     private float attackMultiplier = 1;
 
@@ -83,7 +83,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Flip(rb.velocity.x);
-        
+        healthVfxTimer -= Time.deltaTime;
+
+        if (healthVfxTimer > 0)
+        {
+            healthVfx.SetActive(true);
+        }
+        else
+        {
+            healthVfx.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -212,7 +221,6 @@ public class PlayerController : MonoBehaviour
                 //GetComponent<Animator>().SetTrigger("Hurt");
                 GameObject.Find("Shake").GetComponent<CameraShake>().shakeCamera.Invoke();
             }
-            
         }
 }
 
