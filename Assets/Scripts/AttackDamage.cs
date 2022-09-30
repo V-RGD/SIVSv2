@@ -28,7 +28,7 @@ public class AttackDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") && !isShield)
+        if (other.gameObject.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().health -= damage;
             other.GetComponent<Enemy>().RecoilTampon(other.transform.position - transform.position);
@@ -50,6 +50,11 @@ public class AttackDamage : MonoBehaviour
             ui.GetComponent<TMP_Text>().text = damage.ToString();
 
             if (destroyedOnContact)
+            {
+                Destroy(gameObject);
+            }
+
+            if (!isShield)
             {
                 Destroy(gameObject);
             }

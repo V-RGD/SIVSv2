@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 2065117378245711032}
   - component: {fileID: 6823298568021128047}
   - component: {fileID: 202307985460940823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AreaOfDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,6 +530,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2569063086960359443}
     m_Modifications:
+    - target: {fileID: 7232514907655624008, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7232514907655624015, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -537,6 +541,10 @@ PrefabInstance:
     - target: {fileID: 7390615913380495601, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_Name
       value: MissileFireEffectCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390615913380495601, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7390615913380495607, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_RootOrder
@@ -596,6 +604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 943163130810998025}
     m_Modifications:
+    - target: {fileID: 7232514907655624008, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7232514907655624015, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -603,6 +615,10 @@ PrefabInstance:
     - target: {fileID: 7390615913380495601, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_Name
       value: MissileFireEffectCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390615913380495601, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7390615913380495607, guid: 8ee1f7f4b63bf3b41afe9a18cc70db38, type: 3}
       propertyPath: m_RootOrder

@@ -19,8 +19,10 @@ public class HomingMissile : MonoBehaviour
     public bool isResidual;
 
     public bool isDoubleBounce;
+    private bool canDouble = true;
     private void Start()
     {
+        //GetComponent<BoxCollider2D>().enabled = true;
         p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
         if (target != null)
         {
@@ -29,6 +31,7 @@ public class HomingMissile : MonoBehaviour
         Aoe = transform.GetChild(0).gameObject;
         residualArea = transform.GetChild(1).gameObject;
         canDamage = true;
+        Destroy(gameObject, 4);
     }
 
     private void FixedUpdate()
@@ -50,7 +53,8 @@ public class HomingMissile : MonoBehaviour
             target = GetClosestEnemy(p_a.enemyPoses);
         }
     }
-    
+
+    #region Target
     Transform GetClosestEnemy (Transform[] enemies)
     {
         Transform bestTarget = null;
@@ -72,6 +76,7 @@ public class HomingMissile : MonoBehaviour
      
         return bestTarget;
     }
+    #endregion
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -88,9 +93,9 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator AreaOfDamage()
     {
-        Debug.Log("boum");
-        if (isDoubleBounce)
+        if (isDoubleBounce && canDouble)
         {
+            canDouble = false;
             DoubleMissileLaunch();
         }
         canMove = false;   
@@ -104,15 +109,6 @@ public class HomingMissile : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    IEnumerator ResidualZone()
-    {
-        residualArea.SetActive(true);
-        residualArea.GetComponent<ResidualArea>().damage = burningDamage;
-        yield return new WaitForSeconds(5);
-        residualArea.SetActive(false);
-        Destroy(gameObject);
-    }
 
     void DoubleMissileLaunch()
     {
@@ -123,6 +119,15 @@ public class HomingMissile : MonoBehaviour
             rocket.GetComponent<HomingMissile>().isResidual = true;
         }
         Debug.Log("doubled");
+    }
+    
+    IEnumerator ResidualZone()
+    {
+        residualArea.SetActive(true);
+        residualArea.GetComponent<ResidualArea>().damage = burningDamage;
+        yield return new WaitForSeconds(5);
+        residualArea.SetActive(false);
+        Destroy(gameObject);
     }
     
 }
