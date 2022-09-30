@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playlist:
-  - {fileID: 8300000, guid: 1a804df505721a048b8b8f0370c29e8a, type: 3}
+  - {fileID: 0}
   audioSource: {fileID: 1336605099}
   soundEffectMixer: {fileID: 6037642473074841992, guid: e5435c1501038d9418c0893198895680, type: 2}
 --- !u!82 &1336605099
@@ -1528,9 +1528,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2486328641387299860, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: GainXP
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
+    - target: {fileID: 2486328641387299860, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: OpenUpgrade
       value: 
-      objectReference: {fileID: 8300000, guid: 14b1aca8a0b4ed144885f53e8d1dac6a, type: 3}
+      objectReference: {fileID: 8300000, guid: a9e6503d525f4a1419af0034ab6fa31b, type: 3}
+    - target: {fileID: 2486328641387299860, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: UpgradeSelection
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 3472952201298720665, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1588,9 +1596,17 @@ PrefabInstance:
       value: -60.4
       objectReference: {fileID: 0}
     - target: {fileID: 3918248522623695410, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: GainXP
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
+    - target: {fileID: 3918248522623695410, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: OpenUpgrade
       value: 
-      objectReference: {fileID: 8300000, guid: 14b1aca8a0b4ed144885f53e8d1dac6a, type: 3}
+      objectReference: {fileID: 8300000, guid: a9e6503d525f4a1419af0034ab6fa31b, type: 3}
+    - target: {fileID: 3918248522623695410, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: UpgradeSelection
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 4039888320400259881, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -33.3
@@ -1624,13 +1640,29 @@ PrefabInstance:
       value: -2.4790802
       objectReference: {fileID: 0}
     - target: {fileID: 5395266735113329918, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: GainXP
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
+    - target: {fileID: 5395266735113329918, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: OpenUpgrade
       value: 
-      objectReference: {fileID: 8300000, guid: 14b1aca8a0b4ed144885f53e8d1dac6a, type: 3}
+      objectReference: {fileID: 8300000, guid: a9e6503d525f4a1419af0034ab6fa31b, type: 3}
+    - target: {fileID: 5395266735113329918, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: UpgradeSelection
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
+    - target: {fileID: 5594981016652379655, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: GainXP
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 5594981016652379655, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: OpenUpgrade
       value: 
-      objectReference: {fileID: 8300000, guid: 14b1aca8a0b4ed144885f53e8d1dac6a, type: 3}
+      objectReference: {fileID: 8300000, guid: a9e6503d525f4a1419af0034ab6fa31b, type: 3}
+    - target: {fileID: 5594981016652379655, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: UpgradeSelection
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 5611788357246593566, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1708,9 +1740,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487561563503544, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: GainXP
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
+    - target: {fileID: 8094487561563503544, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8094487561563503544, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: OpenUpgrade
+      value: 
+      objectReference: {fileID: 8300000, guid: a9e6503d525f4a1419af0034ab6fa31b, type: 3}
+    - target: {fileID: 8094487561563503544, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: UpgradeSelection
+      value: 
+      objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 8094487561590315753, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
       value: 1

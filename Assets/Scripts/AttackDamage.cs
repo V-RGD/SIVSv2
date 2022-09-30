@@ -31,6 +31,8 @@ public class AttackDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") && !isShield)
         {
             other.GetComponent<Enemy>().health -= damage;
+            other.GetComponent<Enemy>().RecoilTampon(other.transform.position - transform.position);
+
             if (isFireAmmo)
             {
                 //burns the enemy
@@ -52,17 +54,6 @@ public class AttackDamage : MonoBehaviour
                 Destroy(gameObject);
             }
             //other.GetComponent<Rigidbody2D>().AddForce(-(player.transform.position - transform.position).normalized * recoilForce);
-        }
-    }
-
-    IEnumerator EnemyBlink(GameObject enemy)
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            enemy.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-            yield return new WaitForSeconds(0.1f);
-            enemy.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            yield return new WaitForSeconds(0.1f);
         }
     }
 }
