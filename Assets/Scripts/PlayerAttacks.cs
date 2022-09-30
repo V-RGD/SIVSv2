@@ -118,7 +118,7 @@ public class PlayerAttacks : MonoBehaviour
 
         if (isShieldActive)
         {
-            shieldProjo.transform.GetChild(0).gameObject.SetActive(true);
+            shield1.SetActive(true);
             //rotates around players
             shieldRotation += Time.deltaTime * 360 * shieldSpeed;
             shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
@@ -161,7 +161,7 @@ public class PlayerAttacks : MonoBehaviour
         }
         else
         {
-            shieldProjo.SetActive(false);
+            shield1.SetActive(false);
         }
 
         shotgunTimer -= Time.deltaTime;
