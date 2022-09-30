@@ -5114,7 +5114,6 @@ MonoBehaviour:
   isMinesActive: 0
   isShieldActive: 0
   shotgunSpeed: 100
-  rocketSpeed: 15
   attackDir: {x: 0, y: 0}
   target: {fileID: 0}
   enemyPoses: []
