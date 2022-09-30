@@ -767,11 +767,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1967861324312598675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: shotgunDamage
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967861324312598675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: shotgunSpread
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1967861324312598675, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: shotgunProjectileNumber
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: maxSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: cursorAim
