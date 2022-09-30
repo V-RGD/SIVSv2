@@ -156,6 +156,7 @@ public class PlayerAttacks : MonoBehaviour
     }
     void ShotgunShot()
     {
+        GameObject.Find("Shake").GetComponent<CameraShake>().shakeCamera.Invoke();
         float rotationDiff = -shotgunSpread * shotgunProjectileNumber / 2;
         //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
         for (int i = 0; i < shotgunProjectileNumber; i++)
@@ -184,6 +185,7 @@ public class PlayerAttacks : MonoBehaviour
             }
             rotationDiff += shotgunSpread;
         }
+
         //recoil
         //GetComponent<Rigidbody2D>().AddForce(-attackDir * 1000);
     }

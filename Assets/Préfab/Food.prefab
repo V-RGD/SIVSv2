@@ -66,7 +66,7 @@ MonoBehaviour:
   - {fileID: 1635043734, guid: 96d5c68f941dd6243b00aed98b0ed557, type: 3}
   - {fileID: 1328895755, guid: 96d5c68f941dd6243b00aed98b0ed557, type: 3}
   - {fileID: -530315898, guid: 96d5c68f941dd6243b00aed98b0ed557, type: 3}
-  healthRestored: 0
+  healthRestored: 10
 --- !u!212 &1876786759343407704
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -89,8 +89,8 @@ public class Enemy : MonoBehaviour
             if (randXpDrop == 0)
             {
                 Instantiate(xpDropped[enemyType], transform.position, Quaternion.identity);
-                Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
         //lgbt pinata
         if (enemyType == 4)
