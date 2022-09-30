@@ -36,6 +36,9 @@ public class Yazid_Script : MonoBehaviour
     // Sound
     public AudioClip sound;
 
+    // The Animator
+    public Animator PauseAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,7 @@ public class Yazid_Script : MonoBehaviour
         PanelSettings = GameObject.Find("SettingsPanel");
         PanelSettings.SetActive(false);
         BoostersParents.instance.ResetLevel();
+        PauseAnimator = PauseMenu.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -85,6 +89,8 @@ public class Yazid_Script : MonoBehaviour
         {
             isPaused = true;
             PauseMenu.SetActive(true);
+            PauseAnimator.SetBool("isOpening",true);
+            PauseAnimator.SetBool("isClosing",false);
         }
         // Pause Menu
         if(isPaused)
@@ -105,6 +111,8 @@ public class Yazid_Script : MonoBehaviour
         PauseMenu.SetActive(false); 
         Time.timeScale = 1;
         isPaused = false;
+        PauseAnimator.SetBool("isClosing",true);
+        PauseAnimator.SetBool("isOpening",false);
     }
 
          // Restart Button
