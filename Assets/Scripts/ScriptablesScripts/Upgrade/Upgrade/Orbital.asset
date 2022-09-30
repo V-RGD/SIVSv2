@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Orbital
   m_EditorClassIdentifier: 
   TheStats:
-  - name: Damage
-    description: Orbital
+  - name: "D\xE9g\xE2ts"
+    description: "D\xE9g\xE2ts de l'orbital augment\xE9s"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
-  - name: Size
-    description: La Size
+  - name: Taille
+    description: "Taille de l'orbital augment\xE9e"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
-  - name: Vitesse Rota
-    description: La vitesse rota
+  - name: Vitesse
+    description: "Vitesse de rotation augment\xE9e"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}

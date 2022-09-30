@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Mine
   m_EditorClassIdentifier: 
   TheStats:
-  - name: Damage
-    description: Mine
+  - name: "D\xE9g\xE2ts"
+    description: "D\xE9g\xE2ts des mines augment\xE9s"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
   - name: Radius
-    description: Le radius
+    description: "Zone de l'explosion augment\xE9e"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
   - name: Cadence
-    description: La cadence
+    description: "Taux d'apparition augment\xE9e"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}

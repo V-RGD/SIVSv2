@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: LootBox1
   m_EditorClassIdentifier: 
   theLootBox:
-  - name: MoveSpeed
-    description: Plus rapide
+  - name: "Vitesse de d\xE9placement"
+    description: Gotta go fast !
     icon: {fileID: 21300000, guid: fbbd2d760b64d6c4690f6c25d961e473, type: 3}
   - name: Max HP
-    description: Plus de max Hp
+    description: + 20 max HP
     icon: {fileID: 21300000, guid: fbbd2d760b64d6c4690f6c25d961e473, type: 3}
-  - name: "La r\xE9ponse C"
-    description: "C'est la r\xE9ponse C"
+  - name: "D\xE9g\xE2ts"
+    description: "+ 10% de d\xE9g\xE2ts"
     icon: {fileID: 21300000, guid: fbbd2d760b64d6c4690f6c25d961e473, type: 3}

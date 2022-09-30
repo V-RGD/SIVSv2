@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: ShotGun
   m_EditorClassIdentifier: 
   TheStats:
-  - name: Damage
-    description: Shotgun
+  - name: "D\xE9g\xE2ts"
+    description: "D\xE9g\xE2ts Augment\xE9s"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
-  - name: Nombres Projectiles
-    description: Le Nombre
+  - name: Rafales
+    description: "+ 1 balle \xE0 chaque tir"
     level: 0
-    niveau: 16
+    niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}
     valeurs: 
   - name: Cadence
-    description: La cadence
+    description: "Cadence de tir augment\xE9e"
     level: 0
     niveau: 0
     icon: {fileID: 21300000, guid: 8401080ef22df394b91773ccf3038c65, type: 3}

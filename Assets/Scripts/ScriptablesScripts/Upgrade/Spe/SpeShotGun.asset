@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SpeShotGun
   m_EditorClassIdentifier: 
   SpeTheStats:
-  - name: Cartouche incendiaire
-    description: C'est les Cartouche incendiaire
+  - name: Balles incendiaires
+    description: Les balles enflamment les ennemis
     icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 
-  - name: Cartouche percantes
-    description: C'est les Cartouche percantes
+  - name: Balles perforantes
+    description: "Les balles transper\xE7ent les ennemis"
     icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
     valeurs: 
