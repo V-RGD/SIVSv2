@@ -40,10 +40,10 @@ public class RandomLootBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Keypad6))
+     /*  if(Input.GetKeyDown(KeyCode.Keypad6))
         {
            OpenLootBox();
-        }
+        } */
     }
 
     public void OpenLootBox()

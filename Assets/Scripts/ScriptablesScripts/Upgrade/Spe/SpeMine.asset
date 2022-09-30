@@ -19,5 +19,5 @@ MonoBehaviour:
     valeurs: 
   - name: Blizzard
     description: Les ennemis sont ralentis
-    icon: {fileID: 21300000, guid: ffd5bb96a880e974b9d9cfce478f28df, type: 3}
+    icon: {fileID: 21300000, guid: 8aea3d904de9cb940bb06bc47cd93509, type: 3}
     valeurs: 
