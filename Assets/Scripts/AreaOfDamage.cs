@@ -1,13 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class AreaOfDamage : MonoBehaviour
 {
-    public int damage = 5;
+    public float damage = 5;
     private float recoilForce = 10;
-    
+    public float radius;
+
+    private void Start()
+    {
+        transform.localScale = new Vector3(radius, radius, radius);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))

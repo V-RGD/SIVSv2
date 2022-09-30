@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -259,6 +258,7 @@ public class Spawner : MonoBehaviour
             enemyToSpawn.GetComponent<Enemy>().health = enemyHealths[enemyType] + currentWave * H_Upgrades[enemyType];
             enemyToSpawn.GetComponent<Enemy>().damage = enemyDamages[enemyType];
         }
+        enemyToSpawn.GetComponent<Enemy>().enemyType = enemyType;
         enemyToSpawn.GetComponent<Enemy>().spawner = this;
         enemyPoses.Add(enemyToSpawn.transform);
     }

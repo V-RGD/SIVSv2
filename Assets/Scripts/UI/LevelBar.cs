@@ -62,7 +62,7 @@ public class LevelBar : MonoBehaviour
 
         public void BoostLevel(float boost)
     {
-       AudioManager.instance.PlayClipAt(GainXP, transform.position);
+       //AudioManager.instance.PlayClipAt(GainXP, transform.position);
        currentlevel += boost;
        SetLevel(currentlevel);
 

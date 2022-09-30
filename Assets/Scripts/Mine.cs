@@ -3,7 +3,10 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     public bool canDamage;
-    public int damage = 5;
+    public float damage = 5;
+    public float radius = 2;
+    public float damageCoef;
+    public float radiusCoef;
     public int shrapnelDamage;
     public GameObject Aoe;
 
@@ -21,6 +24,8 @@ public class Mine : MonoBehaviour
         Aoe = transform.GetChild(0).gameObject;
         canDamage = true;
         iceZone = transform.GetChild(1).gameObject;
+        Aoe.GetComponent<AreaOfDamage>().damage = damage * damageCoef;
+        Aoe.GetComponent<AreaOfDamage>().radius = radius * radiusCoef;
         yield return new WaitForSeconds(10);
         autoExplode = true;
         canDamage = false;

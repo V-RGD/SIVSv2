@@ -184,26 +184,33 @@ public class PlayerAttacks : MonoBehaviour
             }
             rotationDiff += shotgunSpread;
         }
+        //recoil
+        //GetComponent<Rigidbody2D>().AddForce(-attackDir * 1000);
     }
 
     void RocketShot()
     {
-        GameObject rocket = Instantiate(rocketProjo, transform.position, Quaternion.identity);
-        rocket.GetComponent<HomingMissile>().speed = rocketSpeed;
-        if (rocketIsResidual)
+        for (int i = 0; i < rocketNumber; i++)
         {
-            rocket.GetComponent<HomingMissile>().isResidual = true;
-        }
+            GameObject rocket = Instantiate(rocketProjo, transform.position, Quaternion.identity);
+            rocket.GetComponent<HomingMissile>().speed = rocketSpeed;
+            if (rocketIsResidual)
+            {
+                rocket.GetComponent<HomingMissile>().isResidual = true;
+            }
 
-        if (rocketIsDoubleBounce)
-        {
-            rocket.GetComponent<HomingMissile>().isDoubleBounce = true;
+            if (rocketIsDoubleBounce)
+            {
+                rocket.GetComponent<HomingMissile>().isDoubleBounce = true;
+            }
         }
     }
 
     void MineLaunch()
     {
         GameObject mine = Instantiate(mineProjo, transform.position, Quaternion.identity);
+        mine.GetComponent<Mine>().radius = mineRadius;
+        mine.GetComponent<Mine>().damage = mineDamage;
         if (mineIsShrapnel)
         {
             mine.GetComponent<Mine>().isShrapnel = true;

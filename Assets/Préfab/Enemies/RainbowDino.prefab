@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  enemyType: {fileID: 11400000, guid: 7035ddb0459034547920d9191c15c4a8, type: 2}
+  enemyType: 0
   health: 0
   damage: 0
   spawner: {fileID: 0}
@@ -110,7 +110,12 @@ MonoBehaviour:
   burnDamage: 1
   slowedTimer: 0
   speedCoef: 1
-  xpDropped: {fileID: 0}
+  xpDropped:
+  - {fileID: 3685444260859283942, guid: 1ce54c5c5ec0500438ae49de10321f13, type: 3}
+  - {fileID: 2502803966036417107, guid: 7149bc14a7020324b9be751f699d1ffe, type: 3}
+  - {fileID: 4912392333344865560, guid: 1b7e072f13b8b084287bd3b66050138c, type: 3}
+  - {fileID: 6587195552284973399, guid: 72ecfd60d02aa7f43be7ad4477b8f1aa, type: 3}
+  food: {fileID: 123747637513680859, guid: 34bb3410c6cd23f4da380348bf1d6b0d, type: 3}
 --- !u!50 &4329952272776381718
 Rigidbody2D:
   serializedVersion: 4

@@ -1,12 +1,14 @@
 using System.Collections;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
     public float speed = 3;
-    public EnemyType enemyType;
+    public int enemyType;
     public float health;
     public float damage;
     public Spawner spawner;
@@ -20,7 +22,10 @@ public class Enemy : MonoBehaviour
     public float slowedTimer;
     public float speedCoef = 1;
 
-    public GameObject xpDropped;
+    public GameObject[] xpDropped;
+    private bool canSpawnXP = true;
+
+    public GameObject food;
 
     void Start()
     {
@@ -46,11 +51,10 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             spawner.enemyPoses.Remove(gameObject.transform);
-            Destroy(gameObject);
-            int randXpDrop = Random.Range(0, 3);
-            if (randXpDrop == 0)
+            if (canSpawnXP)
             {
-                Instantiate(xpDropped, transform.position, Quaternion.identity);
+                canSpawnXP = false;
+                LootDrop();
             }
         }
 
@@ -75,6 +79,57 @@ public class Enemy : MonoBehaviour
         ui.GetComponent<TMP_Text>().text = burnDamage.ToString();
         yield return new WaitForSeconds(1);
         canBurn = true;
+    }
+
+    void LootDrop()
+    {
+        if (enemyType < 4)
+        {
+            int randXpDrop = Random.Range(0, 3);
+            if (randXpDrop == 0)
+            {
+                Instantiate(xpDropped[enemyType], transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+        //lgbt pinata
+        if (enemyType == 4)
+        {
+            StartCoroutine(Pinata());
+        }
+
+        //golden
+        if (enemyType == 5)
+        {
+            Instantiate(xpDropped[4], transform.position, Quaternion.identity);
+            
+            StartCoroutine(Pinata());
+        }
+
+        int randBouffeSpawn = Random.Range(0, 50);
+        if (randBouffeSpawn == 0)
+        {
+            Instantiate(food, transform.position, quaternion.identity);
+        }
+    }
+
+    IEnumerator Pinata()
+    {
+        int randAmount = Random.Range(30, 50);
+        int counter = randAmount;
+        for (int i = 0; i < randAmount; i++)
+        {
+            int randXpColor = Random.Range(0, 4);
+            Instantiate(xpDropped[randXpColor], transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.25f);
+            Debug.Log("xp");
+            counter--;
+        }
+
+        if (counter == 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
     
