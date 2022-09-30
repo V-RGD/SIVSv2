@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Pinata());
         }
 
-        int randBouffeSpawn = Random.Range(0, 1);
+        int randBouffeSpawn = Random.Range(0, 50);
         if (randBouffeSpawn == 0)
         {
             Instantiate(food, transform.position, quaternion.identity);

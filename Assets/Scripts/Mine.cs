@@ -33,7 +33,7 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (canDamage && other.gameObject.CompareTag("Enemy") && autoExplode)
+        if ((canDamage && other.gameObject.CompareTag("Enemy")) || autoExplode)
         {
             canDamage = false;
             StartCoroutine(AreaOfDamage());
