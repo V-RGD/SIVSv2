@@ -131,6 +131,7 @@ public class Yazid_Script : MonoBehaviour
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
+        TheGameManager.GetComponent<GameManager>().health = 100;
         PanelDeath.SetActive(false);
         isPaused = false;
         SceneManager.LoadScene("SceneFinale");
