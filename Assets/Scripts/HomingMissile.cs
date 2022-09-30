@@ -88,6 +88,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator AreaOfDamage()
     {
+        Debug.Log("boum");
         if (isDoubleBounce)
         {
             DoubleMissileLaunch();
