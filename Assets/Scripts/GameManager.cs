@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         healthBar.value = health / maxHealth;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
     void Start()

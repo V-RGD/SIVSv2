@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
     {
         if (enemyType < 4)
         {
-            int randXpDrop = Random.Range(0, 1);
+            int randXpDrop = Random.Range(0, 50);
             if (randXpDrop == 0)
             {
                 Instantiate(xpDropped[enemyType], transform.position, Quaternion.identity);
