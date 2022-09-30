@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public float orangeXP;
     public float redXP;
 
-
     private void Awake()
     {
         player = GameObject.Find("Player");
