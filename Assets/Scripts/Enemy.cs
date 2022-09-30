@@ -23,9 +23,9 @@ public class Enemy : MonoBehaviour
     public float speedCoef = 1;
 
     public GameObject[] xpDropped;
-    public GameObject fireStatus;
-    public GameObject iceStatus;
-    public GameObject hurtVfx;
+    private GameObject fireStatus;
+    private GameObject iceStatus;
+    private GameObject hurtVfx;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
     private bool canSpawnXP = true;
@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         fireStatus = transform.GetChild(0).gameObject;
         iceStatus = transform.GetChild(1).gameObject;
+        hurtVfx = transform.GetChild(2).gameObject;
+        hurtVfx.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -188,6 +190,7 @@ public class Enemy : MonoBehaviour
     {
         StartCoroutine(Recoil(dir));
         StartCoroutine(EnemyBlink());
+        StartCoroutine(HurtFX());
     }
 
     IEnumerator Recoil(Vector2 dir)
@@ -202,12 +205,19 @@ public class Enemy : MonoBehaviour
     
     IEnumerator EnemyBlink()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 2; i++)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
             yield return new WaitForSeconds(0.1f);
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    IEnumerator HurtFX()
+    {
+        hurtVfx.SetActive(true);
+        yield return new WaitForSeconds(2);
+        hurtVfx.SetActive(false);
     }
 }

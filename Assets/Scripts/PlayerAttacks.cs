@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour
@@ -106,7 +107,7 @@ public class PlayerAttacks : MonoBehaviour
             if (rocketTimer <= 0 && isRocketActive)
             {
                 rocketTimer = rocketCooldown/rocketRate;
-                RocketShot();
+                StartCoroutine(RocketShot());
             }
 
             if (mineTimer <= 0 && isMinesActive)
@@ -204,7 +205,7 @@ public class PlayerAttacks : MonoBehaviour
         //StartCoroutine(Recoil());
     }
 
-    void RocketShot()
+    IEnumerator RocketShot()
     {
         for (int i = 0; i < rocketNumber; i++)
         {
@@ -219,6 +220,8 @@ public class PlayerAttacks : MonoBehaviour
             {
                 rocket.GetComponent<HomingMissile>().isDoubleBounce = true;
             }
+
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
