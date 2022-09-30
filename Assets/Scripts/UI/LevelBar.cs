@@ -24,6 +24,8 @@ public class LevelBar : MonoBehaviour
     public AudioClip UpgradeSelection;
     public AudioClip OpenUpgrade;
 
+    private GameObject player;
+
     void Start()
     {
         fill.color = gradient.Evaluate(slider.normalizedValue);
@@ -31,6 +33,7 @@ public class LevelBar : MonoBehaviour
         Boost2 = GameObject.Find("Boost2");
         Boost3 = GameObject.Find("Boost3");
         maxLevel = gameObject.GetComponent<Slider>().maxValue;
+        player = GameObject.Find("Player");
 
   //      UpgradePanel = GameObject.Find("SelectUpgradePanel");
         UpgradePanel.SetActive(false);
@@ -89,6 +92,7 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar2")
         {
+            player.GetComponent<PlayerAttacks>().isMinesActive = true;
             gameObject.GetComponent<Slider>().maxValue += 20;
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMine += 1;
@@ -109,6 +113,7 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar3")
         {
+            player.GetComponent<PlayerAttacks>().isRocketActive = true;
             gameObject.GetComponent<Slider>().maxValue += 30;
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMissile += 1;
@@ -129,6 +134,7 @@ public class LevelBar : MonoBehaviour
         }
         if(gameObject.name == "LevelBar4")
         {
+            player.GetComponent<PlayerAttacks>().isShieldActive = true;
             gameObject.GetComponent<Slider>().maxValue += 40;
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersOrbital += 1;

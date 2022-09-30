@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
-    private float speed = 3;
+    public float speed = 3;
     public EnemyType enemyType;
     public float health;
     public float damage;
@@ -46,8 +46,12 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             spawner.enemyPoses.Remove(gameObject.transform);
-            Instantiate(xpDropped, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            int randXpDrop = Random.Range(0, 3);
+            if (randXpDrop == 0)
+            {
+                Instantiate(xpDropped, transform.position, Quaternion.identity);
+            }
         }
 
         if (canBurn && burnTimer > 0)
