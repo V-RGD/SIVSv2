@@ -15,6 +15,5 @@ public class Bullet : MonoBehaviour
     private void FixedUpdate()
     {
         enemyPoses = p_a.enemyPoses;
-        
     }
 }

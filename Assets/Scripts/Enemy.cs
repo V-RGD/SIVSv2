@@ -25,9 +25,11 @@ public class Enemy : MonoBehaviour
     public GameObject[] xpDropped;
     public GameObject fireStatus;
     public GameObject iceStatus;
+    public GameObject hurtVfx;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
     private bool canSpawnXP = true;
+    private bool friction;
 
     public GameObject food;
 
@@ -51,6 +53,11 @@ public class Enemy : MonoBehaviour
         else
         {
             speedCoef = 1;
+        }
+
+        if (friction)
+        {
+            rb.velocity = Vector2.zero;
         }
     }
 
@@ -174,6 +181,33 @@ public class Enemy : MonoBehaviour
         else
         {
             iceStatus.SetActive(false);
+        }
+    }
+
+    public void RecoilTampon(Vector2 dir)
+    {
+        StartCoroutine(Recoil(dir));
+        StartCoroutine(EnemyBlink());
+    }
+
+    IEnumerator Recoil(Vector2 dir)
+    {
+        friction = false;
+        GetComponent<Rigidbody2D>().AddForce(dir * 500);
+        yield return new WaitForSeconds(0.2f);
+        friction = true;
+        yield return new WaitForSeconds(1);
+        friction = false;
+    }
+    
+    IEnumerator EnemyBlink()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

@@ -201,7 +201,7 @@ public class PlayerAttacks : MonoBehaviour
         }
 
         //recoil
-        StartCoroutine(Recoil());
+        //StartCoroutine(Recoil());
     }
 
     void RocketShot()

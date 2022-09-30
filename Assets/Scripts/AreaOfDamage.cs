@@ -17,6 +17,7 @@ public class AreaOfDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().health -= damage;
+            other.GetComponent<Enemy>().RecoilTampon(other.transform.position - transform.position);
             //pop up UI
             GameObject ui = Instantiate(other.GetComponent<Enemy>().damageUI, other.transform);
             ui.transform.position = Vector3.zero;
