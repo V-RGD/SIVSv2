@@ -24,6 +24,7 @@ public class Spawner : MonoBehaviour
     public bool canSpawnOrange;
     public bool canSpawnRed;
     public bool canSpawnGolden;
+    public bool canSpawnBoss = true;
 
     public List<int> greenWaves;
     public List<int> yellowWaves;
@@ -86,44 +87,59 @@ public class Spawner : MonoBehaviour
             currentWave = 40;
         }
 
-        //-------VERT------------
-        if (greenWaves.Contains(currentWave))
+        if (currentWave < 40)
+        {
+            //-------VERT------------
+            if (greenWaves.Contains(currentWave))
+            {
+                canSpawnGreen = true;
+            }
+            else
+            {
+                canSpawnGreen = false;
+            }
+
+            //------------JAUNE-----------
+            if (yellowWaves.Contains(currentWave))
+            {
+                canSpawnYellow = true;
+            }
+            else
+            {
+                canSpawnYellow = false;
+            }
+
+            //----------------ORANGE------
+            if (orangeWaves.Contains(currentWave))
+            {
+                canSpawnOrange = true;
+            }
+            else
+            {
+                canSpawnOrange = false;
+            }
+
+            //--------------Rouge------------
+            if (redWaves.Contains(currentWave))
+            {
+                canSpawnRed = true;
+            }
+            else
+            {
+                canSpawnRed = false;
+            }
+        }
+        else
         {
             canSpawnGreen = true;
-        }
-        else
-        {
-            canSpawnGreen = false;
-        }
-
-        //------------JAUNE-----------
-        if (yellowWaves.Contains(currentWave))
-        {
             canSpawnYellow = true;
-        }
-        else
-        {
-            canSpawnYellow = false;
-        }
-
-        //----------------ORANGE------
-        if (orangeWaves.Contains(currentWave))
-        {
             canSpawnOrange = true;
-        }
-        else
-        {
-            canSpawnOrange = false;
-        }
-
-        //--------------Rouge------------
-        if (redWaves.Contains(currentWave))
-        {
             canSpawnRed = true;
-        }
-        else
-        {
-            canSpawnRed = false;
+            if (canSpawnBoss)
+            {
+                canSpawnBoss = false;
+                EnemySpawn(6);
+            }
         }
 
         //--------------DORE------------
@@ -231,6 +247,12 @@ public class Spawner : MonoBehaviour
         {
             enemyToSpawn.GetComponent<Enemy>().health = goldenHealths[goldenToSpawn];
             enemyToSpawn.GetComponent<Enemy>().damage = goldenDamages[goldenToSpawn];
+        }
+        else if (enemyType == 6)
+        {
+            enemyToSpawn.GetComponent<Enemy>().health = 1000;
+            enemyToSpawn.GetComponent<Enemy>().damage = 999;
+            enemyToSpawn.GetComponent<Enemy>().speed = 2;
         }
         else
         {

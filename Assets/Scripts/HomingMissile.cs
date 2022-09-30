@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 public class HomingMissile : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class HomingMissile : MonoBehaviour
     
     public GameObject Aoe;
     public GameObject residualArea;
+    public GameObject clonePrefab;
     public Vector2 rotationDiff;
     public PlayerAttacks p_a;
     
     public bool canMove = true;
     public bool canDamage;
     public bool isResidual;
+
+    public bool isDoubleBounce;
     private void Start()
     {
         p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
@@ -86,6 +90,10 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator AreaOfDamage()
     {
+        if (isDoubleBounce)
+        {
+            DoubleMissileLaunch();
+        }
         canMove = false;   
         GetComponent<SpriteRenderer>().enabled = false;
         Aoe.SetActive(true);
@@ -105,6 +113,17 @@ public class HomingMissile : MonoBehaviour
         yield return new WaitForSeconds(5);
         residualArea.SetActive(false);
         Destroy(gameObject);
+    }
+
+    void DoubleMissileLaunch()
+    {
+        GameObject rocket = Instantiate(clonePrefab, transform.position, quaternion.identity);
+        rocket.GetComponent<HomingMissile>().speed = speed;
+        if (isResidual) 
+        { 
+            rocket.GetComponent<HomingMissile>().isResidual = true;
+        }
+        Debug.Log("doubled");
     }
     
 }

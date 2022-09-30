@@ -197,7 +197,7 @@ public class PlayerAttacks : MonoBehaviour
 
         if (rocketIsDoubleBounce)
         {
-            
+            rocket.GetComponent<HomingMissile>().isDoubleBounce = true;
         }
     }
 
