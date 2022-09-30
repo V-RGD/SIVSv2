@@ -257,6 +257,7 @@ MonoBehaviour:
   inputDir: {x: 0, y: 0}
   dirCoef: 1
   playerAnimator: {fileID: 8518646027766302684}
+  TakeDamage: {fileID: 0}
 --- !u!114 &1967861324312598675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,24 +271,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotgunRate: 2
-  shotgunProjectileNumber: 10
-  shotgunDamage: 5
-  shotgunIsBurning: 1
-  shotgunIsPiercing: 1
+  shotgunProjectileNumber: 1
+  shotgunDamage: 1
+  shotgunIsBurning: 0
+  shotgunIsPiercing: 0
   rocketRate: 1
   rocketNumber: 1
-  rocketIsResidual: 1
-  rocketIsDoubleBounce: 1
+  rocketIsResidual: 0
+  rocketIsDoubleBounce: 0
   mineRate: 1
   mineRadius: 1
   mineDamage: 5
-  mineIsShrapnel: 1
-  mineIsIce: 1
+  mineIsShrapnel: 0
+  mineIsIce: 0
   shieldDamage: 5
   shieldSize: 1
   shieldSpeed: 1
-  shieldIsDouble: 1
-  shieldIsPewPew: 1
+  shieldIsDouble: 0
+  shieldIsPewPew: 0
   rocketDamage: 10
   shotgunSpread: 15
   shotgunProjo: {fileID: 8865965525024252180, guid: d571c8ebd84ce9c4fa1d51a6ae9f09c6, type: 3}
@@ -295,9 +296,9 @@ MonoBehaviour:
   mineProjo: {fileID: 9114584235997046971, guid: ce4db7881fafa0a4996ff7426287237b, type: 3}
   shieldProjo: {fileID: 3564214360211970423}
   isShogunActive: 1
-  isRocketActive: 1
-  isMinesActive: 1
-  isShieldActive: 1
+  isRocketActive: 0
+  isMinesActive: 0
+  isShieldActive: 0
   shotgunSpeed: 100
   rocketSpeed: 15
   attackDir: {x: 0, y: 0}
