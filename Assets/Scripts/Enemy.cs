@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
-    public float speed = 3;
+    public float speed = 1.5f;
     public int enemyType;
     public float health;
     public float damage;
