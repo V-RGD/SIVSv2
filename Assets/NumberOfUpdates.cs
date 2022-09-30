@@ -140,22 +140,6 @@ public class NumberOfUpdates : MonoBehaviour
                 player.GetComponent<PlayerAttacks>().shieldSpeed += 2;
             }
         }
-        // Barre 5
-        if(BarName == "LevelBar5")
-        {
-            if(ButtonName == "Boost1")
-            {
-                Debug.Log("DamageTronc");
-            }
-            if(ButtonName == "Boost2")
-            {
-                Debug.Log("RadiusTronc");
-            }
-            if(ButtonName == "Boost3")
-            {
-                Debug.Log("CadencTronc");
-            }
-        }
 
         // Spe ShotGun
         if(BarName == "LevelBar1")
@@ -219,20 +203,6 @@ public class NumberOfUpdates : MonoBehaviour
                 Debug.Log("Spe2Orbital");
                 Spe2Orbital = true;
                 player.GetComponent<PlayerAttacks>().shieldIsPewPew = true;
-            }
-        }
-        // Spe Tronc
-        if(BarName == "LevelBar5")
-        {
-            if(ButtonName == "Spe1")
-            {
-                Debug.Log("Spe1Tronc");
-                Spe1Tronc = true;
-            }
-            if(ButtonName == "Spe2")
-            {
-                Debug.Log("Spe2Tronc");
-                Spe2Tronc = true;
             }
         }
     }
