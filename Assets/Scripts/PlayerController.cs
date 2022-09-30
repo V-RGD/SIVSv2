@@ -209,7 +209,6 @@ public class PlayerController : MonoBehaviour
                 AudioManager.instance.PlayClipAt(TakeDamage, transform.position);
                 //playerAnimator.SetBool("isHit", true);
                 gameManager.health -= col.GetComponent<Enemy>().damage;
-                Debug.Log("lost damage");
                 //GetComponent<Animator>().SetTrigger("Hurt");
                 GameObject.Find("Shake").GetComponent<CameraShake>().shakeCamera.Invoke();
             }

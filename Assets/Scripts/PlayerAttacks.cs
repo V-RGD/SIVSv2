@@ -76,10 +76,17 @@ public class PlayerAttacks : MonoBehaviour
     private Vector2 mouseDir;
     public Camera cam;
 
+    private GameObject shield1;
+    private GameObject shield2;
+    private GameObject shield3;
+
     private void Awake()
     {
         spawner = GameObject.Find("EnemySpawner").GetComponent<Spawner>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        shield1 = shieldProjo.transform.GetChild(0).gameObject;
+        shield2 = shieldProjo.transform.GetChild(1).gameObject;
+        shield3 = shieldProjo.transform.GetChild(2).gameObject;
     }
 
     void Update()
@@ -116,9 +123,13 @@ public class PlayerAttacks : MonoBehaviour
             shieldRotation += Time.deltaTime * 360 * shieldSpeed;
             shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
 
-            shieldProjo.transform.GetChild(0).GetComponent<AttackDamage>().damage = shieldDamage;
-            shieldProjo.transform.GetChild(1).GetComponent<AttackDamage>().damage = shieldDamage;
-            shieldProjo.transform.GetChild(2).GetComponent<AttackDamage>().damage = shieldDamage;
+            shield1.GetComponent<AttackDamage>().damage = shieldDamage;
+            shield2.GetComponent<AttackDamage>().damage = shieldDamage;
+            shield3.GetComponent<AttackDamage>().damage = shieldDamage;
+            
+            shield1.transform.localScale = new Vector3(shieldSize, shieldSize, shieldSize);
+            shield2.transform.localScale = new Vector3(shieldSize, shieldSize, shieldSize);
+            shield3.transform.localScale = new Vector3(shieldSize, shieldSize, shieldSize);
             
 
             if (shieldRotation > 360)
@@ -128,19 +139,19 @@ public class PlayerAttacks : MonoBehaviour
 
             if (shieldIsDouble)
             {
-                shieldProjo.transform.GetChild(1).gameObject.SetActive(true);
-                shieldProjo.transform.GetChild(2).gameObject.SetActive(true);
+                shield2.SetActive(true);
+                shield3.SetActive(true);
                 
-                shieldProjo.transform.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, 0, shieldRotation * 2.7f);
+                shield3.gameObject.transform.rotation = Quaternion.Euler(0, 0, shieldRotation * 2.7f);
             }
             else
             {
-                shieldProjo.transform.GetChild(1).gameObject.SetActive(false);
-                shieldProjo.transform.GetChild(2).gameObject.SetActive(false);
+                shield2.gameObject.SetActive(false);
+                shield3.gameObject.SetActive(false);
             }
-            shieldProjo.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
-            shieldProjo.transform.GetChild(1).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
-            shieldProjo.transform.GetChild(2).gameObject.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+            shield1.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+            shield2.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
+            shield3.transform.localRotation = Quaternion.Euler(0, 0, -shieldRotation);
 
             if (shieldIsPewPew && shieldPewPewTimer <= 0)
             {

@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
     {
         if (enemyType < 4)
         {
-            int randXpDrop = Random.Range(0, 3);
+            int randXpDrop = Random.Range(0, 1);
             if (randXpDrop == 0)
             {
                 Instantiate(xpDropped[enemyType], transform.position, Quaternion.identity);
@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Pinata());
         }
 
-        int randBouffeSpawn = Random.Range(0, 50);
+        int randBouffeSpawn = Random.Range(0, 1);
         if (randBouffeSpawn == 0)
         {
             Instantiate(food, transform.position, quaternion.identity);
