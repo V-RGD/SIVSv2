@@ -211,6 +211,7 @@ public class PlayerController : MonoBehaviour
                 gameManager.health -= col.GetComponent<Enemy>().damage;
                 Debug.Log("lost damage");
                 //GetComponent<Animator>().SetTrigger("Hurt");
+                GameObject.Find("Shake").GetComponent<CameraShake>().shakeCamera.Invoke();
             }
             
         }

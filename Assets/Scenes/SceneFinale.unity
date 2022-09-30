@@ -694,7 +694,7 @@ MonoBehaviour:
     m_DissipationRate: 0.25
     m_RawSignal: {fileID: 11400000, guid: 70a893493d9502c419b77eebcbf93da8, type: 2}
     m_AmplitudeGain: 0.2
-    m_FrequencyGain: 0.4
+    m_FrequencyGain: 0.6
     m_RepeatMode: 0
     m_Randomize: 1
     m_TimeEnvelope:
@@ -712,12 +712,12 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0
       m_SustainTime: 0.2
-      m_DecayTime: 0.7
+      m_DecayTime: 0
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
     m_DirectionMode: 0
-    m_DissipationMode: 2
+    m_DissipationMode: 0
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 0, y: -1, z: 0}
@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
+      propertyPath: cursorAim
+      value: 
+      objectReference: {fileID: 2800000, guid: baf9f761123771b4cbb9f47ad1e03c54, type: 3}
     - target: {fileID: 8518646027766302674, guid: 9da3cb00eec8c0a4d95dc1bc9ea030ca, type: 3}
       propertyPath: TakeDamage
       value: 

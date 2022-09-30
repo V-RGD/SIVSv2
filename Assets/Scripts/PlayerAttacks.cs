@@ -115,6 +115,10 @@ public class PlayerAttacks : MonoBehaviour
             //rotates around players
             shieldRotation += Time.deltaTime * 360 * shieldSpeed;
             shieldProjo.transform.rotation = Quaternion.Euler(0, 0, shieldRotation);
+
+            shieldProjo.transform.GetChild(0).GetComponent<AttackDamage>().damage = shieldDamage;
+            shieldProjo.transform.GetChild(1).GetComponent<AttackDamage>().damage = shieldDamage;
+            shieldProjo.transform.GetChild(2).GetComponent<AttackDamage>().damage = shieldDamage;
             
 
             if (shieldRotation > 360)
@@ -156,7 +160,6 @@ public class PlayerAttacks : MonoBehaviour
     }
     void ShotgunShot()
     {
-        GameObject.Find("Shake").GetComponent<CameraShake>().shakeCamera.Invoke();
         float rotationDiff = -shotgunSpread * shotgunProjectileNumber / 2;
         //instanciate X projo separated by Y angle, does Z damage, dissapears after W range
         for (int i = 0; i < shotgunProjectileNumber; i++)
