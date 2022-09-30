@@ -21,6 +21,10 @@ public class XP_Collect : MonoBehaviour
     private GameObject YellowBar;
     private GameObject OrangeBar;
     private GameObject RedBar;
+
+    public AudioClip xpCollect;
+
+    public AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,8 @@ public class XP_Collect : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            AudioManager.instance.PlayClipAt(xpCollect, transform.position);
+
             if (xpType == 0)
             {
                 gameManager.greenXP++;

@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   xpType: 1
+  xpCollect: {fileID: 8300000, guid: df53230fd497af540b24e022872bbfb7, type: 3}
+  audioManager: {fileID: 0}
 --- !u!50 &6587195552284973397
 Rigidbody2D:
   serializedVersion: 4
