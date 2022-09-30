@@ -79,7 +79,6 @@ public class RandomLootBox : MonoBehaviour
         if(IndexLootBox == 2)
         {
             Debug.Log("Dégats");
-            player.GetComponent<PlayerController>().maxSpeed += 1;
             player.GetComponent<PlayerAttacks>().shotgunDamage += 1;
             player.GetComponent<PlayerAttacks>().mineDamage += 1;
             player.GetComponent<PlayerAttacks>().shieldDamage += 1f;
