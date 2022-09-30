@@ -674,6 +674,7 @@ MonoBehaviour:
   canSpawnOrange: 0
   canSpawnRed: 0
   canSpawnGolden: 0
+  canSpawnBoss: 1
   greenWaves: 0000000001000000030000000200000006000000070000000a0000000b0000000e0000000f000000140000001500000016000000170000001a0000001b0000001e0000001f0000002000000021000000250000002400000028000000290000002b0000002a000000
   yellowWaves: 0200000004000000080000000c0000000e00000012000000180000002000000026000000280000002a0000000300000005000000090000000d0000000f00000013000000190000002100000027000000290000002b000000
   orangeWaves: 06000000080000000c0000001000000012000000160000001a0000001c00000022000000240000002a00000007000000090000000d0000001100000013000000170000001b0000001d00000023000000250000002b000000
@@ -1254,6 +1255,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b5219f202af5bdd4e9fcb57fda99b78e, type: 3}
+    - target: {fileID: 4763534805135820921, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b6349d08a5335cd4aa534282435d11cc, type: 3}
+    - target: {fileID: 4763534805135820921, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763534805135820923, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -109.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425960757522496453, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b6349d08a5335cd4aa534282435d11cc, type: 3}
+    - target: {fileID: 6425960757522496453, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425960757522496453, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425960757522496455, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -53
+      objectReference: {fileID: 0}
     - target: {fileID: 8094487561556628554, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
       value: 1
