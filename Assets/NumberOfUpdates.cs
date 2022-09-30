@@ -133,7 +133,7 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost2")
             {
                 Debug.Log("SizeOrbital");
-                player.GetComponent<PlayerAttacks>().shieldSize += 1.2f;
+                player.GetComponent<PlayerAttacks>().shieldSize += 1.1f;
             }
             if(ButtonName == "Boost3")
             {
