@@ -201,7 +201,7 @@ public class PlayerAttacks : MonoBehaviour
         }
 
         //recoil
-        //GetComponent<Rigidbody2D>().AddForce(-attackDir * 1000);
+        StartCoroutine(Recoil());
     }
 
     void RocketShot()
@@ -299,5 +299,13 @@ public class PlayerAttacks : MonoBehaviour
     void LookAtMouse()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    IEnumerator Recoil()
+    {
+        GetComponent<PlayerController>().canMove = false;
+        GetComponent<Rigidbody2D>().AddForce(-mouseDir * 500);
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<PlayerController>().canMove = true;
     }
 }
