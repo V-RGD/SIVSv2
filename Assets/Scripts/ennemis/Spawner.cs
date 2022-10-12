@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
     public bool canSpawnOrange;
     public bool canSpawnRed;
     public bool canSpawnGolden;
-    public bool canSpawnBoss = true;
+    public bool canSpawnBoss = false;
 
     public List<int> greenWaves;
     public List<int> yellowWaves;
@@ -260,8 +260,8 @@ public class Spawner : MonoBehaviour
         else if (enemyType == 6)
         {
             enemyToSpawn.GetComponent<Enemy>().health = 1000;
-            enemyToSpawn.GetComponent<Enemy>().damage = 999;
-            enemyToSpawn.GetComponent<Enemy>().speed = 2;
+            enemyToSpawn.GetComponent<Enemy>().damage = 10;
+            enemyToSpawn.GetComponent<Enemy>().speed = 4;
         }
         else
         {

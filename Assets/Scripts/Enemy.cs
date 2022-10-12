@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float damage;
     public Spawner spawner;
+    public Color color;
     
     //public GameObject damageUI;
     
@@ -35,6 +36,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        color = GetComponent<SpriteRenderer>().color;
         player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -212,7 +214,7 @@ public class Enemy : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
             yield return new WaitForSeconds(0.1f);
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            GetComponent<SpriteRenderer>().color = color;
             yield return new WaitForSeconds(0.1f);
         }
     }
