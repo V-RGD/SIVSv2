@@ -9,7 +9,7 @@ public class XP_Collect : MonoBehaviour
 
     public int xpType;
 
-    //private float playerDist;
+    private float playerDist;
 
     private bool canAttract;
 
@@ -36,8 +36,12 @@ public class XP_Collect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerDist = (player.transform.position - transform.position).magnitude;
-        transform.DOMove(player.transform.position + new Vector3(1f * player.GetComponent<PlayerController>().dirCoef, 0, 0), 0.5f);
+        playerDist = (player.transform.position - transform.position).magnitude;
+
+        if (playerDist < 10)
+        {
+            transform.DOMove(player.transform.position + new Vector3(1f * player.GetComponent<PlayerController>().dirCoef, 0, 0), 0.5f);
+        }
         //rb.AddForce((player.transform.position - transform.position) * 5);
     }
 

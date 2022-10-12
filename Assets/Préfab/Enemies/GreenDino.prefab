@@ -108,7 +108,8 @@ MonoBehaviour:
   health: 0
   damage: 0
   spawner: {fileID: 0}
-  damageUI: {fileID: 4279177516061526664, guid: 0e29a3bb4d4b9af48960e7178c824ccd, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  score: 10
   burnTimer: 0
   burnDamage: 1
   slowedTimer: 0

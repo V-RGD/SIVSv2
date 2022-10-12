@@ -225,32 +225,41 @@ public class Spawner : MonoBehaviour
     void EnemySpawn(int enemyType)
     {
         Vector2 spawnPoint = Vector2.zero;
-        int randDir = Random.Range(0, 4);
-        float randPos = Random.Range(0, 100);
-        randPos = randPos / 100;
-        #region randomise dir
-        if (randDir == 0)
+        Vector2 playerDir = player.GetComponent<PlayerController>().inputDir.normalized * cameraLenght;
+
+        if (player.GetComponent<PlayerController>().inputDir != Vector2.zero)
         {
-            //spawns down
-            spawnPoint = new Vector2( -cameraLenght/2 + ( randPos * cameraLenght), -cameraHeight);
+            spawnPoint = new Vector2(player.transform.position.x, player.transform.position.y )+ playerDir;
         }
-        if (randDir == 1)
+        else
         {
-            //spawns left
-            spawnPoint = new Vector2( -cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
+            int randDir = Random.Range(0, 4);
+            float randPos = Random.Range(0, 100);
+            randPos = randPos / 100;
+            if (randDir == 0)
+            {
+                //spawns down
+                spawnPoint = new Vector2( -cameraLenght/2 + ( randPos * cameraLenght), -cameraHeight);
+            }
+            if (randDir == 1)
+            {
+                //spawns left
+                spawnPoint = new Vector2( -cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
+            }
+            if (randDir == 2)
+            {
+                //spawns up
+                spawnPoint = new Vector2(-cameraLenght/2 + (randPos * cameraLenght), cameraHeight);
+            }
+            if (randDir == 3)
+            {
+                //spawns right
+                spawnPoint = new Vector2( cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
+            }
+            spawnPoint += new Vector2(player.transform.position.x, player.transform.position.y);
         }
-        if (randDir == 2)
-        {
-            //spawns up
-            spawnPoint = new Vector2(-cameraLenght/2 + (randPos * cameraLenght), cameraHeight);
-        }
-        if (randDir == 3)
-        {
-            //spawns right
-            spawnPoint = new Vector2( cameraLenght, -cameraHeight/2 + (randPos * cameraHeight));
-        }
-        spawnPoint += new Vector2(player.transform.position.x, player.transform.position.y);
-        #endregion
+        
+        
         GameObject enemyToSpawn = Instantiate(enemyPrefabs[enemyType], spawnPoint, quaternion.identity);
         if (enemyType == 5)
         {
@@ -260,7 +269,7 @@ public class Spawner : MonoBehaviour
         else if (enemyType == 6)
         {
             enemyToSpawn.GetComponent<Enemy>().health = 1000;
-            enemyToSpawn.GetComponent<Enemy>().damage = 10;
+            enemyToSpawn.GetComponent<Enemy>().damage = 1;
             enemyToSpawn.GetComponent<Enemy>().speed = 4;
         }
         else

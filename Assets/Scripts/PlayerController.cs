@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         Flip(rb.velocity.x);
         healthVfxTimer -= Time.deltaTime;
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
 
         if (healthVfxTimer > 0)
         {

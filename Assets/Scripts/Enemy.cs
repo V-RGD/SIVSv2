@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float damage;
     public Spawner spawner;
     public Color color;
+    public int score;
     
     //public GameObject damageUI;
     
@@ -71,7 +72,6 @@ public class Enemy : MonoBehaviour
         StatusVFX();
         if (health <= 0)
         {
-            Score.instance.currentScore += 1;
             spawner.enemyPoses.Remove(gameObject.transform);
             if (canSpawnXP)
             {
@@ -136,6 +136,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(food, transform.position, quaternion.identity);
         }
+        Score.instance.currentScore += score;
     }
 
     IEnumerator Pinata()

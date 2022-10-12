@@ -52,6 +52,7 @@ public class Mine : MonoBehaviour
 
     IEnumerator AreaOfDamage()
     {
+        //anim
         GetComponent<SpriteRenderer>().enabled = false;
         Aoe.SetActive(true);
         Aoe.GetComponent<AreaOfDamage>().damage = damage;
