@@ -8,5 +8,6 @@ public class SpeStats
     public string name;
     public string description;
     public Sprite icon;
+    public Sprite WeaponIcon;
     public int[] valeurs;
 }

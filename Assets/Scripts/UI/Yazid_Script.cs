@@ -103,13 +103,13 @@ public class Yazid_Script : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Keypad4))
         {
             level4.GetComponent<LevelBar>().BoostLevel(50);
-        }
+        } */
 
         // Score
         if(Input.GetKeyDown(KeyCode.M))
         {
             TheScore.GetComponent<Score>().currentScore += 1;
-        } */
+        }
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {

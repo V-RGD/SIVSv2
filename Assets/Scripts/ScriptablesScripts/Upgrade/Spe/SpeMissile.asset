@@ -16,8 +16,10 @@ MonoBehaviour:
   - name: Zone de feu
     description: "Une zone de feu se cr\xE9e \xE0 l'impact"
     icon: {fileID: 21300000, guid: 7da27f0006887d04d80ea9f2452cb1f5, type: 3}
+    WeaponIcon: {fileID: 21300000, guid: 13800768a3279484c9f3e724f0f06506, type: 3}
     valeurs: 
   - name: Rebond
     description: "Le missile a 2 impact suppl\xE9mentaires"
     icon: {fileID: 21300000, guid: 61002e51fcfae7e43ac0943189878ed3, type: 3}
+    WeaponIcon: {fileID: 0}
     valeurs: 

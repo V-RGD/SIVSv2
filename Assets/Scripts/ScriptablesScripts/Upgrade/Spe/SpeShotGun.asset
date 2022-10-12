@@ -16,8 +16,10 @@ MonoBehaviour:
   - name: Balles incendiaires
     description: Les balles enflamment les ennemis
     icon: {fileID: 21300000, guid: 23b5216ea0dd9984a9bd485385fa2d80, type: 3}
+    WeaponIcon: {fileID: 21300000, guid: fecf696ca29ed9f458781a62f4c2cfd0, type: 3}
     valeurs: 
   - name: Balles perforantes
     description: "Les balles transper\xE7ent les ennemis"
     icon: {fileID: 21300000, guid: 75ab7e65ef8f1444bbff5b6d3fc2cbd3, type: 3}
+    WeaponIcon: {fileID: 0}
     valeurs: 

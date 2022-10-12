@@ -10,6 +10,8 @@ public class Boosters : MonoBehaviour
     public Transform description;
     public Transform level;
     public Transform TheIcon;
+    public Transform TheWeaponIcon;
+    public Transform CopyWeaponIcon;
 
     public UpgradeWeapons Weapons;
     public UpgradeWeapons ShotGun;
@@ -129,6 +131,8 @@ public class Boosters : MonoBehaviour
                 name.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].name;
                 description.transform.GetChild(0).GetComponent<Text>().text = TheSpe.SpeTheStats[0].description;
                 TheIcon.GetComponent<Image>().sprite = TheSpe.SpeTheStats[0].icon;
+                TheWeaponIcon.GetComponent<Image>().sprite = TheSpe.SpeTheStats[0].WeaponIcon;
+                CopyWeaponIcon.GetComponent<Image>().sprite = TheSpe.SpeTheStats[0].WeaponIcon;
             }
         if(gameObject.name == "Spe2")
             {
