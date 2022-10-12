@@ -1885,7 +1885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1107860980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2736,7 +2736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1590579708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2809,7 +2809,7 @@ Animator:
   m_GameObject: {fileID: 1590579707}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d00d255599926649b4197c4a8a6aa25, type: 2}
+  m_Controller: {fileID: 9100000, guid: bdc1904609de4244f8350c17322557d0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 2
   m_ApplyRootMotion: 0
@@ -4100,7 +4100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094487561556628554, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487561563503544, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: GainXP
@@ -4120,7 +4120,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e80c0e7de4951bd4ba7ed987a2579605, type: 3}
     - target: {fileID: 8094487561590315753, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487561590315755, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_Color.a
@@ -4572,7 +4572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094487562154107489, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487562154107491, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_Color.a
@@ -4632,7 +4632,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b99133ea3fb2c3f47be0f31b292daf4a, type: 3}
     - target: {fileID: 8094487562283386560, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487562283386562, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_Color.a
@@ -5072,7 +5072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8094487563218140445, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8094487563218140447, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_Sprite

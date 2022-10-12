@@ -106,10 +106,10 @@ public class Yazid_Script : MonoBehaviour
         } */
 
         // Score
-        if(Input.GetKeyDown(KeyCode.M))
+     /*   if(Input.GetKeyDown(KeyCode.M))
         {
             TheScore.GetComponent<Score>().currentScore += 1;
-        }
+        } */
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {
