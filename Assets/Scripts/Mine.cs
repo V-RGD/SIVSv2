@@ -19,6 +19,9 @@ public class Mine : MonoBehaviour
     public GameObject camera;
 
     public bool autoExplode;
+
+    public Animator explosionMine;
+    public GameObject mineExplosion;
     IEnumerator Start()
     {
         camera = GameObject.Find("CM vcam1");
@@ -53,6 +56,7 @@ public class Mine : MonoBehaviour
     IEnumerator AreaOfDamage()
     {
         //anim
+        mineExplosion.SetActive(true);
         GetComponent<SpriteRenderer>().enabled = false;
         Aoe.SetActive(true);
         Aoe.GetComponent<AreaOfDamage>().damage = damage;
