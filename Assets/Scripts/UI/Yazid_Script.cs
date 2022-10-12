@@ -88,7 +88,7 @@ public class Yazid_Script : MonoBehaviour
 
 
         // LevelBar
-        if(Input.GetKeyDown(KeyCode.Keypad1))
+   /*     if(Input.GetKeyDown(KeyCode.Keypad1))
         {
             level1.GetComponent<LevelBar>().BoostLevel(100);
         }
@@ -103,7 +103,7 @@ public class Yazid_Script : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Keypad4))
         {
             level4.GetComponent<LevelBar>().BoostLevel(100);
-        }
+        } */
 
         // Score
         if(Input.GetKeyDown(KeyCode.M))
