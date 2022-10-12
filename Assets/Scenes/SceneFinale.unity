@@ -4763,6 +4763,22 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8094487563644252280, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: myColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487563644252280, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: myColor.b
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487563644252280, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: myColor.g
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487563644252280, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: myColor.r
+      value: 0.5686275
+      objectReference: {fileID: 0}
     - target: {fileID: 8094487563644252281, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
