@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 41262077}
   - component: {fileID: 41262076}
   m_Layer: 0
-  m_Name: MINE EXPLOSION
+  m_Name: MISSILE EXPLOSION
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,10 +187,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.6666667, y: 2.6666667}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &41262077
@@ -203,7 +203,7 @@ Animator:
   m_GameObject: {fileID: 41262075}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c9bba82f51763bd45921dcc265a487d0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8ab2d14b0d4f3b34bb9da22c6a41ba69, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+
 public class Mine : MonoBehaviour
 {
     public bool canDamage;
@@ -57,6 +59,8 @@ public class Mine : MonoBehaviour
     {
         //anim
         mineExplosion.SetActive(true);
+        //GetComponent<Animator>().enabled = false;
+        GetComponent<Light2D>().enabled = false;
         GetComponent<SpriteRenderer>().enabled = false;
         Aoe.SetActive(true);
         Aoe.GetComponent<AreaOfDamage>().damage = damage;
