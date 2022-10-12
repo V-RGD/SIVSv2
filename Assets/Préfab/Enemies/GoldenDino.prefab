@@ -121,9 +121,6 @@ MonoBehaviour:
   - {fileID: 4912392333344865560, guid: 1b7e072f13b8b084287bd3b66050138c, type: 3}
   - {fileID: 6587195552284973399, guid: 72ecfd60d02aa7f43be7ad4477b8f1aa, type: 3}
   - {fileID: 7683206589396654502, guid: b01e47a91184e49499297d89b00bc565, type: 3}
-  fireStatus: {fileID: 0}
-  iceStatus: {fileID: 0}
-  hurtVfx: {fileID: 0}
   food: {fileID: 123747637513680859, guid: 34bb3410c6cd23f4da380348bf1d6b0d, type: 3}
 --- !u!50 &4329952272776381718
 Rigidbody2D:
@@ -159,7 +156,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00798481, y: -0.057490557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,7 +167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61329556, y: 0.7147263}
+  m_Size: {x: 0.34181237, y: 0.5997452}
   m_EdgeRadius: 0
 --- !u!198 &4122827489967764313
 ParticleSystem:

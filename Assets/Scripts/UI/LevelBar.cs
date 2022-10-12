@@ -70,7 +70,7 @@ public class LevelBar : MonoBehaviour
         AudioManager.instance.PlayClipAt(OpenUpgrade, transform.position);
         if(gameObject.name == "LevelBar1")
         {
-            gameObject.GetComponent<Slider>().maxValue += 200;  // Augementation du Maximum de la barre
+            gameObject.GetComponent<Slider>().maxValue += 150;  // Augementation du Maximum de la barre
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersShotGun += 1;
             BoostersParents.instance.TheBar = "LevelBar1";
@@ -92,7 +92,7 @@ public class LevelBar : MonoBehaviour
         if(gameObject.name == "LevelBar2")
         {
             player.GetComponent<PlayerAttacks>().isMinesActive = true;
-            gameObject.GetComponent<Slider>().maxValue += 200; // Augementation du Maximum de la barre
+            gameObject.GetComponent<Slider>().maxValue += 150; // Augementation du Maximum de la barre
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMine += 1;
             BoostersParents.instance.TheBar = "LevelBar2";
@@ -113,7 +113,7 @@ public class LevelBar : MonoBehaviour
         if(gameObject.name == "LevelBar3")
         {
             player.GetComponent<PlayerAttacks>().isRocketActive = true;
-            gameObject.GetComponent<Slider>().maxValue += 200; // Augementation du Maximum de la barre
+            gameObject.GetComponent<Slider>().maxValue += 150; // Augementation du Maximum de la barre
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersMissile += 1;
             BoostersParents.instance.TheBar = "LevelBar3";
@@ -134,7 +134,7 @@ public class LevelBar : MonoBehaviour
         if(gameObject.name == "LevelBar4")
         {
             player.GetComponent<PlayerAttacks>().isShieldActive = true;
-            gameObject.GetComponent<Slider>().maxValue += 200; // Augementation du Maximum de la barre
+            gameObject.GetComponent<Slider>().maxValue += 100; // Augementation du Maximum de la barre
             maxLevel = gameObject.GetComponent<Slider>().maxValue;
             NumberOfUpdates.instance.TiersOrbital += 1;
             BoostersParents.instance.TheBar = "LevelBar4";
