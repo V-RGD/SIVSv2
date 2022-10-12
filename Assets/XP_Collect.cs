@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
+using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class XP_Collect : MonoBehaviour
 {
@@ -13,7 +9,7 @@ public class XP_Collect : MonoBehaviour
 
     public int xpType;
 
-    private float playerDist;
+    //private float playerDist;
 
     private bool canAttract;
 
@@ -40,13 +36,9 @@ public class XP_Collect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerDist = (player.transform.position - transform.position).magnitude;
-
-        if (playerDist <= 5  || canAttract)
-        {
-            canAttract = true;
-            rb.AddForce((player.transform.position - transform.position) * 5);
-        }
+        //playerDist = (player.transform.position - transform.position).magnitude;
+        transform.DOMove(player.transform.position, 0.5f);
+        //rb.AddForce((player.transform.position - transform.position) * 5);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

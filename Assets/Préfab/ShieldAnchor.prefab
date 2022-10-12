@@ -127,7 +127,7 @@ MonoBehaviour:
   damage: 5
   player: {fileID: 0}
   isShield: 1
-  destroyedOnContact: 1
+  destroyedOnContact: 0
   isFireAmmo: 0
   burnDamage: 0
 --- !u!1 &2566208204140819696
@@ -257,7 +257,7 @@ MonoBehaviour:
   damage: 5
   player: {fileID: 0}
   isShield: 1
-  destroyedOnContact: 1
+  destroyedOnContact: 0
   isFireAmmo: 0
   burnDamage: 0
 --- !u!1 &6578670005901491348
@@ -387,7 +387,7 @@ MonoBehaviour:
   damage: 5
   player: {fileID: 0}
   isShield: 1
-  destroyedOnContact: 1
+  destroyedOnContact: 0
   isFireAmmo: 0
   burnDamage: 0
 --- !u!1 &8901965687578072853
