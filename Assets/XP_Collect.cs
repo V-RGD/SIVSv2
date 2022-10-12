@@ -37,7 +37,7 @@ public class XP_Collect : MonoBehaviour
     void Update()
     {
         //playerDist = (player.transform.position - transform.position).magnitude;
-        transform.DOMove(player.transform.position, 0.5f);
+        transform.DOMove(player.transform.position + new Vector3(1f * player.GetComponent<PlayerController>().dirCoef, 0, 0), 0.5f);
         //rb.AddForce((player.transform.position - transform.position) * 5);
     }
 

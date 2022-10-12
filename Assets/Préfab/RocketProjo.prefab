@@ -342,6 +342,7 @@ MonoBehaviour:
   canMove: 1
   canDamage: 0
   isResidual: 0
+  canResidual: 0
   isDoubleBounce: 0
 --- !u!212 &435108247291351025
 SpriteRenderer:
@@ -456,7 +457,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Time: 0.2
   m_Parameters:
     serializedVersion: 3
