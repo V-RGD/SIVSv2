@@ -18,6 +18,7 @@ public class SpeBoostersParents : MonoBehaviour
     public Button Spe2;
 
     public Color myColor;
+    public Color WhiteColor;
 
     public static SpeBoostersParents instance;
      private void Awake()
@@ -51,12 +52,24 @@ public class SpeBoostersParents : MonoBehaviour
             Spe1.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe1.transform.GetChild(2).GetComponent<Image>().color = myColor;
          }
+         else
+         {
+            Spe1.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
+         }
            if(NumberOfUpdates.instance.Spe2ShotGun)
          {
             Spe2.interactable = false;
             Spe2.transform.GetChild(0).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(2).GetComponent<Image>().color = myColor;
+         }
+         else
+         {
+            Spe2.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
          }
         }
          if(TheBar == "LevelBar2")
@@ -68,12 +81,24 @@ public class SpeBoostersParents : MonoBehaviour
             Spe1.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe1.transform.GetChild(2).GetComponent<Image>().color = myColor;
          }
+         else
+         {
+            Spe1.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
+         }
            if(NumberOfUpdates.instance.Spe2Mine)
          {
             Spe2.interactable = false;
             Spe2.transform.GetChild(0).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(2).GetComponent<Image>().color = myColor;
+         }
+         else
+         {
+            Spe2.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
          }
         }
           if(TheBar == "LevelBar3")
@@ -85,9 +110,24 @@ public class SpeBoostersParents : MonoBehaviour
             Spe1.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe1.transform.GetChild(2).GetComponent<Image>().color = myColor;
          }
+         else
+         {
+            Spe1.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
+         }
            if(NumberOfUpdates.instance.Spe2Missile)
          {
             Spe2.interactable = false;
+            Spe2.transform.GetChild(0).GetComponent<Image>().color = myColor;
+            Spe2.transform.GetChild(1).GetComponent<Image>().color = myColor;
+            Spe2.transform.GetChild(2).GetComponent<Image>().color = myColor;
+         }
+         else
+         {
+            Spe2.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
          }
         }
            if(TheBar == "LevelBar4")
@@ -99,12 +139,24 @@ public class SpeBoostersParents : MonoBehaviour
             Spe1.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe1.transform.GetChild(2).GetComponent<Image>().color = myColor;
          }
+         else
+         {
+            Spe1.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe1.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
+         }
            if(NumberOfUpdates.instance.Spe2Orbital)
          {
             Spe2.interactable = false;
             Spe2.transform.GetChild(0).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(1).GetComponent<Image>().color = myColor;
             Spe2.transform.GetChild(2).GetComponent<Image>().color = myColor;
+         }
+         else
+         {
+            Spe2.transform.GetChild(0).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(1).GetComponent<Image>().color = WhiteColor;
+            Spe2.transform.GetChild(2).GetComponent<Image>().color = WhiteColor;
          }
         }
           gameObject.transform.GetChild(0).GetComponent<Boosters>().BarName = TheBar;
