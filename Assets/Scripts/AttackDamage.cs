@@ -49,12 +49,7 @@ public class AttackDamage : MonoBehaviour
             ui.GetComponent<Animator>().SetTrigger("DamageTaken");
             ui.GetComponent<TMP_Text>().text = damage.ToString();
 
-            if (destroyedOnContact)
-            {
-                Destroy(gameObject);
-            }
-
-            if (!isShield)
+            if (destroyedOnContact && isShield)
             {
                 Destroy(gameObject);
             }
