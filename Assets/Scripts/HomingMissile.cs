@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -17,13 +18,19 @@ public class HomingMissile : MonoBehaviour
     public bool canMove = true;
     public bool canDamage;
     public bool isResidual;
+    public bool canResidual;
 
     public bool isDoubleBounce;
-    private bool canDouble = true;
-    private void Start()
+    private bool canDouble;
+
+    private void Awake()
+    {
+        p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
+    }
+
+    IEnumerator Start()
     {
         //GetComponent<BoxCollider2D>().enabled = true;
-        p_a = GameObject.Find("Player").GetComponent<PlayerAttacks>();
         if (target != null)
         {
             transform.right = (target.transform.position - transform.position);
@@ -32,6 +39,9 @@ public class HomingMissile : MonoBehaviour
         residualArea = transform.GetChild(1).gameObject;
         canDamage = true;
         Destroy(gameObject, 4);
+        yield return new WaitForSeconds(0.5f);
+        canResidual = true;
+        canDouble = true;
     }
 
     private void FixedUpdate()
@@ -84,8 +94,9 @@ public class HomingMissile : MonoBehaviour
         {
             canDamage = false;
             StartCoroutine(AreaOfDamage());
-            if (isResidual)
+            if (isResidual && canResidual)
             {
+                canResidual = false;    
                 StartCoroutine(ResidualZone());
             }
         }
@@ -118,7 +129,6 @@ public class HomingMissile : MonoBehaviour
         { 
             rocket.GetComponent<HomingMissile>().isResidual = true;
         }
-        Debug.Log("doubled");
     }
     
     IEnumerator ResidualZone()

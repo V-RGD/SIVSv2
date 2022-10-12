@@ -3,6 +3,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     public bool canDamage;
+    public bool canSpawnShrapnel = true;
     public float damage = 5;
     public float radius = 2;
     public float damageCoef;
@@ -37,8 +38,9 @@ public class Mine : MonoBehaviour
         {
             canDamage = false;
             StartCoroutine(AreaOfDamage());
-            if (isShrapnel)
+            if (isShrapnel && canSpawnShrapnel)
             {
+                canSpawnShrapnel = false;
                 ShrapnelsSpawn();
             }
             if (isIce)
@@ -71,7 +73,7 @@ public class Mine : MonoBehaviour
             GameObject projo = Instantiate(shrapnel, transform.position, Quaternion.identity);
             rotateDir = Quaternion.Euler(0, 0, rotationDiff) * Vector2.right;
             projo.GetComponent<Rigidbody2D>().AddForce(rotateDir * 100);
-            projo.GetComponent<AttackDamage>().damage = shrapnelDamage;
+            projo.GetComponent<AttackDamage>().damage = damage;
             
             rotationDiff += 90;
         }

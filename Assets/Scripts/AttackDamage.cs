@@ -42,12 +42,14 @@ public class AttackDamage : MonoBehaviour
                 //don't forget ui
             }
             
+            /*
             //pop up UI
             GameObject ui = Instantiate(other.GetComponent<Enemy>().damageUI, other.transform);
             ui.transform.position = Vector3.zero;
             ui.SetActive(true);
             ui.GetComponent<Animator>().SetTrigger("DamageTaken");
             ui.GetComponent<TMP_Text>().text = damage.ToString();
+            */
 
             if (destroyedOnContact && isShield)
             {

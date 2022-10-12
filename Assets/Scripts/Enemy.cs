@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public float damage;
     public Spawner spawner;
     
-    public GameObject damageUI;
+    //public GameObject damageUI;
     
     public float burnTimer;
     private bool canBurn = true;
@@ -92,11 +92,14 @@ public class Enemy : MonoBehaviour
     {
         health -= burnDamage;
         //pop up UI
+        
+        /*
         GameObject ui = Instantiate(damageUI, transform);
         ui.transform.position = Vector3.zero;
         ui.SetActive(true);
         ui.GetComponent<Animator>().SetTrigger("DamageTaken");
         ui.GetComponent<TMP_Text>().text = burnDamage.ToString();
+        */
         yield return new WaitForSeconds(1);
         canBurn = true;
     }
