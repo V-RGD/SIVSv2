@@ -128,7 +128,7 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost1")
             {
                 Debug.Log("DamageOrbital");
-                player.GetComponent<PlayerAttacks>().shieldDamage += 1.2f;
+                player.GetComponent<PlayerAttacks>().shieldDamage += 0.4f;
             }
             if(ButtonName == "Boost2")
             {
@@ -138,7 +138,7 @@ public class NumberOfUpdates : MonoBehaviour
             if(ButtonName == "Boost3")
             {
                 Debug.Log("VitesseRotaOrbital");
-                player.GetComponent<PlayerAttacks>().shieldSpeed += 0.5f;
+                player.GetComponent<PlayerAttacks>().shieldSpeed += 0.2f;
             }
         }
 

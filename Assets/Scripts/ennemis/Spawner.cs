@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
     private float orangeTimer;
     private float redTimer;
     public float goldenTimer = 0;
+    public float bossTimer;
+    public float bossTime = 0.5f;
 
     public bool canSpawnGreen;
     public bool canSpawnYellow;
@@ -39,7 +41,7 @@ public class Spawner : MonoBehaviour
     //damage increase each 30S
     public int[] enemyDamages = new []{4, 5, 6, 7, 8};
 
-    private int[] goldenHealths = new []{50, 100, 150, 200, 250, 300};
+    private int[] goldenHealths = new []{50, 75, 100, 125, 150, 175};
     private int[] goldenDamages = new []{5, 10, 15, 20, 25, 30};
     private int goldenToSpawn = 1;
 
@@ -68,6 +70,7 @@ public class Spawner : MonoBehaviour
         orangeTimer -= Time.deltaTime;
         redTimer -= Time.deltaTime;
         goldenTimer -= Time.deltaTime;
+        bossTimer -= Time.deltaTime;
 
         ColorActivations();
         DinoSpawners();
@@ -130,15 +133,11 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            canSpawnGreen = true;
-            canSpawnYellow = true;
-            canSpawnOrange = true;
-            canSpawnRed = true;
-            if (canSpawnBoss)
-            {
-                canSpawnBoss = false;
-                EnemySpawn(6);
-            }
+            canSpawnGreen = false;
+            canSpawnYellow = false;
+            canSpawnOrange = false;
+            canSpawnRed = false;
+            canSpawnBoss = true;
         }
 
         //--------------DORE------------
@@ -210,6 +209,17 @@ public class Spawner : MonoBehaviour
             Debug.Log("golden dino spawned");
             EnemySpawn(5);
         }
+
+        if (canSpawnBoss)
+        {
+            if (bossTimer <= 0)
+            {
+                bossTimer = bossTime;
+                EnemySpawn(6);
+            }
+            
+        }
+
     }
     #endregion
     void EnemySpawn(int enemyType)

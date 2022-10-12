@@ -342,6 +342,7 @@ MonoBehaviour:
   canMove: 1
   canDamage: 0
   isResidual: 0
+  canResidual: 0
   isDoubleBounce: 0
 --- !u!212 &435108247291351025
 SpriteRenderer:
@@ -385,7 +386,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1814679092, guid: a12b103092a790547a77bf0a84b07f1a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.020870686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -456,7 +457,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Time: 0.2
   m_Parameters:
     serializedVersion: 3
@@ -487,7 +488,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0.8520417, a: 1}
+      key0: {r: 1, g: 0.5152212, b: 0, a: 1}
       key1: {r: 1, g: 0.49115866, b: 0.11792451, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
