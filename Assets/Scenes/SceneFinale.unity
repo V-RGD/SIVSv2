@@ -4638,6 +4638,26 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 8094487562283386563, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: TiersMine
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487562283386563, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: TiersTronc
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487562283386563, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: TiersMissile
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487562283386563, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: TiersOrbital
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8094487562283386563, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
+      propertyPath: TiersShotGun
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8094487562283386588, guid: 59601d085f5c05541b72e96e0a822373, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 4.550537
