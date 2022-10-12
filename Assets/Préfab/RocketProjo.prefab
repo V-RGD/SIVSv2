@@ -342,6 +342,7 @@ MonoBehaviour:
   canMove: 1
   canDamage: 0
   isResidual: 0
+  canResidual: 0
   isDoubleBounce: 0
 --- !u!212 &435108247291351025
 SpriteRenderer:
